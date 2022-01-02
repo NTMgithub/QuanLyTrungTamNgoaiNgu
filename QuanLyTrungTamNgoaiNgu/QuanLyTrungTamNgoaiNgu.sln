@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31829.152
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyTrungTamNgoaiNgu", "QuanLyTrungTamNgoaiNgu.csproj", "{CEA817CD-E470-4936-8B66-163BB41EEF64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL.csproj", "{B7A1679F-ED42-4649-ACAD-662B1B6310FA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CEA817CD-E470-4936-8B66-163BB41EEF64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CEA817CD-E470-4936-8B66-163BB41EEF64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CEA817CD-E470-4936-8B66-163BB41EEF64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7A1679F-ED42-4649-ACAD-662B1B6310FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7A1679F-ED42-4649-ACAD-662B1B6310FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7A1679F-ED42-4649-ACAD-662B1B6310FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7A1679F-ED42-4649-ACAD-662B1B6310FA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
