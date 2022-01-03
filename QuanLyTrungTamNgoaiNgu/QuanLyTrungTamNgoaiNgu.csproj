@@ -52,6 +52,12 @@
     <Compile Include="fmDangKyThi.Designer.cs">
       <DependentUpon>fmDangKyThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="fmLapKhoaThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmLapKhoaThi.Designer.cs">
+      <DependentUpon>fmLapKhoaThi.cs</DependentUpon>
+    </Compile>
     <Compile Include="fmLapPhongThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     <EmbeddedResource Include="fmDangKyThi.resx">
       <DependentUpon>fmDangKyThi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="fmLapKhoaThi.resx">
+      <DependentUpon>fmLapKhoaThi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fmLapPhongThi.resx">
       <DependentUpon>fmLapPhongThi.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fmTrangChu.resx">
       <DependentUpon>fmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmXepGiaoVien.resx">
+      <DependentUpon>fmXepGiaoVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmXepPhongThi.resx">
       <DependentUpon>fmXepPhongThi.cs</DependentUpon>
