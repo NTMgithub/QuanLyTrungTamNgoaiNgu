@@ -13,3 +13,25 @@ C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTa
 C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmQuanLyDiem.resources
 C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmTraCuu.resources
 C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmXepPhongThi.resources
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\QuanLyTrungTamNgoaiNgu.exe.config
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\QuanLyTrungTamNgoaiNgu.exe
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\QuanLyTrungTamNgoaiNgu.pdb
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.csproj.AssemblyReference.cache
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmDangKyThi.resources
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmLapPhongThi.resources
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmQuanLyDiem.resources
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmTraCuu.resources
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmTrangChu.resources
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmXepPhongThi.resources
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.Properties.Resources.resources
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.csproj.GenerateResource.cache
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.csproj.CoreCompileInputs.cache
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.exe
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.pdb
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\BUS.dll
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\DAL.dll
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\EntityFramework.dll
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\BUS.pdb
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\DAL.pdb
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\DAL.dll.config
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\EntityFramework.xml

@@ -1,0 +1,12 @@
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\BUS\bin\Debug\BUS.dll
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\BUS\bin\Debug\BUS.pdb
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\BUS\bin\Debug\DAL.dll
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\BUS\bin\Debug\EntityFramework.dll
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\BUS\bin\Debug\DAL.pdb
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\BUS\bin\Debug\DAL.dll.config
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\BUS\bin\Debug\EntityFramework.xml
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\BUS\obj\Debug\BUS.dll
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\BUS\obj\Debug\BUS.pdb
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\BUS\obj\Debug\BUS.csproj.CopyComplete
