@@ -122,12 +122,11 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // textBoxMaDangKy
             // 
-            this.textBoxMaDangKy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBoxMaDangKy.Location = new System.Drawing.Point(127, 10);
-            this.textBoxMaDangKy.MaximumSize = new System.Drawing.Size(300, 35);
+            this.textBoxMaDangKy.MaximumSize = new System.Drawing.Size(300, 32);
             this.textBoxMaDangKy.MinimumSize = new System.Drawing.Size(200, 32);
             this.textBoxMaDangKy.Name = "textBoxMaDangKy";
-            this.textBoxMaDangKy.Size = new System.Drawing.Size(220, 22);
+            this.textBoxMaDangKy.Size = new System.Drawing.Size(220, 32);
             this.textBoxMaDangKy.TabIndex = 2;
             this.textBoxMaDangKy.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -143,12 +142,11 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // textBoxHoTen
             // 
-            this.textBoxHoTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBoxHoTen.Location = new System.Drawing.Point(127, 10);
             this.textBoxHoTen.MaximumSize = new System.Drawing.Size(300, 35);
             this.textBoxHoTen.MinimumSize = new System.Drawing.Size(200, 32);
             this.textBoxHoTen.Name = "textBoxHoTen";
-            this.textBoxHoTen.Size = new System.Drawing.Size(220, 22);
+            this.textBoxHoTen.Size = new System.Drawing.Size(220, 32);
             this.textBoxHoTen.TabIndex = 2;
             // 
             // label5
@@ -172,12 +170,11 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // textBoxCMND
             // 
-            this.textBoxCMND.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBoxCMND.Location = new System.Drawing.Point(127, 10);
             this.textBoxCMND.MaximumSize = new System.Drawing.Size(300, 35);
             this.textBoxCMND.MinimumSize = new System.Drawing.Size(200, 32);
             this.textBoxCMND.Name = "textBoxCMND";
-            this.textBoxCMND.Size = new System.Drawing.Size(220, 22);
+            this.textBoxCMND.Size = new System.Drawing.Size(220, 32);
             this.textBoxCMND.TabIndex = 2;
             // 
             // label6
@@ -201,12 +198,11 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBoxEmail.Location = new System.Drawing.Point(127, 10);
             this.textBoxEmail.MaximumSize = new System.Drawing.Size(300, 35);
             this.textBoxEmail.MinimumSize = new System.Drawing.Size(200, 32);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(220, 22);
+            this.textBoxEmail.Size = new System.Drawing.Size(220, 32);
             this.textBoxEmail.TabIndex = 2;
             // 
             // label7
@@ -230,12 +226,11 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // textBoxSoDienThoai
             // 
-            this.textBoxSoDienThoai.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.textBoxSoDienThoai.Location = new System.Drawing.Point(127, 10);
             this.textBoxSoDienThoai.MaximumSize = new System.Drawing.Size(300, 35);
             this.textBoxSoDienThoai.MinimumSize = new System.Drawing.Size(200, 32);
             this.textBoxSoDienThoai.Name = "textBoxSoDienThoai";
-            this.textBoxSoDienThoai.Size = new System.Drawing.Size(220, 22);
+            this.textBoxSoDienThoai.Size = new System.Drawing.Size(220, 32);
             this.textBoxSoDienThoai.TabIndex = 2;
             // 
             // label8
@@ -278,7 +273,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // dateTimePickerNgaySInh
             // 
-            this.dateTimePickerNgaySInh.Location = new System.Drawing.Point(127, 15);
+            this.dateTimePickerNgaySInh.Location = new System.Drawing.Point(127, 11);
             this.dateTimePickerNgaySInh.MinimumSize = new System.Drawing.Size(220, 32);
             this.dateTimePickerNgaySInh.Name = "dateTimePickerNgaySInh";
             this.dateTimePickerNgaySInh.Size = new System.Drawing.Size(220, 32);
