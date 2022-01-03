@@ -81,5 +81,16 @@ namespace QuanLyTrungTamNgoaiNgu
             fmXepGiaoVien fmXGV = new fmXepGiaoVien();
             HienThiFormCon(fmXGV);
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            fmLapKhoaThi fmLKT = new fmLapKhoaThi();
+            HienThiFormCon(fmLKT);
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
