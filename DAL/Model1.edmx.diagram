@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c0520dd9e56b43de836c436dafc8709e" Name="Diagram1">
+        <EntityTypeShape EntityType="TTANModel.DSGVTrongPhongThi" Width="1.5" PointX="5.25" PointY="3.5" />
+        <EntityTypeShape EntityType="TTANModel.DSThiSinhTrongPhongThi" Width="1.5" PointX="8.25" PointY="3.125" />
+        <EntityTypeShape EntityType="TTANModel.GiaoVien" Width="1.5" PointX="3" PointY="0.75" />
+        <EntityTypeShape EntityType="TTANModel.KhoaThi" Width="1.5" PointX="0.75" PointY="3.5" />
+        <EntityTypeShape EntityType="TTANModel.PhongThi" Width="1.5" PointX="3" PointY="3.5" />
+        <EntityTypeShape EntityType="TTANModel.sysdiagram" Width="1.5" PointX="0.75" PointY="6.5" />
+        <EntityTypeShape EntityType="TTANModel.ThiSinhDK" Width="1.5" PointX="6" PointY="8.125" />
+        <AssociationConnector Association="TTANModel.FK_DSGVTrongPhongThi_GiaoVien" />
+        <AssociationConnector Association="TTANModel.FK_DSGVTrongPhongThi_PhongThi" />
+        <AssociationConnector Association="TTANModel.FK_DSThiSinhTrongPhongThi_PhongThi" />
+        <AssociationConnector Association="TTANModel.FK_DSThiSinhTrongPhongThi_ThiSinhDK" />
+        <AssociationConnector Association="TTANModel.FK_PhongThi_KhoaThi" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TTANModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DSGVTrongPhongThi">
+    <Key>
+      <PropertyRef Name="MAGV" />
+      <PropertyRef Name="MAPHONGTHI" />
+    </Key>
+    <Property Name="MAGV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MAPHONGTHI" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="GHICHU" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="DSThiSinhTrongPhongThi">
+    <Key>
+      <PropertyRef Name="MADK" />
+      <PropertyRef Name="MAPHONGTHI" />
+    </Key>
+    <Property Name="MADK" Type="int" Nullable="false" />
+    <Property Name="MAPHONGTHI" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SBD" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DIEMNGHE" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DIEMNOI" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DIEMVIET" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DIEMDOC" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="GiaoVien">
+    <Key>
+      <PropertyRef Name="MAGV" />
+    </Key>
+    <Property Name="MAGV" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TENGV" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="KhoaThi">
+    <Key>
+      <PropertyRef Name="MAKHOATHI" />
+    </Key>
+    <Property Name="MAKHOATHI" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TENKHOATHI" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="TRINHDO" Type="nvarchar" MaxLength="50" />
+    <Property Name="NGAYTHI" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PhongThi">
+    <Key>
+      <PropertyRef Name="MAPHONGTHI" />
+    </Key>
+    <Property Name="MAPHONGTHI" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MAKHOATHI" Type="nvarchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="ThiSinhDK">
+    <Key>
+      <PropertyRef Name="MADK" />
+    </Key>
+    <Property Name="MADK" Type="int" Nullable="false" />
+    <Property Name="CMND" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="NGAYDK" Type="datetime" Nullable="false" />
+    <Property Name="TRINHDO" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="HOTEN" Type="nvarchar" MaxLength="50" />
+    <Property Name="GIOITINH" Type="nvarchar" MaxLength="50" />
+    <Property Name="NGAYSINH" Type="datetime" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="50" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <Association Name="FK_DSGVTrongPhongThi_GiaoVien">
+    <End Role="GiaoVien" Type="Self.GiaoVien" Multiplicity="1" />
+    <End Role="DSGVTrongPhongThi" Type="Self.DSGVTrongPhongThi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="GiaoVien">
+        <PropertyRef Name="MAGV" />
+      </Principal>
+      <Dependent Role="DSGVTrongPhongThi">
+        <PropertyRef Name="MAGV" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DSGVTrongPhongThi_PhongThi">
+    <End Role="PhongThi" Type="Self.PhongThi" Multiplicity="1" />
+    <End Role="DSGVTrongPhongThi" Type="Self.DSGVTrongPhongThi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhongThi">
+        <PropertyRef Name="MAPHONGTHI" />
+      </Principal>
+      <Dependent Role="DSGVTrongPhongThi">
+        <PropertyRef Name="MAPHONGTHI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DSThiSinhTrongPhongThi_PhongThi">
+    <End Role="PhongThi" Type="Self.PhongThi" Multiplicity="1" />
+    <End Role="DSThiSinhTrongPhongThi" Type="Self.DSThiSinhTrongPhongThi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PhongThi">
+        <PropertyRef Name="MAPHONGTHI" />
+      </Principal>
+      <Dependent Role="DSThiSinhTrongPhongThi">
+        <PropertyRef Name="MAPHONGTHI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DSThiSinhTrongPhongThi_ThiSinhDK">
+    <End Role="ThiSinhDK" Type="Self.ThiSinhDK" Multiplicity="1" />
+    <End Role="DSThiSinhTrongPhongThi" Type="Self.DSThiSinhTrongPhongThi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThiSinhDK">
+        <PropertyRef Name="MADK" />
+      </Principal>
+      <Dependent Role="DSThiSinhTrongPhongThi">
+        <PropertyRef Name="MADK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PhongThi_KhoaThi">
+    <End Role="KhoaThi" Type="Self.KhoaThi" Multiplicity="1" />
+    <End Role="PhongThi" Type="Self.PhongThi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="KhoaThi">
+        <PropertyRef Name="MAKHOATHI" />
+      </Principal>
+      <Dependent Role="PhongThi">
+        <PropertyRef Name="MAKHOATHI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TTANModelStoreContainer">
+    <EntitySet Name="DSGVTrongPhongThi" EntityType="Self.DSGVTrongPhongThi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DSThiSinhTrongPhongThi" EntityType="Self.DSThiSinhTrongPhongThi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GiaoVien" EntityType="Self.GiaoVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="KhoaThi" EntityType="Self.KhoaThi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PhongThi" EntityType="Self.PhongThi" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ThiSinhDK" EntityType="Self.ThiSinhDK" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_DSGVTrongPhongThi_GiaoVien" Association="Self.FK_DSGVTrongPhongThi_GiaoVien">
+      <End Role="GiaoVien" EntitySet="GiaoVien" />
+      <End Role="DSGVTrongPhongThi" EntitySet="DSGVTrongPhongThi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DSGVTrongPhongThi_PhongThi" Association="Self.FK_DSGVTrongPhongThi_PhongThi">
+      <End Role="PhongThi" EntitySet="PhongThi" />
+      <End Role="DSGVTrongPhongThi" EntitySet="DSGVTrongPhongThi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DSThiSinhTrongPhongThi_PhongThi" Association="Self.FK_DSThiSinhTrongPhongThi_PhongThi">
+      <End Role="PhongThi" EntitySet="PhongThi" />
+      <End Role="DSThiSinhTrongPhongThi" EntitySet="DSThiSinhTrongPhongThi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DSThiSinhTrongPhongThi_ThiSinhDK" Association="Self.FK_DSThiSinhTrongPhongThi_ThiSinhDK">
+      <End Role="ThiSinhDK" EntitySet="ThiSinhDK" />
+      <End Role="DSThiSinhTrongPhongThi" EntitySet="DSThiSinhTrongPhongThi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PhongThi_KhoaThi" Association="Self.FK_PhongThi_KhoaThi">
+      <End Role="KhoaThi" EntitySet="KhoaThi" />
+      <End Role="PhongThi" EntitySet="PhongThi" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

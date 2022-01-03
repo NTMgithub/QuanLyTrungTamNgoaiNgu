@@ -1,0 +1,9 @@
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\DAL\bin\Debug\DAL.dll.config
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\DAL\bin\Debug\DAL.dll
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\DAL\bin\Debug\DAL.pdb
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\DAL\bin\Debug\EntityFramework.dll
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\DAL\bin\Debug\EntityFramework.xml
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\DAL\obj\Debug\DAL.dll
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\DAL\obj\Debug\DAL.pdb

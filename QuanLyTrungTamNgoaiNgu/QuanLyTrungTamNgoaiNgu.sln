@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuanLyTrungTamNgoaiNgu", "Q
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "..\DAL\DAL.csproj", "{B7A1679F-ED42-4649-ACAD-662B1B6310FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "..\BUS\BUS.csproj", "{6FEAB5FC-D778-48CE-B2B5-122A2F628CFF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{B7A1679F-ED42-4649-ACAD-662B1B6310FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7A1679F-ED42-4649-ACAD-662B1B6310FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7A1679F-ED42-4649-ACAD-662B1B6310FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FEAB5FC-D778-48CE-B2B5-122A2F628CFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FEAB5FC-D778-48CE-B2B5-122A2F628CFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FEAB5FC-D778-48CE-B2B5-122A2F628CFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FEAB5FC-D778-48CE-B2B5-122A2F628CFF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
