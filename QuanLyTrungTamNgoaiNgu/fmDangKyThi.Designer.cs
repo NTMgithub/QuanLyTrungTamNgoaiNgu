@@ -48,10 +48,14 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel11 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.dateTimePickerNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.label10 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
             this.comboBoxGioiTinh = new System.Windows.Forms.ComboBox();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.dateTimePickerNgayDK = new System.Windows.Forms.DateTimePicker();
+            this.label12 = new System.Windows.Forms.Label();
             this.buttonRefresh = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -59,8 +63,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.label2 = new System.Windows.Forms.Label();
             this.btnTaoMoi = new System.Windows.Forms.Button();
             this.dataGridView_thiSinhDK = new System.Windows.Forms.DataGridView();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
             this.STT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDangKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,8 +73,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateTimePickerNgaySinh = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerNgayDK = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -82,9 +82,9 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel12.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_thiSinhDK)).BeginInit();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -288,6 +288,20 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel12.Size = new System.Drawing.Size(400, 64);
             this.panel12.TabIndex = 4;
             // 
+            // dateTimePickerNgaySinh
+            // 
+            this.dateTimePickerNgaySinh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerNgaySinh.CustomFormat = "";
+            this.dateTimePickerNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.dateTimePickerNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerNgaySinh.Location = new System.Drawing.Point(143, 16);
+            this.dateTimePickerNgaySinh.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.dateTimePickerNgaySinh.Name = "dateTimePickerNgaySinh";
+            this.dateTimePickerNgaySinh.Size = new System.Drawing.Size(242, 32);
+            this.dateTimePickerNgaySinh.TabIndex = 13;
+            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -344,6 +358,41 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel14.Size = new System.Drawing.Size(1588, 880);
             this.panel14.TabIndex = 3;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.dateTimePickerNgayDK);
+            this.panel4.Controls.Add(this.label12);
+            this.panel4.Location = new System.Drawing.Point(1161, 231);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(400, 64);
+            this.panel4.TabIndex = 12;
+            // 
+            // dateTimePickerNgayDK
+            // 
+            this.dateTimePickerNgayDK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dateTimePickerNgayDK.CustomFormat = "";
+            this.dateTimePickerNgayDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.dateTimePickerNgayDK.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePickerNgayDK.Location = new System.Drawing.Point(154, 16);
+            this.dateTimePickerNgayDK.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
+            this.dateTimePickerNgayDK.Name = "dateTimePickerNgayDK";
+            this.dateTimePickerNgayDK.Size = new System.Drawing.Size(242, 32);
+            this.dateTimePickerNgayDK.TabIndex = 14;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.label12.Location = new System.Drawing.Point(15, 16);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(145, 26);
+            this.label12.TabIndex = 0;
+            this.label12.Text = "Ngày đăng ký";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
+            // 
             // buttonRefresh
             // 
             this.buttonRefresh.BackColor = System.Drawing.Color.CornflowerBlue;
@@ -354,6 +403,7 @@ namespace QuanLyTrungTamNgoaiNgu
             this.buttonRefresh.TabIndex = 11;
             this.buttonRefresh.Text = "Refresh";
             this.buttonRefresh.UseVisualStyleBackColor = false;
+            this.buttonRefresh.Click += new System.EventHandler(this.buttonRefresh_Click);
             // 
             // label11
             // 
@@ -411,6 +461,7 @@ namespace QuanLyTrungTamNgoaiNgu
             this.btnTaoMoi.TabIndex = 6;
             this.btnTaoMoi.Text = "Tạo mới";
             this.btnTaoMoi.UseVisualStyleBackColor = false;
+            this.btnTaoMoi.Click += new System.EventHandler(this.btnTaoMoi_Click);
             // 
             // dataGridView_thiSinhDK
             // 
@@ -436,27 +487,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.dataGridView_thiSinhDK.RowTemplate.Height = 24;
             this.dataGridView_thiSinhDK.Size = new System.Drawing.Size(1533, 449);
             this.dataGridView_thiSinhDK.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.dateTimePickerNgayDK);
-            this.panel4.Controls.Add(this.label12);
-            this.panel4.Location = new System.Drawing.Point(1161, 231);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(400, 64);
-            this.panel4.TabIndex = 12;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label12.Location = new System.Drawing.Point(15, 16);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(145, 26);
-            this.label12.TabIndex = 0;
-            this.label12.Text = "Ngày đăng ký";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // STT
             // 
@@ -547,34 +577,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.SDT.ReadOnly = true;
             this.SDT.Width = 125;
             // 
-            // dateTimePickerNgaySinh
-            // 
-            this.dateTimePickerNgaySinh.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePickerNgaySinh.CustomFormat = "";
-            this.dateTimePickerNgaySinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.dateTimePickerNgaySinh.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerNgaySinh.Location = new System.Drawing.Point(143, 16);
-            this.dateTimePickerNgaySinh.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.dateTimePickerNgaySinh.Name = "dateTimePickerNgaySinh";
-            this.dateTimePickerNgaySinh.Size = new System.Drawing.Size(242, 32);
-            this.dateTimePickerNgaySinh.TabIndex = 13;
-            // 
-            // dateTimePickerNgayDK
-            // 
-            this.dateTimePickerNgayDK.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dateTimePickerNgayDK.CustomFormat = "";
-            this.dateTimePickerNgayDK.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.dateTimePickerNgayDK.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerNgayDK.Location = new System.Drawing.Point(154, 16);
-            this.dateTimePickerNgayDK.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.dateTimePickerNgayDK.Name = "dateTimePickerNgayDK";
-            this.dateTimePickerNgayDK.Size = new System.Drawing.Size(242, 32);
-            this.dateTimePickerNgayDK.TabIndex = 14;
-            // 
             // fmDangKyThi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -607,11 +609,11 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel13.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_thiSinhDK)).EndInit();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
