@@ -81,6 +81,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_DSThiSinhTrongPhongThi_ThiSinhDK">
+    <End Role="ThiSinhDK" Type="Self.ThiSinhDK" Multiplicity="1" />
+    <End Role="DSThiSinhTrongPhongThi" Type="Self.DSThiSinhTrongPhongThi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThiSinhDK">
+        <PropertyRef Name="MADK" />
+      </Principal>
+      <Dependent Role="DSThiSinhTrongPhongThi">
+        <PropertyRef Name="MADK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_GiaoVien_PhongThi">
     <End Role="PhongThi" Type="Self.PhongThi" Multiplicity="1" />
     <End Role="GiaoVien" Type="Self.GiaoVien" Multiplicity="*" />
@@ -116,6 +128,10 @@
     <EntitySet Name="ThiSinhDK" EntityType="Self.ThiSinhDK" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_DSThiSinhTrongPhongThi_PhongThi" Association="Self.FK_DSThiSinhTrongPhongThi_PhongThi">
       <End Role="PhongThi" EntitySet="PhongThi" />
+      <End Role="DSThiSinhTrongPhongThi" EntitySet="DSThiSinhTrongPhongThi" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DSThiSinhTrongPhongThi_ThiSinhDK" Association="Self.FK_DSThiSinhTrongPhongThi_ThiSinhDK">
+      <End Role="ThiSinhDK" EntitySet="ThiSinhDK" />
       <End Role="DSThiSinhTrongPhongThi" EntitySet="DSThiSinhTrongPhongThi" />
     </AssociationSet>
     <AssociationSet Name="FK_GiaoVien_PhongThi" Association="Self.FK_GiaoVien_PhongThi">
