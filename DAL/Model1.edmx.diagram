@@ -14,6 +14,7 @@
         <AssociationConnector Association="TTANModel.FK_DSThiSinhTrongPhongThi_PhongThi" ManuallyRouted="false" />
         <AssociationConnector Association="TTANModel.FK_GiaoVien_PhongThi" ManuallyRouted="false" />
         <AssociationConnector Association="TTANModel.FK_PhongThi_KhoaThi" ManuallyRouted="false" />
+        <AssociationConnector Association="TTANModel.FK_DSThiSinhTrongPhongThi_ThiSinhDK" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

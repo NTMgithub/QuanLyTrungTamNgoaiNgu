@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="TTANModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="TTANModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="DSThiSinhTrongPhongThi">
           <Key>
             <PropertyRef Name="MADK" />
@@ -86,6 +86,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_DSThiSinhTrongPhongThi_ThiSinhDK">
+          <End Role="ThiSinhDK" Type="Self.ThiSinhDK" Multiplicity="1" />
+          <End Role="DSThiSinhTrongPhongThi" Type="Self.DSThiSinhTrongPhongThi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThiSinhDK">
+              <PropertyRef Name="MADK" />
+            </Principal>
+            <Dependent Role="DSThiSinhTrongPhongThi">
+              <PropertyRef Name="MADK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_GiaoVien_PhongThi">
           <End Role="PhongThi" Type="Self.PhongThi" Multiplicity="1" />
           <End Role="GiaoVien" Type="Self.GiaoVien" Multiplicity="*" />
@@ -123,6 +135,10 @@
             <End Role="PhongThi" EntitySet="PhongThi" />
             <End Role="DSThiSinhTrongPhongThi" EntitySet="DSThiSinhTrongPhongThi" />
           </AssociationSet>
+          <AssociationSet Name="FK_DSThiSinhTrongPhongThi_ThiSinhDK" Association="Self.FK_DSThiSinhTrongPhongThi_ThiSinhDK">
+            <End Role="ThiSinhDK" EntitySet="ThiSinhDK" />
+            <End Role="DSThiSinhTrongPhongThi" EntitySet="DSThiSinhTrongPhongThi" />
+          </AssociationSet>
           <AssociationSet Name="FK_GiaoVien_PhongThi" Association="Self.FK_GiaoVien_PhongThi">
             <End Role="PhongThi" EntitySet="PhongThi" />
             <End Role="GiaoVien" EntitySet="GiaoVien" />
@@ -132,8 +148,7 @@
             <End Role="PhongThi" EntitySet="PhongThi" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="TTANModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -152,6 +167,7 @@
           <Property Name="DIEMVIET" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="DIEMDOC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="PhongThi" Relationship="Self.FK_DSThiSinhTrongPhongThi_PhongThi" FromRole="DSThiSinhTrongPhongThi" ToRole="PhongThi" />
+          <NavigationProperty Name="ThiSinhDK" Relationship="TTANModel.FK_DSThiSinhTrongPhongThi_ThiSinhDK" FromRole="DSThiSinhTrongPhongThi" ToRole="ThiSinhDK" />
         </EntityType>
         <EntityType Name="GiaoVien">
           <Key>
@@ -209,6 +225,7 @@
           <Property Name="NGAYSINH" Type="DateTime" Precision="3" />
           <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="DSThiSinhTrongPhongThis" Relationship="TTANModel.FK_DSThiSinhTrongPhongThi_ThiSinhDK" FromRole="ThiSinhDK" ToRole="DSThiSinhTrongPhongThi" />
         </EntityType>
         <Association Name="FK_DSThiSinhTrongPhongThi_PhongThi">
           <End Role="PhongThi" Type="Self.PhongThi" Multiplicity="1" />
@@ -269,7 +286,23 @@
             <End Role="KhoaThi" EntitySet="KhoaThis" />
             <End Role="PhongThi" EntitySet="PhongThis" />
           </AssociationSet>
+          <AssociationSet Name="FK_DSThiSinhTrongPhongThi_ThiSinhDK" Association="TTANModel.FK_DSThiSinhTrongPhongThi_ThiSinhDK">
+            <End Role="ThiSinhDK" EntitySet="ThiSinhDKs" />
+            <End Role="DSThiSinhTrongPhongThi" EntitySet="DSThiSinhTrongPhongThis" />
+          </AssociationSet>
         </EntityContainer>
+        <Association Name="FK_DSThiSinhTrongPhongThi_ThiSinhDK">
+          <End Type="TTANModel.ThiSinhDK" Role="ThiSinhDK" Multiplicity="1" />
+          <End Type="TTANModel.DSThiSinhTrongPhongThi" Role="DSThiSinhTrongPhongThi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ThiSinhDK">
+              <PropertyRef Name="MADK" />
+            </Principal>
+            <Dependent Role="DSThiSinhTrongPhongThi">
+              <PropertyRef Name="MADK" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->

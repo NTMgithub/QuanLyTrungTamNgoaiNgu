@@ -20,11 +20,11 @@ namespace QuanLyTrungTamNgoaiNgu
         }
         public void createThiSinh()
         {
-            if (!String.IsNullOrWhiteSpace(textBoxHoTen.Text)) 
+            if (!String.IsNullOrWhiteSpace(textBoxHoTen.Text))
             {
                 if (!String.IsNullOrWhiteSpace(textBoxCMND.Text))
                 {
-                    if (!String.IsNullOrWhiteSpace(textBoxEmail.Text)) 
+                    if (!String.IsNullOrWhiteSpace(textBoxEmail.Text))
                     {
                         if (!String.IsNullOrWhiteSpace(textBoxSoDienThoai.Text))
                         {
@@ -82,9 +82,9 @@ namespace QuanLyTrungTamNgoaiNgu
                 MessageBox.Show("Vui lòng nhập họ tên!", "Thông báo!");
                 textBoxHoTen.Focus();
             }
-            
 
-          
+
+
         }
 
         private void ThemThiSinh()
@@ -139,7 +139,7 @@ namespace QuanLyTrungTamNgoaiNgu
             ThemThiSinh();
         }
 
-       
+
 
         private void buttonRefresh_Click(object sender, EventArgs e)
         {
@@ -158,5 +158,5 @@ namespace QuanLyTrungTamNgoaiNgu
             ControlPaint.DrawBorder(e.Graphics, this.panel5.ClientRectangle, Color.Black, ButtonBorderStyle.Solid);
         }
     }
-    
+
 }

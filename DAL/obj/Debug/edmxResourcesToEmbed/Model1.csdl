@@ -15,6 +15,7 @@
     <Property Name="DIEMVIET" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="DIEMDOC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="PhongThi" Relationship="Self.FK_DSThiSinhTrongPhongThi_PhongThi" FromRole="DSThiSinhTrongPhongThi" ToRole="PhongThi" />
+    <NavigationProperty Name="ThiSinhDK" Relationship="TTANModel.FK_DSThiSinhTrongPhongThi_ThiSinhDK" FromRole="DSThiSinhTrongPhongThi" ToRole="ThiSinhDK" />
   </EntityType>
   <EntityType Name="GiaoVien">
     <Key>
@@ -72,6 +73,7 @@
     <Property Name="NGAYSINH" Type="DateTime" Precision="3" />
     <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="DSThiSinhTrongPhongThis" Relationship="TTANModel.FK_DSThiSinhTrongPhongThi_ThiSinhDK" FromRole="ThiSinhDK" ToRole="DSThiSinhTrongPhongThi" />
   </EntityType>
   <Association Name="FK_DSThiSinhTrongPhongThi_PhongThi">
     <End Role="PhongThi" Type="Self.PhongThi" Multiplicity="1" />
@@ -132,5 +134,21 @@
       <End Role="KhoaThi" EntitySet="KhoaThis" />
       <End Role="PhongThi" EntitySet="PhongThis" />
     </AssociationSet>
+    <AssociationSet Name="FK_DSThiSinhTrongPhongThi_ThiSinhDK" Association="TTANModel.FK_DSThiSinhTrongPhongThi_ThiSinhDK">
+      <End Role="ThiSinhDK" EntitySet="ThiSinhDKs" />
+      <End Role="DSThiSinhTrongPhongThi" EntitySet="DSThiSinhTrongPhongThis" />
+    </AssociationSet>
   </EntityContainer>
+  <Association Name="FK_DSThiSinhTrongPhongThi_ThiSinhDK">
+    <End Type="TTANModel.ThiSinhDK" Role="ThiSinhDK" Multiplicity="1" />
+    <End Type="TTANModel.DSThiSinhTrongPhongThi" Role="DSThiSinhTrongPhongThi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThiSinhDK">
+        <PropertyRef Name="MADK" />
+      </Principal>
+      <Dependent Role="DSThiSinhTrongPhongThi">
+        <PropertyRef Name="MADK" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>
