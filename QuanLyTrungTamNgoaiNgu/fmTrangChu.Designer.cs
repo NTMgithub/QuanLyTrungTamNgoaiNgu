@@ -34,14 +34,13 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel1 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonLapKhoaThi = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnXepGiaoVien = new System.Windows.Forms.Button();
             this.btnQuanLyDiem = new System.Windows.Forms.Button();
-            this.btnXepPhongThi = new System.Windows.Forms.Button();
-            this.btnLapPhongThi = new System.Windows.Forms.Button();
             this.btnTraCuu = new System.Windows.Forms.Button();
             this.btnDangKyDuThi = new System.Windows.Forms.Button();
-            this.buttonLapKhoaThi = new System.Windows.Forms.Button();
+            this.btnXepPhongThi = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -97,7 +96,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel2.Controls.Add(this.btnXepGiaoVien);
             this.panel2.Controls.Add(this.btnQuanLyDiem);
             this.panel2.Controls.Add(this.btnXepPhongThi);
-            this.panel2.Controls.Add(this.btnLapPhongThi);
             this.panel2.Controls.Add(this.btnTraCuu);
             this.panel2.Controls.Add(this.btnDangKyDuThi);
             this.panel2.Location = new System.Drawing.Point(3, 79);
@@ -105,12 +103,25 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel2.Size = new System.Drawing.Size(855, 567);
             this.panel2.TabIndex = 3;
             // 
+            // buttonLapKhoaThi
+            // 
+            this.buttonLapKhoaThi.BackColor = System.Drawing.Color.White;
+            this.buttonLapKhoaThi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonLapKhoaThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.buttonLapKhoaThi.Location = new System.Drawing.Point(59, 157);
+            this.buttonLapKhoaThi.Name = "buttonLapKhoaThi";
+            this.buttonLapKhoaThi.Size = new System.Drawing.Size(319, 81);
+            this.buttonLapKhoaThi.TabIndex = 7;
+            this.buttonLapKhoaThi.Text = "Khóa thi";
+            this.buttonLapKhoaThi.UseVisualStyleBackColor = false;
+            this.buttonLapKhoaThi.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(9, 537);
+            this.panel5.Location = new System.Drawing.Point(-2, 439);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(853, 3);
+            this.panel5.Size = new System.Drawing.Size(864, 2);
             this.panel5.TabIndex = 6;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -119,7 +130,7 @@ namespace QuanLyTrungTamNgoaiNgu
             this.btnXepGiaoVien.BackColor = System.Drawing.Color.White;
             this.btnXepGiaoVien.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnXepGiaoVien.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.btnXepGiaoVien.Location = new System.Drawing.Point(480, 284);
+            this.btnXepGiaoVien.Location = new System.Drawing.Point(476, 157);
             this.btnXepGiaoVien.Name = "btnXepGiaoVien";
             this.btnXepGiaoVien.Size = new System.Drawing.Size(319, 81);
             this.btnXepGiaoVien.TabIndex = 5;
@@ -132,7 +143,7 @@ namespace QuanLyTrungTamNgoaiNgu
             this.btnQuanLyDiem.BackColor = System.Drawing.Color.White;
             this.btnQuanLyDiem.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnQuanLyDiem.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.btnQuanLyDiem.Location = new System.Drawing.Point(59, 415);
+            this.btnQuanLyDiem.Location = new System.Drawing.Point(476, 284);
             this.btnQuanLyDiem.Name = "btnQuanLyDiem";
             this.btnQuanLyDiem.Size = new System.Drawing.Size(319, 81);
             this.btnQuanLyDiem.TabIndex = 4;
@@ -140,38 +151,12 @@ namespace QuanLyTrungTamNgoaiNgu
             this.btnQuanLyDiem.UseVisualStyleBackColor = false;
             this.btnQuanLyDiem.Click += new System.EventHandler(this.btnQuanLyDiem_Click);
             // 
-            // btnXepPhongThi
-            // 
-            this.btnXepPhongThi.BackColor = System.Drawing.Color.White;
-            this.btnXepPhongThi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXepPhongThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.btnXepPhongThi.Location = new System.Drawing.Point(59, 284);
-            this.btnXepPhongThi.Name = "btnXepPhongThi";
-            this.btnXepPhongThi.Size = new System.Drawing.Size(319, 81);
-            this.btnXepPhongThi.TabIndex = 3;
-            this.btnXepPhongThi.Text = "Xếp phòng thi";
-            this.btnXepPhongThi.UseVisualStyleBackColor = false;
-            this.btnXepPhongThi.Click += new System.EventHandler(this.btnXepPhongThi_Click);
-            // 
-            // btnLapPhongThi
-            // 
-            this.btnLapPhongThi.BackColor = System.Drawing.Color.White;
-            this.btnLapPhongThi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLapPhongThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.btnLapPhongThi.Location = new System.Drawing.Point(480, 157);
-            this.btnLapPhongThi.Name = "btnLapPhongThi";
-            this.btnLapPhongThi.Size = new System.Drawing.Size(319, 81);
-            this.btnLapPhongThi.TabIndex = 2;
-            this.btnLapPhongThi.Text = "Lập phòng thi";
-            this.btnLapPhongThi.UseVisualStyleBackColor = false;
-            this.btnLapPhongThi.Click += new System.EventHandler(this.btnLapPhongThi_Click);
-            // 
             // btnTraCuu
             // 
             this.btnTraCuu.BackColor = System.Drawing.Color.White;
             this.btnTraCuu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTraCuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.btnTraCuu.Location = new System.Drawing.Point(480, 29);
+            this.btnTraCuu.Location = new System.Drawing.Point(59, 284);
             this.btnTraCuu.Name = "btnTraCuu";
             this.btnTraCuu.Size = new System.Drawing.Size(319, 81);
             this.btnTraCuu.TabIndex = 1;
@@ -193,29 +178,29 @@ namespace QuanLyTrungTamNgoaiNgu
             this.btnDangKyDuThi.UseVisualStyleBackColor = false;
             this.btnDangKyDuThi.Click += new System.EventHandler(this.button1_Click);
             // 
-            // buttonLapKhoaThi
+            // btnXepPhongThi
             // 
-            this.buttonLapKhoaThi.BackColor = System.Drawing.Color.White;
-            this.buttonLapKhoaThi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonLapKhoaThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.buttonLapKhoaThi.Location = new System.Drawing.Point(59, 157);
-            this.buttonLapKhoaThi.Name = "buttonLapKhoaThi";
-            this.buttonLapKhoaThi.Size = new System.Drawing.Size(319, 81);
-            this.buttonLapKhoaThi.TabIndex = 7;
-            this.buttonLapKhoaThi.Text = "Lập khóa thi";
-            this.buttonLapKhoaThi.UseVisualStyleBackColor = false;
-            this.buttonLapKhoaThi.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnXepPhongThi.BackColor = System.Drawing.Color.White;
+            this.btnXepPhongThi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXepPhongThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.btnXepPhongThi.Location = new System.Drawing.Point(476, 29);
+            this.btnXepPhongThi.Name = "btnXepPhongThi";
+            this.btnXepPhongThi.Size = new System.Drawing.Size(319, 81);
+            this.btnXepPhongThi.TabIndex = 3;
+            this.btnXepPhongThi.Text = "Xếp phòng thi";
+            this.btnXepPhongThi.UseVisualStyleBackColor = false;
+            this.btnXepPhongThi.Click += new System.EventHandler(this.btnXepPhongThi_Click);
             // 
             // fmTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 645);
+            this.ClientSize = new System.Drawing.Size(861, 541);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "fmTrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fmTrangChu";
+            this.Text = "Trang chủ | App quản lý trung tâm ngoại ngữ";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -232,11 +217,10 @@ namespace QuanLyTrungTamNgoaiNgu
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnXepGiaoVien;
         private System.Windows.Forms.Button btnQuanLyDiem;
-        private System.Windows.Forms.Button btnXepPhongThi;
-        private System.Windows.Forms.Button btnLapPhongThi;
         private System.Windows.Forms.Button btnTraCuu;
         private System.Windows.Forms.Button btnDangKyDuThi;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button buttonLapKhoaThi;
+        private System.Windows.Forms.Button btnXepPhongThi;
     }
 }
