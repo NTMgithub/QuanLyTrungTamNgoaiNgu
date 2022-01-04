@@ -21,7 +21,7 @@ namespace DAL
         }
     
         public string MAPHONGTHI { get; set; }
-        public string MAKHOATHI { get; set; }
+        public int MAKHOATHI { get; set; }
         public string TRINHDO { get; set; }
     
         public virtual ICollection<DSThiSinhTrongPhongThi> DSThiSinhTrongPhongThis { get; set; }
