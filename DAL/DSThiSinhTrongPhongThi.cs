@@ -24,5 +24,6 @@ namespace DAL
         public string DIEMDOC { get; set; }
     
         public virtual PhongThi PhongThi { get; set; }
+        public virtual ThiSinhDK ThiSinhDK { get; set; }
     }
 }
