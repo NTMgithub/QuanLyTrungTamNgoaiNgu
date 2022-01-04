@@ -16,15 +16,15 @@ namespace DAL
     {
         public PhongThi()
         {
-            this.DSGVTrongPhongThis = new HashSet<DSGVTrongPhongThi>();
             this.DSThiSinhTrongPhongThis = new HashSet<DSThiSinhTrongPhongThi>();
+            this.GiaoViens = new HashSet<GiaoVien>();
         }
     
         public string MAPHONGTHI { get; set; }
         public string MAKHOATHI { get; set; }
     
-        public virtual ICollection<DSGVTrongPhongThi> DSGVTrongPhongThis { get; set; }
         public virtual ICollection<DSThiSinhTrongPhongThi> DSThiSinhTrongPhongThis { get; set; }
+        public virtual ICollection<GiaoVien> GiaoViens { get; set; }
         public virtual KhoaThi KhoaThi { get; set; }
     }
 }
