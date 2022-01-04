@@ -25,7 +25,6 @@ namespace DAL
             throw new UnintentionalCodeFirstException();
         }
     
-        public DbSet<DSGVTrongPhongThi> DSGVTrongPhongThis { get; set; }
         public DbSet<DSThiSinhTrongPhongThi> DSThiSinhTrongPhongThis { get; set; }
         public DbSet<GiaoVien> GiaoViens { get; set; }
         public DbSet<KhoaThi> KhoaThis { get; set; }

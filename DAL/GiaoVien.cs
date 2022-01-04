@@ -14,14 +14,10 @@ namespace DAL
     
     public partial class GiaoVien
     {
-        public GiaoVien()
-        {
-            this.DSGVTrongPhongThis = new HashSet<DSGVTrongPhongThi>();
-        }
-    
         public string MAGV { get; set; }
         public string TENGV { get; set; }
+        public string MAPHONGTHI { get; set; }
     
-        public virtual ICollection<DSGVTrongPhongThi> DSGVTrongPhongThis { get; set; }
+        public virtual PhongThi PhongThi { get; set; }
     }
 }
