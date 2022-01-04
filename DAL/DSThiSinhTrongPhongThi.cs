@@ -16,6 +16,7 @@ namespace DAL
     {
         public int MADK { get; set; }
         public string MAPHONGTHI { get; set; }
+        public string MAKHOATHI { get; set; }
         public string SBD { get; set; }
         public string DIEMNGHE { get; set; }
         public string DIEMNOI { get; set; }
@@ -23,6 +24,5 @@ namespace DAL
         public string DIEMDOC { get; set; }
     
         public virtual PhongThi PhongThi { get; set; }
-        public virtual ThiSinhDK ThiSinhDK { get; set; }
     }
 }

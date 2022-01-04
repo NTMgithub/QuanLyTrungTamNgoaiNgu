@@ -14,9 +14,10 @@ namespace DAL
     
     public partial class GiaoVien
     {
-        public string MAGV { get; set; }
+        public int ID { get; set; }
         public string TENGV { get; set; }
         public string MAPHONGTHI { get; set; }
+        public string MAKHOATHI { get; set; }
     
         public virtual PhongThi PhongThi { get; set; }
     }
