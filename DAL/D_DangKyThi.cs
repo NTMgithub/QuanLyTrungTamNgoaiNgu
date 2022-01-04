@@ -8,22 +8,10 @@ namespace DAL
     {
         private TTANEntities TTAN = new TTANEntities();
 
-        public List<dynamic> GetThiSinhDKs()
+        public List<ThiSinhDK> GetThiSinhDKs()
         {
-            var dsThiSinhDk = from tbThiSinh in TTAN.ThiSinhDKs
-                              select new
-                              {
-                                  MADK = tbThiSinh.MADK,
-                                  CMND = tbThiSinh.CMND,
-                                  NGAYDK = tbThiSinh.NGAYDK,
-                                  TRINHDO = tbThiSinh.TRINHDO,
-                                  HOTEN = tbThiSinh.HOTEN,
-                                  GIOITINH = tbThiSinh.GIOITINH,
-                                  NGAYSINH = tbThiSinh.NGAYSINH,
-                                  SDT = tbThiSinh.SDT,
-                                  EMAIL = tbThiSinh.EMAIL
-                              };
-            return dsThiSinhDk.ToList<dynamic>();
+            var dsThiSinhDk = TTAN.ThiSinhDKs;
+            return dsThiSinhDk.ToList<ThiSinhDK>();
         }
 
         public bool ThemThiSinh(ThiSinhDK thiSinh)

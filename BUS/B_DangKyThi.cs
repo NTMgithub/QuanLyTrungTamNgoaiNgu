@@ -10,7 +10,7 @@ namespace BUS
     public class B_DangKyThi
     {
         D_DangKyThi d_DangKy = new D_DangKyThi();
-        public List<dynamic> GetThiSinhDKs()
+        public List<ThiSinhDK> GetThiSinhDKs()
         {
             return d_DangKy.GetThiSinhDKs();
         }

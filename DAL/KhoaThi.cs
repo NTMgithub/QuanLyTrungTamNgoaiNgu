@@ -21,8 +21,7 @@ namespace DAL
     
         public string MAKHOATHI { get; set; }
         public string TENKHOATHI { get; set; }
-        public string TRINHDO { get; set; }
-        public System.DateTime NGAYTHI { get; set; }
+        public Nullable<System.DateTime> NGAYTHI { get; set; }
     
         public virtual ICollection<PhongThi> PhongThis { get; set; }
     }

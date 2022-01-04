@@ -14,11 +14,6 @@ namespace DAL
     
     public partial class ThiSinhDK
     {
-        public ThiSinhDK()
-        {
-            this.DSThiSinhTrongPhongThis = new HashSet<DSThiSinhTrongPhongThi>();
-        }
-    
         public int MADK { get; set; }
         public string CMND { get; set; }
         public System.DateTime NGAYDK { get; set; }
@@ -28,7 +23,5 @@ namespace DAL
         public Nullable<System.DateTime> NGAYSINH { get; set; }
         public string SDT { get; set; }
         public string EMAIL { get; set; }
-    
-        public virtual ICollection<DSThiSinhTrongPhongThi> DSThiSinhTrongPhongThis { get; set; }
     }
 }

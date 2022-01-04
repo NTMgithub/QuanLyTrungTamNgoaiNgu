@@ -48,9 +48,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DSGVTrongPhongThi.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="DSThiSinhTrongPhongThi.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
