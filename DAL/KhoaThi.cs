@@ -19,7 +19,7 @@ namespace DAL
             this.PhongThis = new HashSet<PhongThi>();
         }
     
-        public string MAKHOATHI { get; set; }
+        public int MAKHOATHI { get; set; }
         public string TENKHOATHI { get; set; }
         public Nullable<System.DateTime> NGAYTHI { get; set; }
     
