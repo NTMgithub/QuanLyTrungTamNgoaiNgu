@@ -16,10 +16,23 @@ namespace QuanLyTrungTamNgoaiNgu
     {
         B_KhoaThi B_KhoaThi = new B_KhoaThi();
         B_DSThiSinhTrongPhongThi B_DSThiSinhTrongPhongThi = new B_DSThiSinhTrongPhongThi();
+        B_XepPhongThi B_XepPhongThi = new B_XepPhongThi();
         public fmQuanLyDiem()
         {
             InitializeComponent();
             LoadComboboxKhoaThi();
+
+
+            LoadComboboxPhongThi();
+        }
+
+        private void LoadComboboxPhongThi()
+        {
+            string makhoathi = comboBoxKhoa.SelectedValue.ToString();
+            // comboBoxPhong.DataSource = B_XepPhongThi.GetPhongThis(makhoathi);
+            comboBoxPhong.DisplayMember = "MAPHONGTHI";
+            comboBoxPhong.ValueMember = "MAPHONGTHI";
+
         }
 
         private void LoadComboboxKhoaThi()
@@ -37,17 +50,20 @@ namespace QuanLyTrungTamNgoaiNgu
 
         private void comboBoxKhoa_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string makhoathi = comboBoxKhoa.SelectedValue.ToString();
-            //  comboBoxPhong.DataSource = B_PhongThi.GetPhongThis(makhoathi);
-            comboBoxPhong.DisplayMember = "MAPHONGTHI";
-            comboBoxPhong.ValueMember = "MAPHONGTHI";
+            // string makhoathi = comboBoxKhoa.SelectedValue.ToString();
+            //MessageBox.Show(makhoathi, "thong bao");
+            //comboBoxPhong.DataSource = B_XepPhongThi.GetPhongThis(makhoathi);
+            //comboBoxPhong.DisplayMember = "MAPHONGTHI";
+            //comboBoxPhong.ValueMember = "MAPHONGTHI";
+            MessageBox.Show(comboBoxKhoa.SelectedValue.ToString(), "thong bao");
         }
 
         private void comboBoxPhong_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int makhoathi = int.Parse(comboBoxKhoa.SelectedValue.ToString());
+            /*int makhoathi = int.Parse(comboBoxKhoa.SelectedValue.ToString());
             string maphongthi = comboBoxPhong.SelectedValue.ToString();
             dataGridViewbangDiemThiSinh.DataSource = B_DSThiSinhTrongPhongThi.GetDSThiSinhTrongPhongThies(makhoathi, maphongthi);
+        */
         }
     }
 }

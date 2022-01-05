@@ -20,10 +20,10 @@ namespace QuanLyTrungTamNgoaiNgu
         public fmXepPhongThi()
         {
             InitializeComponent();
-            
+
             HienThiComboKhoaThi();
             comboBoxTrinhDo.SelectedIndex = 0;
-           
+
             HienThiDSThiSinhDaCoPhongThi();
             HienThiDSThiSinhChuaCoPhongThi();
 
@@ -64,12 +64,12 @@ namespace QuanLyTrungTamNgoaiNgu
                     List<ThiSinhDK> listThiSinh = b_XepPhongThi.GetDSThiSinhChuaDangKy(monthNgayThi, yearNgayThi, trinhDoValue);
 
                     dataGridView_ChuaCoPhongThi.DataSource = listThiSinh;
-                   
+
                 }
-               
+
             }
-            
-             
+
+
         }
 
 
@@ -172,7 +172,7 @@ namespace QuanLyTrungTamNgoaiNgu
             {
                 MessageBox.Show("Danh sách trống", "Thông báo!");
             }
-            
+
 
         }
 
@@ -207,7 +207,7 @@ namespace QuanLyTrungTamNgoaiNgu
         {
 
             HienThiDSThiSinhChuaCoPhongThi();
-            
+
         }
 
         private void comboBoxTrinhDo_SelectedIndexChanged(object sender, EventArgs e)
@@ -222,7 +222,7 @@ namespace QuanLyTrungTamNgoaiNgu
             {
                 XepPhongThi();
             }
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
