@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="B_XepPhongThi.cs" />
     <Compile Include="B_DangKyThi.cs" />
+    <Compile Include="B_DSThiSinhTrongPhongThi.cs" />
     <Compile Include="B_KhoaThi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

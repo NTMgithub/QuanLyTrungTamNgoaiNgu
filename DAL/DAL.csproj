@@ -53,6 +53,7 @@
     </Compile>
     <Compile Include="D_XepPhongThi.cs" />
     <Compile Include="D_DangKyThi.cs" />
+    <Compile Include="D_DSThiSinhTrongPhongThi.cs" />
     <Compile Include="D_KhoaThi.cs" />
     <Compile Include="GiaoVien.cs">
       <DependentUpon>Model1.tt</DependentUpon>
