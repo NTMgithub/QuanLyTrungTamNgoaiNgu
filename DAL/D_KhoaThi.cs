@@ -15,6 +15,13 @@ namespace DAL
             return TTAN.KhoaThis.ToList<KhoaThi>();
         }
 
+        public List<KhoaThi> GetNgayDangKyKhoaThi(int maKhoaThi)
+        {
+            var resultList = TTAN.KhoaThis.Where(t => t.MAKHOATHI == maKhoaThi);
+
+            return resultList.ToList<KhoaThi>();
+        }
+
         public bool ThemKhoaThi(KhoaThi khoaThi)
         {
             {

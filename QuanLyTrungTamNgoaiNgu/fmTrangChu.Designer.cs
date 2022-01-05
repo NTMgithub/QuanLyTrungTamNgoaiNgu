@@ -38,9 +38,9 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel5 = new System.Windows.Forms.Panel();
             this.btnXepGiaoVien = new System.Windows.Forms.Button();
             this.btnQuanLyDiem = new System.Windows.Forms.Button();
+            this.btnXepPhongThi = new System.Windows.Forms.Button();
             this.btnTraCuu = new System.Windows.Forms.Button();
             this.btnDangKyDuThi = new System.Windows.Forms.Button();
-            this.btnXepPhongThi = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -81,11 +81,11 @@ namespace QuanLyTrungTamNgoaiNgu
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label3.Location = new System.Drawing.Point(142, 10);
+            this.label3.Location = new System.Drawing.Point(98, 20);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(574, 46);
+            this.label3.Size = new System.Drawing.Size(682, 46);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Quản Lý Trung Tâm Ngoại Ngữ";
+            this.label3.Text = "QUẢN LÝ TRUNG TÂM NGOẠI NGỮ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
@@ -151,6 +151,19 @@ namespace QuanLyTrungTamNgoaiNgu
             this.btnQuanLyDiem.UseVisualStyleBackColor = false;
             this.btnQuanLyDiem.Click += new System.EventHandler(this.btnQuanLyDiem_Click);
             // 
+            // btnXepPhongThi
+            // 
+            this.btnXepPhongThi.BackColor = System.Drawing.Color.White;
+            this.btnXepPhongThi.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnXepPhongThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.btnXepPhongThi.Location = new System.Drawing.Point(476, 29);
+            this.btnXepPhongThi.Name = "btnXepPhongThi";
+            this.btnXepPhongThi.Size = new System.Drawing.Size(319, 81);
+            this.btnXepPhongThi.TabIndex = 3;
+            this.btnXepPhongThi.Text = "Xếp phòng thi";
+            this.btnXepPhongThi.UseVisualStyleBackColor = false;
+            this.btnXepPhongThi.Click += new System.EventHandler(this.btnXepPhongThi_Click);
+            // 
             // btnTraCuu
             // 
             this.btnTraCuu.BackColor = System.Drawing.Color.White;
@@ -177,19 +190,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.btnDangKyDuThi.Text = "Đăng ký thi";
             this.btnDangKyDuThi.UseVisualStyleBackColor = false;
             this.btnDangKyDuThi.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnXepPhongThi
-            // 
-            this.btnXepPhongThi.BackColor = System.Drawing.Color.White;
-            this.btnXepPhongThi.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnXepPhongThi.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
-            this.btnXepPhongThi.Location = new System.Drawing.Point(476, 29);
-            this.btnXepPhongThi.Name = "btnXepPhongThi";
-            this.btnXepPhongThi.Size = new System.Drawing.Size(319, 81);
-            this.btnXepPhongThi.TabIndex = 3;
-            this.btnXepPhongThi.Text = "Xếp phòng thi";
-            this.btnXepPhongThi.UseVisualStyleBackColor = false;
-            this.btnXepPhongThi.Click += new System.EventHandler(this.btnXepPhongThi_Click);
             // 
             // fmTrangChu
             // 
