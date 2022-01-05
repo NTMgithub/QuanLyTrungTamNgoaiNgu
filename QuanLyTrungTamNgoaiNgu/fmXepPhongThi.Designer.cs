@@ -30,6 +30,7 @@ namespace QuanLyTrungTamNgoaiNgu
         private void InitializeComponent()
         {
             this.panel14 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnLapNhanh = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -58,7 +59,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.ThoiGianThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel14.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -78,19 +78,35 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel14.Controls.Add(this.panel2);
             this.panel14.Controls.Add(this.dataGridView_ChuaCoPhongThi);
             this.panel14.Controls.Add(this.dataGridView_DaCoPhongThi);
-            this.panel14.Location = new System.Drawing.Point(0, 56);
+            this.panel14.Location = new System.Drawing.Point(0, 70);
+            this.panel14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1403, 739);
+            this.panel14.Size = new System.Drawing.Size(1578, 924);
             this.panel14.TabIndex = 5;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(1306, 356);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(171, 61);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Làm mới";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnLapNhanh
             // 
             this.btnLapNhanh.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnLapNhanh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLapNhanh.ForeColor = System.Drawing.Color.White;
-            this.btnLapNhanh.Location = new System.Drawing.Point(954, 29);
+            this.btnLapNhanh.Location = new System.Drawing.Point(1073, 36);
+            this.btnLapNhanh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLapNhanh.Name = "btnLapNhanh";
-            this.btnLapNhanh.Size = new System.Drawing.Size(160, 49);
+            this.btnLapNhanh.Size = new System.Drawing.Size(180, 61);
             this.btnLapNhanh.TabIndex = 13;
             this.btnLapNhanh.Text = "Xếp phòng";
             this.btnLapNhanh.UseVisualStyleBackColor = false;
@@ -100,9 +116,9 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 359);
+            this.label5.Location = new System.Drawing.Point(25, 449);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1366, 24);
+            this.label5.Size = new System.Drawing.Size(1623, 26);
             this.label5.TabIndex = 9;
             this.label5.Text = "________________________Danh sách thí sinh đã có phòng thi ______________________" +
     "____________________________________________________________";
@@ -111,9 +127,9 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(150, 79);
+            this.label4.Location = new System.Drawing.Point(169, 99);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(891, 24);
+            this.label4.Size = new System.Drawing.Size(1052, 26);
             this.label4.TabIndex = 2;
             this.label4.Text = "_________________ Danh sách thí sinh chưa có phòng thi __________________________" +
     "_____________";
@@ -122,9 +138,10 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.panel3.Controls.Add(this.comboKhoa);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(255, 29);
+            this.panel3.Location = new System.Drawing.Point(287, 36);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(332, 47);
+            this.panel3.Size = new System.Drawing.Size(374, 59);
             this.panel3.TabIndex = 8;
             // 
             // comboKhoa
@@ -132,11 +149,12 @@ namespace QuanLyTrungTamNgoaiNgu
             this.comboKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboKhoa.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboKhoa.FormattingEnabled = true;
-            this.comboKhoa.Location = new System.Drawing.Point(106, 9);
-            this.comboKhoa.MaximumSize = new System.Drawing.Size(220, 0);
-            this.comboKhoa.MinimumSize = new System.Drawing.Size(120, 0);
+            this.comboKhoa.Location = new System.Drawing.Point(119, 11);
+            this.comboKhoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboKhoa.MaximumSize = new System.Drawing.Size(247, 0);
+            this.comboKhoa.MinimumSize = new System.Drawing.Size(134, 0);
             this.comboKhoa.Name = "comboKhoa";
-            this.comboKhoa.Size = new System.Drawing.Size(206, 28);
+            this.comboKhoa.Size = new System.Drawing.Size(231, 33);
             this.comboKhoa.TabIndex = 1;
             this.comboKhoa.SelectedIndexChanged += new System.EventHandler(this.comboKhoa_SelectedIndexChanged);
             // 
@@ -144,9 +162,9 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(14, 15);
+            this.label3.Location = new System.Drawing.Point(16, 19);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(70, 18);
+            this.label3.Size = new System.Drawing.Size(84, 22);
             this.label3.TabIndex = 0;
             this.label3.Text = "Khóa thi";
             // 
@@ -154,9 +172,10 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.panel2.Controls.Add(this.comboBoxTrinhDo);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(641, 29);
+            this.panel2.Location = new System.Drawing.Point(721, 36);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(228, 47);
+            this.panel2.Size = new System.Drawing.Size(256, 59);
             this.panel2.TabIndex = 7;
             // 
             // comboBoxTrinhDo
@@ -167,11 +186,12 @@ namespace QuanLyTrungTamNgoaiNgu
             this.comboBoxTrinhDo.Items.AddRange(new object[] {
             "A2",
             "B1"});
-            this.comboBoxTrinhDo.Location = new System.Drawing.Point(81, 9);
-            this.comboBoxTrinhDo.MaximumSize = new System.Drawing.Size(220, 0);
-            this.comboBoxTrinhDo.MinimumSize = new System.Drawing.Size(120, 0);
+            this.comboBoxTrinhDo.Location = new System.Drawing.Point(91, 11);
+            this.comboBoxTrinhDo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.comboBoxTrinhDo.MaximumSize = new System.Drawing.Size(247, 0);
+            this.comboBoxTrinhDo.MinimumSize = new System.Drawing.Size(134, 0);
             this.comboBoxTrinhDo.Name = "comboBoxTrinhDo";
-            this.comboBoxTrinhDo.Size = new System.Drawing.Size(124, 28);
+            this.comboBoxTrinhDo.Size = new System.Drawing.Size(139, 33);
             this.comboBoxTrinhDo.TabIndex = 1;
             this.comboBoxTrinhDo.SelectedIndexChanged += new System.EventHandler(this.comboBoxTrinhDo_SelectedIndexChanged);
             // 
@@ -179,9 +199,9 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 15);
+            this.label2.Location = new System.Drawing.Point(3, 19);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 18);
+            this.label2.Size = new System.Drawing.Size(85, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Trình độ";
             // 
@@ -195,14 +215,15 @@ namespace QuanLyTrungTamNgoaiNgu
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
-            this.dataGridView_ChuaCoPhongThi.Location = new System.Drawing.Point(153, 111);
+            this.dataGridView_ChuaCoPhongThi.Location = new System.Drawing.Point(172, 139);
+            this.dataGridView_ChuaCoPhongThi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView_ChuaCoPhongThi.MultiSelect = false;
             this.dataGridView_ChuaCoPhongThi.Name = "dataGridView_ChuaCoPhongThi";
             this.dataGridView_ChuaCoPhongThi.ReadOnly = true;
             this.dataGridView_ChuaCoPhongThi.RowHeadersWidth = 51;
             this.dataGridView_ChuaCoPhongThi.RowTemplate.Height = 24;
             this.dataGridView_ChuaCoPhongThi.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView_ChuaCoPhongThi.Size = new System.Drawing.Size(961, 223);
+            this.dataGridView_ChuaCoPhongThi.Size = new System.Drawing.Size(1081, 279);
             this.dataGridView_ChuaCoPhongThi.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn2
@@ -260,11 +281,12 @@ namespace QuanLyTrungTamNgoaiNgu
             this.PhongThi,
             this.SBD,
             this.ThoiGianThi});
-            this.dataGridView_DaCoPhongThi.Location = new System.Drawing.Point(25, 389);
+            this.dataGridView_DaCoPhongThi.Location = new System.Drawing.Point(28, 486);
+            this.dataGridView_DaCoPhongThi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridView_DaCoPhongThi.Name = "dataGridView_DaCoPhongThi";
             this.dataGridView_DaCoPhongThi.RowHeadersWidth = 51;
             this.dataGridView_DaCoPhongThi.RowTemplate.Height = 24;
-            this.dataGridView_DaCoPhongThi.Size = new System.Drawing.Size(1353, 295);
+            this.dataGridView_DaCoPhongThi.Size = new System.Drawing.Size(1522, 369);
             this.dataGridView_DaCoPhongThi.TabIndex = 0;
             // 
             // MaDangKy
@@ -343,8 +365,9 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1403, 66);
+            this.panel1.Size = new System.Drawing.Size(1578, 82);
             this.panel1.TabIndex = 4;
             // 
             // label1
@@ -354,34 +377,22 @@ namespace QuanLyTrungTamNgoaiNgu
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(585, 8);
+            this.label1.Location = new System.Drawing.Point(658, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(253, 44);
+            this.label1.Size = new System.Drawing.Size(300, 52);
             this.label1.TabIndex = 2;
             this.label1.Text = "Xếp phòng thi";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DodgerBlue;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(1161, 285);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(152, 49);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Làm mới";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // fmXepPhongThi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1402, 785);
+            this.ClientSize = new System.Drawing.Size(1573, 970);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(1420, 832);
-            this.MinimumSize = new System.Drawing.Size(1420, 832);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximumSize = new System.Drawing.Size(1595, 1026);
+            this.MinimumSize = new System.Drawing.Size(1595, 1026);
             this.Name = "fmXepPhongThi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Xếp phòng thi | App quản lý trung tâm ngoại ngữ";
