@@ -68,6 +68,8 @@ namespace QuanLyTrungTamNgoaiNgu
             this.comboBoxPhong = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridViewbangDiemThiSinh = new System.Windows.Forms.DataGridView();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.MaDangKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoBaoDanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,8 +77,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.DiemNoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemViet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -277,6 +277,7 @@ namespace QuanLyTrungTamNgoaiNgu
             this.btnLuu.TabIndex = 6;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // panel14
             // 
@@ -530,62 +531,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.dataGridViewbangDiemThiSinh.Size = new System.Drawing.Size(1550, 369);
             this.dataGridViewbangDiemThiSinh.TabIndex = 0;
             // 
-            // MaDangKy
-            // 
-            this.MaDangKy.HeaderText = "Mã Đăng Ký";
-            this.MaDangKy.MinimumWidth = 6;
-            this.MaDangKy.Name = "MaDangKy";
-            this.MaDangKy.ReadOnly = true;
-            this.MaDangKy.Width = 125;
-            // 
-            // SoBaoDanh
-            // 
-            this.SoBaoDanh.HeaderText = "Số Báo Danh";
-            this.SoBaoDanh.MinimumWidth = 6;
-            this.SoBaoDanh.Name = "SoBaoDanh";
-            this.SoBaoDanh.ReadOnly = true;
-            this.SoBaoDanh.Width = 135;
-            // 
-            // HoTen
-            // 
-            this.HoTen.HeaderText = "Họ Tên";
-            this.HoTen.MinimumWidth = 6;
-            this.HoTen.Name = "HoTen";
-            this.HoTen.ReadOnly = true;
-            this.HoTen.Width = 125;
-            // 
-            // DiemNghe
-            // 
-            this.DiemNghe.HeaderText = "Điểm nghe";
-            this.DiemNghe.MinimumWidth = 6;
-            this.DiemNghe.Name = "DiemNghe";
-            this.DiemNghe.ReadOnly = true;
-            this.DiemNghe.Width = 105;
-            // 
-            // DiemNoi
-            // 
-            this.DiemNoi.HeaderText = "Điểm nói";
-            this.DiemNoi.MinimumWidth = 6;
-            this.DiemNoi.Name = "DiemNoi";
-            this.DiemNoi.ReadOnly = true;
-            this.DiemNoi.Width = 95;
-            // 
-            // DiemDoc
-            // 
-            this.DiemDoc.HeaderText = "Điểm đọc";
-            this.DiemDoc.MinimumWidth = 6;
-            this.DiemDoc.Name = "DiemDoc";
-            this.DiemDoc.ReadOnly = true;
-            this.DiemDoc.Width = 95;
-            // 
-            // DiemViet
-            // 
-            this.DiemViet.HeaderText = "Điểm viết";
-            this.DiemViet.MinimumWidth = 6;
-            this.DiemViet.Name = "DiemViet";
-            this.DiemViet.ReadOnly = true;
-            this.DiemViet.Width = 95;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
@@ -609,6 +554,69 @@ namespace QuanLyTrungTamNgoaiNgu
             this.label1.TabIndex = 2;
             this.label1.Text = "Quản lý điểm thi";
             // 
+            // MaDangKy
+            // 
+            this.MaDangKy.DataPropertyName = "MADK";
+            this.MaDangKy.HeaderText = "Mã Đăng Ký";
+            this.MaDangKy.MinimumWidth = 6;
+            this.MaDangKy.Name = "MaDangKy";
+            this.MaDangKy.ReadOnly = true;
+            this.MaDangKy.Width = 125;
+            // 
+            // SoBaoDanh
+            // 
+            this.SoBaoDanh.DataPropertyName = "SBD";
+            this.SoBaoDanh.HeaderText = "Số Báo Danh";
+            this.SoBaoDanh.MinimumWidth = 6;
+            this.SoBaoDanh.Name = "SoBaoDanh";
+            this.SoBaoDanh.ReadOnly = true;
+            this.SoBaoDanh.Width = 135;
+            // 
+            // HoTen
+            // 
+            this.HoTen.DataPropertyName = "HOTEN";
+            this.HoTen.HeaderText = "Họ Tên";
+            this.HoTen.MinimumWidth = 6;
+            this.HoTen.Name = "HoTen";
+            this.HoTen.ReadOnly = true;
+            this.HoTen.Width = 125;
+            // 
+            // DiemNghe
+            // 
+            this.DiemNghe.DataPropertyName = "DIEMNGHE";
+            this.DiemNghe.HeaderText = "Điểm nghe";
+            this.DiemNghe.MinimumWidth = 6;
+            this.DiemNghe.Name = "DiemNghe";
+            this.DiemNghe.ReadOnly = true;
+            this.DiemNghe.Width = 105;
+            // 
+            // DiemNoi
+            // 
+            this.DiemNoi.DataPropertyName = "DIEMNOI";
+            this.DiemNoi.HeaderText = "Điểm nói";
+            this.DiemNoi.MinimumWidth = 6;
+            this.DiemNoi.Name = "DiemNoi";
+            this.DiemNoi.ReadOnly = true;
+            this.DiemNoi.Width = 95;
+            // 
+            // DiemDoc
+            // 
+            this.DiemDoc.DataPropertyName = "DIEMDOC";
+            this.DiemDoc.HeaderText = "Điểm đọc";
+            this.DiemDoc.MinimumWidth = 6;
+            this.DiemDoc.Name = "DiemDoc";
+            this.DiemDoc.ReadOnly = true;
+            this.DiemDoc.Width = 95;
+            // 
+            // DiemViet
+            // 
+            this.DiemViet.DataPropertyName = "DIEMVIET";
+            this.DiemViet.HeaderText = "Điểm viết";
+            this.DiemViet.MinimumWidth = 6;
+            this.DiemViet.Name = "DiemViet";
+            this.DiemViet.ReadOnly = true;
+            this.DiemViet.Width = 95;
+            // 
             // fmQuanLyDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -617,9 +625,12 @@ namespace QuanLyTrungTamNgoaiNgu
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximumSize = new System.Drawing.Size(1622, 1021);
+            this.MinimumSize = new System.Drawing.Size(1622, 1021);
             this.Name = "fmQuanLyDiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmQuanLyDiem";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel4.ResumeLayout(false);
