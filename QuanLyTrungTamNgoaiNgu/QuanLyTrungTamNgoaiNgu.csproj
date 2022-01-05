@@ -52,6 +52,12 @@
     <Compile Include="fmDangKyThi.Designer.cs">
       <DependentUpon>fmDangKyThi.cs</DependentUpon>
     </Compile>
+    <Compile Include="fmDanhSachThiSinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fmDanhSachThiSinh.Designer.cs">
+      <DependentUpon>fmDanhSachThiSinh.cs</DependentUpon>
+    </Compile>
     <Compile Include="fmLapKhoaThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </Compile>
     <EmbeddedResource Include="fmDangKyThi.resx">
       <DependentUpon>fmDangKyThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fmDanhSachThiSinh.resx">
+      <DependentUpon>fmDanhSachThiSinh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmLapKhoaThi.resx">
       <DependentUpon>fmLapKhoaThi.cs</DependentUpon>
