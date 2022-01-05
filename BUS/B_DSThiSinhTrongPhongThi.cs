@@ -14,5 +14,10 @@ namespace BUS
         {
             return D_DSThiSinhTrongPhongThi.GetDSThiSinhTrongPhongThies(makhoathi, maphongthi);
         }
+        public bool UpdateDiem(DSThiSinhTrongPhongThi thiSinhNew, int madk)
+        {
+            return D_DSThiSinhTrongPhongThi.UpdateDiem(thiSinhNew, madk);
+        }
     }
+
 }
