@@ -14,9 +14,17 @@ namespace BUS
         {
             return _KhoaThi.GetKhoaThis();
         }
+
+        public List<KhoaThi> GetNgayDangKyKhoaThi(int maKhoaThi)
+        {
+            return _KhoaThi.GetNgayDangKyKhoaThi(maKhoaThi);
+        }
+
         public bool ThemKhoaThi(KhoaThi khoaThi)
         {
             return _KhoaThi.ThemKhoaThi(khoaThi);
         }
+
+
     }
 }

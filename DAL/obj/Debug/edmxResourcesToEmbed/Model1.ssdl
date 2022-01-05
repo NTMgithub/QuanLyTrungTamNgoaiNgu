@@ -6,14 +6,14 @@
       <PropertyRef Name="MAPHONGTHI" />
       <PropertyRef Name="MAKHOATHI" />
     </Key>
-    <Property Name="MADK" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MADK" Type="int" Nullable="false" />
     <Property Name="MAPHONGTHI" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="MAKHOATHI" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MAKHOATHI" Type="int" Nullable="false" />
     <Property Name="SBD" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="DIEMNGHE" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="DIEMNOI" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="DIEMVIET" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="DIEMDOC" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="DIEMNGHE" Type="nvarchar" MaxLength="50" />
+    <Property Name="DIEMNOI" Type="nvarchar" MaxLength="50" />
+    <Property Name="DIEMVIET" Type="nvarchar" MaxLength="50" />
+    <Property Name="DIEMDOC" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="GiaoVien">
     <Key>
@@ -24,13 +24,13 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENGV" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="MAPHONGTHI" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="MAKHOATHI" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MAKHOATHI" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="KhoaThi">
     <Key>
       <PropertyRef Name="MAKHOATHI" />
     </Key>
-    <Property Name="MAKHOATHI" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MAKHOATHI" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="TENKHOATHI" Type="nvarchar" MaxLength="50" />
     <Property Name="NGAYTHI" Type="datetime" />
   </EntityType>
@@ -40,7 +40,7 @@
       <PropertyRef Name="MAKHOATHI" />
     </Key>
     <Property Name="MAPHONGTHI" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="MAKHOATHI" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="MAKHOATHI" Type="int" Nullable="false" />
     <Property Name="TRINHDO" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="sysdiagrams">

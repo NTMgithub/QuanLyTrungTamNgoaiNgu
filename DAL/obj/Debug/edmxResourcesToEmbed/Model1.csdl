@@ -8,14 +8,14 @@
     </Key>
     <Property Name="MADK" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="MAPHONGTHI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="MAKHOATHI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MAKHOATHI" Type="Int32" Nullable="false" />
     <Property Name="SBD" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="DIEMNGHE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="DIEMNOI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="DIEMVIET" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="DIEMDOC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="DIEMNGHE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DIEMNOI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DIEMVIET" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DIEMDOC" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="PhongThi" Relationship="Self.FK_DSThiSinhTrongPhongThi_PhongThi" FromRole="DSThiSinhTrongPhongThi" ToRole="PhongThi" />
-    <NavigationProperty Name="ThiSinhDK" Relationship="TTANModel.FK_DSThiSinhTrongPhongThi_ThiSinhDK" FromRole="DSThiSinhTrongPhongThi" ToRole="ThiSinhDK" />
+    <NavigationProperty Name="ThiSinhDK" Relationship="Self.FK_DSThiSinhTrongPhongThi_ThiSinhDK" FromRole="DSThiSinhTrongPhongThi" ToRole="ThiSinhDK" />
   </EntityType>
   <EntityType Name="GiaoVien">
     <Key>
@@ -26,14 +26,14 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TENGV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="MAPHONGTHI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="MAKHOATHI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MAKHOATHI" Type="Int32" Nullable="false" />
     <NavigationProperty Name="PhongThi" Relationship="Self.FK_GiaoVien_PhongThi" FromRole="GiaoVien" ToRole="PhongThi" />
   </EntityType>
   <EntityType Name="KhoaThi">
     <Key>
       <PropertyRef Name="MAKHOATHI" />
     </Key>
-    <Property Name="MAKHOATHI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MAKHOATHI" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="TENKHOATHI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="NGAYTHI" Type="DateTime" Precision="3" />
     <NavigationProperty Name="PhongThis" Relationship="Self.FK_PhongThi_KhoaThi" FromRole="KhoaThi" ToRole="PhongThi" />
@@ -44,7 +44,7 @@
       <PropertyRef Name="MAKHOATHI" />
     </Key>
     <Property Name="MAPHONGTHI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="MAKHOATHI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MAKHOATHI" Type="Int32" Nullable="false" />
     <Property Name="TRINHDO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="DSThiSinhTrongPhongThis" Relationship="Self.FK_DSThiSinhTrongPhongThi_PhongThi" FromRole="PhongThi" ToRole="DSThiSinhTrongPhongThi" />
     <NavigationProperty Name="GiaoViens" Relationship="Self.FK_GiaoVien_PhongThi" FromRole="PhongThi" ToRole="GiaoVien" />
@@ -73,7 +73,7 @@
     <Property Name="NGAYSINH" Type="DateTime" Precision="3" />
     <Property Name="SDT" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="DSThiSinhTrongPhongThis" Relationship="TTANModel.FK_DSThiSinhTrongPhongThi_ThiSinhDK" FromRole="ThiSinhDK" ToRole="DSThiSinhTrongPhongThi" />
+    <NavigationProperty Name="DSThiSinhTrongPhongThis" Relationship="Self.FK_DSThiSinhTrongPhongThi_ThiSinhDK" FromRole="ThiSinhDK" ToRole="DSThiSinhTrongPhongThi" />
   </EntityType>
   <Association Name="FK_DSThiSinhTrongPhongThi_PhongThi">
     <End Role="PhongThi" Type="Self.PhongThi" Multiplicity="1" />
@@ -86,6 +86,18 @@
       <Dependent Role="DSThiSinhTrongPhongThi">
         <PropertyRef Name="MAPHONGTHI" />
         <PropertyRef Name="MAKHOATHI" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DSThiSinhTrongPhongThi_ThiSinhDK">
+    <End Role="ThiSinhDK" Type="Self.ThiSinhDK" Multiplicity="1" />
+    <End Role="DSThiSinhTrongPhongThi" Type="Self.DSThiSinhTrongPhongThi" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ThiSinhDK">
+        <PropertyRef Name="MADK" />
+      </Principal>
+      <Dependent Role="DSThiSinhTrongPhongThi">
+        <PropertyRef Name="MADK" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -126,6 +138,10 @@
       <End Role="PhongThi" EntitySet="PhongThis" />
       <End Role="DSThiSinhTrongPhongThi" EntitySet="DSThiSinhTrongPhongThis" />
     </AssociationSet>
+    <AssociationSet Name="FK_DSThiSinhTrongPhongThi_ThiSinhDK" Association="Self.FK_DSThiSinhTrongPhongThi_ThiSinhDK">
+      <End Role="ThiSinhDK" EntitySet="ThiSinhDKs" />
+      <End Role="DSThiSinhTrongPhongThi" EntitySet="DSThiSinhTrongPhongThis" />
+    </AssociationSet>
     <AssociationSet Name="FK_GiaoVien_PhongThi" Association="Self.FK_GiaoVien_PhongThi">
       <End Role="PhongThi" EntitySet="PhongThis" />
       <End Role="GiaoVien" EntitySet="GiaoViens" />
@@ -134,21 +150,5 @@
       <End Role="KhoaThi" EntitySet="KhoaThis" />
       <End Role="PhongThi" EntitySet="PhongThis" />
     </AssociationSet>
-    <AssociationSet Name="FK_DSThiSinhTrongPhongThi_ThiSinhDK" Association="TTANModel.FK_DSThiSinhTrongPhongThi_ThiSinhDK">
-      <End Role="ThiSinhDK" EntitySet="ThiSinhDKs" />
-      <End Role="DSThiSinhTrongPhongThi" EntitySet="DSThiSinhTrongPhongThis" />
-    </AssociationSet>
   </EntityContainer>
-  <Association Name="FK_DSThiSinhTrongPhongThi_ThiSinhDK">
-    <End Type="TTANModel.ThiSinhDK" Role="ThiSinhDK" Multiplicity="1" />
-    <End Type="TTANModel.DSThiSinhTrongPhongThi" Role="DSThiSinhTrongPhongThi" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="ThiSinhDK">
-        <PropertyRef Name="MADK" />
-      </Principal>
-      <Dependent Role="DSThiSinhTrongPhongThi">
-        <PropertyRef Name="MADK" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
 </Schema>

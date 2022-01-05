@@ -16,7 +16,7 @@ namespace DAL
     {
         public int MADK { get; set; }
         public string MAPHONGTHI { get; set; }
-        public string MAKHOATHI { get; set; }
+        public int MAKHOATHI { get; set; }
         public string SBD { get; set; }
         public string DIEMNGHE { get; set; }
         public string DIEMNOI { get; set; }
