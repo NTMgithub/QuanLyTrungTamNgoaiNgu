@@ -28,5 +28,30 @@ namespace DAL
 
             return DSThiSinhTrongPhongThiNay.ToList<dynamic>();
         }
+        public bool UpdateDiem(DSThiSinhTrongPhongThi thiSinhNew, int madk)
+        {
+            {
+                try
+                {
+                    DSThiSinhTrongPhongThi thiSinhOld = (from thisinh in TTAN.DSThiSinhTrongPhongThis
+                                                         where thisinh.MADK == madk
+                                                         select thisinh).SingleOrDefault();
+
+
+                    thiSinhOld.DIEMDOC = thiSinhNew.DIEMDOC;
+                    thiSinhOld.DIEMNGHE = thiSinhNew.DIEMNGHE;
+                    thiSinhOld.DIEMNOI = thiSinhNew.DIEMNOI;
+                    thiSinhOld.DIEMVIET = thiSinhNew.DIEMVIET;
+
+                    TTAN.SaveChanges();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine(ex);
+                    return false;
+                }
+            }
+        }
     }
 }
