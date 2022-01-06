@@ -23,7 +23,7 @@ namespace DAL
                                                 DIEMNGHE = ds.DIEMNGHE,
                                                 DIEMNOI = ds.DIEMNOI,
                                                 DIEMVIET = ds.DIEMVIET,
-                                                DIEMDOC = ds.DIEMDOC,
+                                                DIEMDOC = ds.DIEMDOC
                                             };
 
             return DSThiSinhTrongPhongThiNay.ToList<dynamic>();
