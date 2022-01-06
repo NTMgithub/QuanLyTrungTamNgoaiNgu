@@ -23,7 +23,7 @@ namespace DAL
                                                 DIEMNGHE = ds.DIEMNGHE,
                                                 DIEMNOI = ds.DIEMNOI,
                                                 DIEMVIET = ds.DIEMVIET,
-                                                DIEMDOC = ds.DIEMDOC
+                                                DIEMDOC = ds.DIEMDOC,
                                             };
 
             return DSThiSinhTrongPhongThiNay.ToList<dynamic>();
@@ -37,11 +37,25 @@ namespace DAL
                                                          where thisinh.MADK == madk
                                                          select thisinh).SingleOrDefault();
 
+                    if (!thiSinhNew.DIEMDOC.Equals(""))
+                    {
+                        thiSinhOld.DIEMDOC = thiSinhNew.DIEMDOC;
+                    }
+                    if (!thiSinhNew.DIEMNGHE.Equals(""))
+                    {
+                        thiSinhOld.DIEMNGHE = thiSinhNew.DIEMNGHE;
 
-                    thiSinhOld.DIEMDOC = thiSinhNew.DIEMDOC;
-                    thiSinhOld.DIEMNGHE = thiSinhNew.DIEMNGHE;
-                    thiSinhOld.DIEMNOI = thiSinhNew.DIEMNOI;
-                    thiSinhOld.DIEMVIET = thiSinhNew.DIEMVIET;
+                    }
+                    if (!thiSinhNew.DIEMNOI.Equals(""))
+                    {
+                        thiSinhOld.DIEMNOI = thiSinhNew.DIEMNOI;
+
+                    }
+                    if (!thiSinhNew.DIEMVIET.Equals(""))
+                    {
+                        thiSinhOld.DIEMVIET = thiSinhNew.DIEMVIET;
+                    }
+
 
                     TTAN.SaveChanges();
                     return true;

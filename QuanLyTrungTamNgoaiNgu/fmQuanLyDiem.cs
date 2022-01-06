@@ -21,9 +21,24 @@ namespace QuanLyTrungTamNgoaiNgu
         {
             InitializeComponent();
             LoadComboboxKhoaThi();
-
-
             LoadComboboxPhongThi();
+            void chkItems_CheckedChanged(object sender, EventArgs e)
+            {
+                foreach (DataGridViewRow row in dataGridViewbangDiemThiSinh.Rows)
+                {
+                    DataGridViewCheckBoxCell chk = (DataGridViewCheckBoxCell)row.Cells[0];
+                    if (chk.Value == chk.FalseValue || chk.Value == null)
+                    {
+                        chk.Value = chk.TrueValue;
+                    }
+                    else
+                    {
+                        chk.Value = chk.FalseValue;
+                    }
+
+                }
+                dataGridViewbangDiemThiSinh.EndEdit();
+            }
         }
 
         private void LoadComboboxPhongThi()
@@ -45,7 +60,10 @@ namespace QuanLyTrungTamNgoaiNgu
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            textBoxDiemDoc.Text = "";
+            textBoxDiemNghe.Text = "";
+            textBoxDiemNoi.Text = "";
+            textBoxDiemViet.Text = "";
         }
 
         private void comboBoxKhoa_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,29 +81,56 @@ namespace QuanLyTrungTamNgoaiNgu
 
         private void comboBoxPhong_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LoadDanhSachThiSinh();
         }
 
         private void LoadDanhSachThiSinh()
         {
-            int makhoathi = int.Parse(comboBoxKhoa.SelectedValue.ToString());
-            string maphongthi = comboBoxPhong.SelectedValue.ToString();
+            dataGridViewbangDiemThiSinh.DataSource = null;
+            if (comboBoxPhong.SelectedValue != null)
+            {
 
-            dataGridViewbangDiemThiSinh.AutoGenerateColumns = false;
-            dataGridViewbangDiemThiSinh.DataSource = B_DSThiSinhTrongPhongThi.GetDSThiSinhTrongPhongThies(makhoathi, maphongthi);
+                int makhoathi = int.Parse(comboBoxKhoa.SelectedValue.ToString());
+                string maphongthi = comboBoxPhong.SelectedValue.ToString();
+                dataGridViewbangDiemThiSinh.AutoGenerateColumns = false;
+                dataGridViewbangDiemThiSinh.DataSource = B_DSThiSinhTrongPhongThi.GetDSThiSinhTrongPhongThies(makhoathi, maphongthi);
+                dataGridViewbangDiemThiSinh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridViewbangDiemThiSinh.AllowUserToAddRows = false;
+                //Để có thể check checkbox
+                for (int i = 0; i <= dataGridViewbangDiemThiSinh.Rows.Count - 1; i++)
+                {
+                    dataGridViewbangDiemThiSinh.Rows[i].Cells[0].Value = false;
+
+                }
+            }
         }
 
         private void btnLuu_Click(object sender, EventArgs e)
         {
-
-            DSThiSinhTrongPhongThi thisinh = new DSThiSinhTrongPhongThi();
-            thisinh.DIEMDOC = textBoxDiemDoc.Text;
-            thisinh.DIEMNGHE = textBoxDiemNghe.Text;
-            thisinh.DIEMNOI = textBoxDiemNoi.Text;
-            thisinh.DIEMVIET = textBoxDiemViet.Text;
-            B_DSThiSinhTrongPhongThi.UpdateDiem(thisinh, 9);
+            for (int i = 0; i <= dataGridViewbangDiemThiSinh.Rows.Count - 1; i++)
+            {
+                bool checkedCell = (bool)dataGridViewbangDiemThiSinh.Rows[i].Cells[0].Value;
+                if (checkedCell == true)
+                {
+                    int madk = Convert.ToInt32(dataGridViewbangDiemThiSinh.Rows[i].Cells[1].Value.ToString());
+                    DSThiSinhTrongPhongThi thisinh = new DSThiSinhTrongPhongThi();
+                    thisinh.DIEMDOC = textBoxDiemDoc.Text;
+                    thisinh.DIEMNGHE = textBoxDiemNghe.Text;
+                    thisinh.DIEMNOI = textBoxDiemNoi.Text;
+                    thisinh.DIEMVIET = textBoxDiemViet.Text;
+                    B_DSThiSinhTrongPhongThi.UpdateDiem(thisinh, madk);
+                }
+            }
             LoadDanhSachThiSinh();
+        }
 
+        private void dataGridViewbangDiemThiSinh_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            LoadDanhSachThiSinh();
 
         }
     }
