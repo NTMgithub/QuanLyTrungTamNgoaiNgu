@@ -16,6 +16,7 @@ namespace QuanLyTrungTamNgoaiNgu
     {
         B_XepPhongThi b_XepPhongThi = new B_XepPhongThi();
         B_KhoaThi b_KhoaThi = new B_KhoaThi();
+        D_XepPhongThi d_XepPhongThi = new D_XepPhongThi();
         //int maKhoaThi = 1;
         public fmXepPhongThi()
         {
@@ -48,7 +49,7 @@ namespace QuanLyTrungTamNgoaiNgu
         {
 
             dataGridView_ChuaCoPhongThi.AutoGenerateColumns = false;
-
+            dataGridView_ChuaCoPhongThi.DataSource = null;
 
             if (!comboKhoa.SelectedValue.ToString().Equals("System.Data.Entity.DynamicProxies.KhoaThi_87305566F1A93C290A8622FD22538AF5E789C925966D751F28BBB24AC85315ED"))
             {
@@ -58,13 +59,24 @@ namespace QuanLyTrungTamNgoaiNgu
 
                 foreach (var item in listKhoaThi)
                 {
+                    var datetimeNgayThi = item.NGAYTHI.Value;
+                   
+                    List<ThiSinhDK> listThiSinh = d_XepPhongThi.GetDSThiSinhChuaDangKy_TruocNgayThi(trinhDoValue);
 
-                    var monthNgayThi = item.NGAYTHI.Value.Month;
-                    var yearNgayThi = item.NGAYTHI.Value.Year;
+                    foreach (var itemTS in listThiSinh.ToList())
+                    {
+                        var truoc3Ngay = (datetimeNgayThi - itemTS.NGAYDK).Days;
+                        if (truoc3Ngay < 3)
+                        {
+                            listThiSinh.Remove(itemTS);
+                        }
 
-                    List<ThiSinhDK> listThiSinh = b_XepPhongThi.GetDSThiSinhChuaDangKy(monthNgayThi, yearNgayThi, trinhDoValue);
+                    }
 
                     dataGridView_ChuaCoPhongThi.DataSource = listThiSinh;
+
+
+                   
 
                 }
 
