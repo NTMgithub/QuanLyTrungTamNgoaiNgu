@@ -57,16 +57,10 @@ namespace QuanLyTrungTamNgoaiNgu
             this.dataGridViewbangDiemThiSinh = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.textBoxTimKiem = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MaDangKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoBaoDanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MAPHONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemNghe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemNoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -81,8 +75,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewbangDiemThiSinh)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
@@ -262,7 +254,6 @@ namespace QuanLyTrungTamNgoaiNgu
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.panel14.Controls.Add(this.panel2);
             this.panel14.Controls.Add(this.btnOK);
             this.panel14.Controls.Add(this.btnClear);
             this.panel14.Controls.Add(this.panel10);
@@ -356,7 +347,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.MaDangKy,
             this.SoBaoDanh,
             this.HoTen,
-            this.MAPHONG,
             this.DiemNghe,
             this.DiemNoi,
             this.DiemDoc,
@@ -391,55 +381,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.label1.TabIndex = 2;
             this.label1.Text = "Quản lý điểm thi";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.buttonTimKiem);
-            this.panel2.Controls.Add(this.panel9);
-            this.panel2.Location = new System.Drawing.Point(27, 233);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(449, 103);
-            this.panel2.TabIndex = 13;
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.textBoxTimKiem);
-            this.panel9.Controls.Add(this.label4);
-            this.panel9.Location = new System.Drawing.Point(18, 13);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(247, 75);
-            this.panel9.TabIndex = 14;
-            // 
-            // textBoxTimKiem
-            // 
-            this.textBoxTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxTimKiem.Location = new System.Drawing.Point(13, 40);
-            this.textBoxTimKiem.MaximumSize = new System.Drawing.Size(300, 35);
-            this.textBoxTimKiem.MinimumSize = new System.Drawing.Size(120, 28);
-            this.textBoxTimKiem.Name = "textBoxTimKiem";
-            this.textBoxTimKiem.Size = new System.Drawing.Size(216, 28);
-            this.textBoxTimKiem.TabIndex = 5;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label4.Location = new System.Drawing.Point(13, 8);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(192, 18);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Nhập tên hoặc số điện thoại";
-            // 
-            // buttonTimKiem
-            // 
-            this.buttonTimKiem.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.buttonTimKiem.Location = new System.Drawing.Point(304, 50);
-            this.buttonTimKiem.Name = "buttonTimKiem";
-            this.buttonTimKiem.Size = new System.Drawing.Size(130, 38);
-            this.buttonTimKiem.TabIndex = 15;
-            this.buttonTimKiem.Text = "Tìm kiếm";
-            this.buttonTimKiem.UseVisualStyleBackColor = false;
-            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "select";
@@ -470,14 +411,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.HoTen.HeaderText = "Họ Tên";
             this.HoTen.MinimumWidth = 6;
             this.HoTen.Name = "HoTen";
-            // 
-            // MAPHONG
-            // 
-            this.MAPHONG.DataPropertyName = "PHONGTHI";
-            this.MAPHONG.HeaderText = "Mã Phòng";
-            this.MAPHONG.MinimumWidth = 6;
-            this.MAPHONG.Name = "MAPHONG";
-            this.MAPHONG.Width = 125;
             // 
             // DiemNghe
             // 
@@ -543,9 +476,6 @@ namespace QuanLyTrungTamNgoaiNgu
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewbangDiemThiSinh)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -579,16 +509,10 @@ namespace QuanLyTrungTamNgoaiNgu
         private System.Windows.Forms.TextBox textBoxDiemNoi;
         private System.Windows.Forms.TextBox textBoxDiemNghe;
         private System.Windows.Forms.Button btnOK;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button buttonTimKiem;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBoxTimKiem;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDangKy;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoBaoDanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MAPHONG;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemNghe;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemNoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemDoc;

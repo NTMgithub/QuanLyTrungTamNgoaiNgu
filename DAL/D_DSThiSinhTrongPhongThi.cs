@@ -70,9 +70,9 @@ namespace DAL
         }
 
         // Câu 18
-        public List<dynamic> GetDSThiSinhCoDiemes(String TenHoacSdt)
+        public List<dynamic> GetDSThiSinh_TheoTenVaSDTs(String TenHoacSdt)
         {
-            var DSThiSinhCoDiem = from thisinh in TTAN.ThiSinhDKs
+            var DSThiSinh = from thisinh in TTAN.ThiSinhDKs
                                   join danhsach in TTAN.DSThiSinhTrongPhongThis on thisinh.MADK equals danhsach.MADK
                                   where thisinh.SDT == TenHoacSdt || thisinh.HOTEN == TenHoacSdt
                                   select new
@@ -87,7 +87,26 @@ namespace DAL
                                       DIEMDOC = danhsach.DIEMDOC
                                   };
 
-            return DSThiSinhCoDiem.ToList<dynamic>();
+            return DSThiSinh.ToList<dynamic>();
+        }
+        public List<dynamic> GetDSThiSinhs(String hoten, String sdt)
+        {
+            var DSThiSinh = from thisinh in TTAN.ThiSinhDKs
+                                  join danhsach in TTAN.DSThiSinhTrongPhongThis on thisinh.MADK equals danhsach.MADK
+                                  where thisinh.HOTEN == hoten && thisinh.SDT == sdt
+                                  select new
+                                  {
+                                      MADK = danhsach.MADK,
+                                      SBD = danhsach.SBD,
+                                      HOTEN = thisinh.HOTEN,
+                                      PHONGTHI = danhsach.MAPHONGTHI,
+                                      DIEMNGHE = danhsach.DIEMNGHE,
+                                      DIEMNOI = danhsach.DIEMNOI,
+                                      DIEMVIET = danhsach.DIEMVIET,
+                                      DIEMDOC = danhsach.DIEMDOC
+                                  };
+
+            return DSThiSinh.ToList<dynamic>();
         }
     }
 }
