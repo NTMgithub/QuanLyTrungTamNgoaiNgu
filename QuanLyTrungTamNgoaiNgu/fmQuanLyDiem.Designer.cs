@@ -44,23 +44,10 @@ namespace QuanLyTrungTamNgoaiNgu
             this.textBoxDiemNghe = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.btnHuy = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.panel14 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBoxHoTen = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.textBoxSoBaoDanh = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.textBoxPhongThi = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.textBoxMaDangKy = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.comboBoxKhoa = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -70,6 +57,7 @@ namespace QuanLyTrungTamNgoaiNgu
             this.dataGridViewbangDiemThiSinh = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MaDangKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoBaoDanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,11 +71,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel14.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel15.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewbangDiemThiSinh)).BeginInit();
@@ -255,17 +238,17 @@ namespace QuanLyTrungTamNgoaiNgu
             this.label6.TabIndex = 3;
             this.label6.Text = "Điểm";
             // 
-            // btnHuy
+            // btnClear
             // 
-            this.btnHuy.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnHuy.Location = new System.Drawing.Point(1431, 156);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(146, 48);
-            this.btnHuy.TabIndex = 13;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = false;
-            this.btnHuy.Click += new System.EventHandler(this.button2_Click);
+            this.btnClear.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnClear.Location = new System.Drawing.Point(1431, 156);
+            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(146, 48);
+            this.btnClear.TabIndex = 13;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = false;
+            this.btnClear.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnLuu
             // 
@@ -282,8 +265,8 @@ namespace QuanLyTrungTamNgoaiNgu
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.PaleGoldenrod;
-            this.panel14.Controls.Add(this.panel2);
-            this.panel14.Controls.Add(this.btnHuy);
+            this.panel14.Controls.Add(this.btnOK);
+            this.panel14.Controls.Add(this.btnClear);
             this.panel14.Controls.Add(this.panel10);
             this.panel14.Controls.Add(this.panel11);
             this.panel14.Controls.Add(this.panel4);
@@ -296,160 +279,23 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel14.Size = new System.Drawing.Size(1600, 868);
             this.panel14.TabIndex = 7;
             // 
-            // panel2
+            // btnOK
             // 
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.panel9);
-            this.panel2.Controls.Add(this.panel13);
-            this.panel2.Controls.Add(this.panel15);
-            this.panel2.Controls.Add(this.label15);
-            this.panel2.Location = new System.Drawing.Point(32, 10);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(911, 282);
-            this.panel2.TabIndex = 12;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.textBoxHoTen);
-            this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(510, 165);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(317, 59);
-            this.panel3.TabIndex = 11;
-            // 
-            // textBoxHoTen
-            // 
-            this.textBoxHoTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxHoTen.Location = new System.Drawing.Point(125, 14);
-            this.textBoxHoTen.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxHoTen.MaximumSize = new System.Drawing.Size(337, 35);
-            this.textBoxHoTen.MinimumSize = new System.Drawing.Size(134, 28);
-            this.textBoxHoTen.Name = "textBoxHoTen";
-            this.textBoxHoTen.Size = new System.Drawing.Size(180, 26);
-            this.textBoxHoTen.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label2.Location = new System.Drawing.Point(15, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 22);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Họ tên";
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.textBoxSoBaoDanh);
-            this.panel9.Controls.Add(this.label3);
-            this.panel9.Location = new System.Drawing.Point(510, 70);
-            this.panel9.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(317, 59);
-            this.panel9.TabIndex = 10;
-            // 
-            // textBoxSoBaoDanh
-            // 
-            this.textBoxSoBaoDanh.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxSoBaoDanh.Location = new System.Drawing.Point(125, 14);
-            this.textBoxSoBaoDanh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxSoBaoDanh.MaximumSize = new System.Drawing.Size(337, 35);
-            this.textBoxSoBaoDanh.MinimumSize = new System.Drawing.Size(134, 28);
-            this.textBoxSoBaoDanh.Name = "textBoxSoBaoDanh";
-            this.textBoxSoBaoDanh.Size = new System.Drawing.Size(180, 26);
-            this.textBoxSoBaoDanh.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label3.Location = new System.Drawing.Point(15, 19);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 22);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Số báo danh";
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.textBoxPhongThi);
-            this.panel13.Controls.Add(this.label4);
-            this.panel13.Location = new System.Drawing.Point(96, 165);
-            this.panel13.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(317, 59);
-            this.panel13.TabIndex = 9;
-            // 
-            // textBoxPhongThi
-            // 
-            this.textBoxPhongThi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxPhongThi.Location = new System.Drawing.Point(125, 14);
-            this.textBoxPhongThi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxPhongThi.MaximumSize = new System.Drawing.Size(337, 35);
-            this.textBoxPhongThi.MinimumSize = new System.Drawing.Size(134, 28);
-            this.textBoxPhongThi.Name = "textBoxPhongThi";
-            this.textBoxPhongThi.Size = new System.Drawing.Size(180, 26);
-            this.textBoxPhongThi.TabIndex = 4;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label4.Location = new System.Drawing.Point(15, 19);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(86, 22);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Phòng thi";
-            // 
-            // panel15
-            // 
-            this.panel15.Controls.Add(this.textBoxMaDangKy);
-            this.panel15.Controls.Add(this.label11);
-            this.panel15.Location = new System.Drawing.Point(96, 68);
-            this.panel15.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(317, 59);
-            this.panel15.TabIndex = 8;
-            // 
-            // textBoxMaDangKy
-            // 
-            this.textBoxMaDangKy.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxMaDangKy.Location = new System.Drawing.Point(125, 14);
-            this.textBoxMaDangKy.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxMaDangKy.MaximumSize = new System.Drawing.Size(337, 35);
-            this.textBoxMaDangKy.MinimumSize = new System.Drawing.Size(134, 28);
-            this.textBoxMaDangKy.Name = "textBoxMaDangKy";
-            this.textBoxMaDangKy.Size = new System.Drawing.Size(180, 26);
-            this.textBoxMaDangKy.TabIndex = 4;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label11.Location = new System.Drawing.Point(15, 19);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(102, 22);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Mã đăng ký";
-            // 
-            // label15
-            // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label15.Location = new System.Drawing.Point(374, 11);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(195, 29);
-            this.label15.TabIndex = 3;
-            this.label15.Text = "Thông tin thí sinh";
+            this.btnOK.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.btnOK.Location = new System.Drawing.Point(638, 52);
+            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(146, 48);
+            this.btnOK.TabIndex = 14;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = false;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // panel10
             // 
             this.panel10.Controls.Add(this.comboBoxKhoa);
             this.panel10.Controls.Add(this.label12);
-            this.panel10.Location = new System.Drawing.Point(28, 326);
+            this.panel10.Location = new System.Drawing.Point(12, 10);
             this.panel10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(285, 94);
@@ -481,7 +327,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.panel11.Controls.Add(this.comboBoxPhong);
             this.panel11.Controls.Add(this.label13);
-            this.panel11.Location = new System.Drawing.Point(658, 326);
+            this.panel11.Location = new System.Drawing.Point(324, 10);
             this.panel11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(285, 94);
@@ -512,9 +358,9 @@ namespace QuanLyTrungTamNgoaiNgu
             // dataGridViewbangDiemThiSinh
             // 
             this.dataGridViewbangDiemThiSinh.AllowUserToAddRows = false;
-            this.dataGridViewbangDiemThiSinh.AllowUserToDeleteRows = false;
             this.dataGridViewbangDiemThiSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewbangDiemThiSinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
             this.MaDangKy,
             this.SoBaoDanh,
             this.HoTen,
@@ -525,11 +371,11 @@ namespace QuanLyTrungTamNgoaiNgu
             this.dataGridViewbangDiemThiSinh.Location = new System.Drawing.Point(28, 486);
             this.dataGridViewbangDiemThiSinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dataGridViewbangDiemThiSinh.Name = "dataGridViewbangDiemThiSinh";
-            this.dataGridViewbangDiemThiSinh.ReadOnly = true;
             this.dataGridViewbangDiemThiSinh.RowHeadersWidth = 51;
             this.dataGridViewbangDiemThiSinh.RowTemplate.Height = 24;
             this.dataGridViewbangDiemThiSinh.Size = new System.Drawing.Size(1550, 369);
             this.dataGridViewbangDiemThiSinh.TabIndex = 0;
+            this.dataGridViewbangDiemThiSinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewbangDiemThiSinh_CellContentClick);
             // 
             // panel1
             // 
@@ -554,13 +400,19 @@ namespace QuanLyTrungTamNgoaiNgu
             this.label1.TabIndex = 2;
             this.label1.Text = "Quản lý điểm thi";
             // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "select";
+            this.Column1.MinimumWidth = 8;
+            this.Column1.Name = "Column1";
+            this.Column1.Width = 150;
+            // 
             // MaDangKy
             // 
             this.MaDangKy.DataPropertyName = "MADK";
             this.MaDangKy.HeaderText = "Mã Đăng Ký";
             this.MaDangKy.MinimumWidth = 6;
             this.MaDangKy.Name = "MaDangKy";
-            this.MaDangKy.ReadOnly = true;
             this.MaDangKy.Width = 125;
             // 
             // SoBaoDanh
@@ -569,17 +421,15 @@ namespace QuanLyTrungTamNgoaiNgu
             this.SoBaoDanh.HeaderText = "Số Báo Danh";
             this.SoBaoDanh.MinimumWidth = 6;
             this.SoBaoDanh.Name = "SoBaoDanh";
-            this.SoBaoDanh.ReadOnly = true;
             this.SoBaoDanh.Width = 135;
             // 
             // HoTen
             // 
+            this.HoTen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.HoTen.DataPropertyName = "HOTEN";
             this.HoTen.HeaderText = "Họ Tên";
             this.HoTen.MinimumWidth = 6;
             this.HoTen.Name = "HoTen";
-            this.HoTen.ReadOnly = true;
-            this.HoTen.Width = 125;
             // 
             // DiemNghe
             // 
@@ -587,7 +437,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.DiemNghe.HeaderText = "Điểm nghe";
             this.DiemNghe.MinimumWidth = 6;
             this.DiemNghe.Name = "DiemNghe";
-            this.DiemNghe.ReadOnly = true;
             this.DiemNghe.Width = 105;
             // 
             // DiemNoi
@@ -596,7 +445,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.DiemNoi.HeaderText = "Điểm nói";
             this.DiemNoi.MinimumWidth = 6;
             this.DiemNoi.Name = "DiemNoi";
-            this.DiemNoi.ReadOnly = true;
             this.DiemNoi.Width = 95;
             // 
             // DiemDoc
@@ -605,7 +453,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.DiemDoc.HeaderText = "Điểm đọc";
             this.DiemDoc.MinimumWidth = 6;
             this.DiemDoc.Name = "DiemDoc";
-            this.DiemDoc.ReadOnly = true;
             this.DiemDoc.Width = 95;
             // 
             // DiemViet
@@ -614,7 +461,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.DiemViet.HeaderText = "Điểm viết";
             this.DiemViet.MinimumWidth = 6;
             this.DiemViet.Name = "DiemViet";
-            this.DiemViet.ReadOnly = true;
             this.DiemViet.Width = 95;
             // 
             // fmQuanLyDiem
@@ -643,16 +489,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel5.PerformLayout();
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel9.ResumeLayout(false);
-            this.panel9.PerformLayout();
-            this.panel13.ResumeLayout(false);
-            this.panel13.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
@@ -669,7 +505,7 @@ namespace QuanLyTrungTamNgoaiNgu
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Button btnHuy;
+        private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel5;
@@ -692,20 +528,8 @@ namespace QuanLyTrungTamNgoaiNgu
         private System.Windows.Forms.TextBox textBoxDiemDoc;
         private System.Windows.Forms.TextBox textBoxDiemNoi;
         private System.Windows.Forms.TextBox textBoxDiemNghe;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.TextBox textBoxHoTen;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox textBoxSoBaoDanh;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Panel panel13;
-        private System.Windows.Forms.TextBox textBoxPhongThi;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Panel panel15;
-        private System.Windows.Forms.TextBox textBoxMaDangKy;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDangKy;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoBaoDanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
