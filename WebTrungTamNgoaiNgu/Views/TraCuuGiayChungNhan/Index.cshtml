@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Tra cứu giấy chứng nhận";
+}
+
+<main id="main">
+    <div style="padding: 25px;padding-bottom: 20px;border-radius: 10px;">
+        <h2 class="text-center" style="text-transform: uppercase;">Tra cứu giấy chứng nhận</h2>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div class="containerForm">
+            <form>
+
+                <div class="containerThongTinCaNhan">
+                    <div class="mb-3">
+                        <label for="inputHoten" class="form-label">Khóa thi</label>
+                        <select class="form-select" id="selectKhoaThi">
+                            <option value="1" selected>One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputSBD" class="form-label">Số báo danh</label>
+                        <input type="text" class="form-control" id="inputSBD">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+
+                </div>
+
+            </form>
+
+            <div style="margin-top: 25px;">
+                <span style="text-transform: uppercase;font-weight: 800;margin-bottom: 10px;">Kết quả tìm kiếm</span>
+                <div id="ketQuaTimKiem">
+
+                    <div style="width:100%; height:auto; padding:20px; text-align:center; border: 10px solid #787878">
+                        <div style="width:100%; height:100%; padding:20px; text-align:center; border: 5px solid #787878">
+
+                            <span style="font-size:50px; font-weight:bold">Chứng nhận kết quả</span>
+                            <p style="font-size:25px"><i>Trình độ A2</i></p>
+                            <br>
+                            <table style="margin: auto;">
+                                <tbody>
+                                    <tr style="font-size: 20px;">
+                                        <td>Họ tên: </td>
+                                        <td>Nguyễn Văn A</td>
+                                    </tr>
+                                    <tr style="font-size: 20px;">
+                                        <td>Ngày sinh: </td>
+                                        <td>01/11/1997</td>
+                                    </tr>
+                                    <tr style="font-size: 20px;">
+                                        <td>CMND: </td>
+                                        <td>232524234</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <br>
+                            <span style="font-size:25px"><i>Đã tham gia kỳ thi vào ngày: 20/1/2022</i></span><br>
+
+                            <span style="font-size:25px"><i>Với kết quả:</i></span><br>
+                            <p style="font-size: 20px;">Nghe: 8</p>
+                            <p style="font-size: 20px;">Nói: 8</p>
+                            <p style="font-size: 20px;">Đọc: 8</p>
+                            <p style="font-size: 20px;">Viết: 8</p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <button type="button" name="btnLuuGiayChungNhan" class="btn btn-warning" style="margin-top: 20px;">Lưu PDF</button>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+</main><!-- End #main -->
