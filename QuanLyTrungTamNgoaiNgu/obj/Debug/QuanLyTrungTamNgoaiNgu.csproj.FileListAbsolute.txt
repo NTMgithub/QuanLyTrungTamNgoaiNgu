@@ -37,6 +37,16 @@ D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoa
 D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\EntityFramework.xml
 D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmLapKhoaThi.resources
 D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmXepGiaoVien.resources
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\BUS.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\DAL.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\EntityFramework.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\BUS.pdb
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\DAL.pdb
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\DAL.dll.config
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\EntityFramework.xml
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmDanhSachThiSinh.resources
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmLapKhoaThi.resources
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmXepGiaoVien.resources
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\QuanLyTrungTamNgoaiNgu.exe.config
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\QuanLyTrungTamNgoaiNgu.exe
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\QuanLyTrungTamNgoaiNgu.pdb
@@ -49,6 +59,7 @@ D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\Qu
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\EntityFramework.xml
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.csproj.AssemblyReference.cache
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmDangKyThi.resources
+D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmDanhSachThiSinh.resources
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmLapKhoaThi.resources
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmLapPhongThi.resources
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmQuanLyDiem.resources
@@ -62,5 +73,3 @@ D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\Qu
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.csproj.CopyComplete
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.exe
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.pdb
-D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.Form1.resources
-D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.csproj.CopyComplete

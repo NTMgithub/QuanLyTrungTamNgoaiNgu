@@ -47,6 +47,23 @@ namespace DAL
             return dsThiSinhDk.ToList<ThiSinhDK>();
         }
 
+        public List<ThiSinhDK> GetDSThiSinhChuaDangKy_TruocNgayThi(int dayKhoa, int monthKhoa, int yearKhoa, String trinhDoValue)
+        {
+            var dsThiSinhDk = from tableThiSinh in TTAN.ThiSinhDKs
+                              where !(from tableDSThiSinhPhongThi in TTAN.DSThiSinhTrongPhongThis select tableDSThiSinhPhongThi.MADK).Contains(tableThiSinh.MADK)
+                              && tableThiSinh.NGAYDK.Month == monthKhoa && tableThiSinh.NGAYDK.Year == yearKhoa
+                              && tableThiSinh.NGAYDK.Day < dayKhoa
+                              && tableThiSinh.TRINHDO == trinhDoValue
+                              select tableThiSinh;
+
+
+            return dsThiSinhDk.ToList<ThiSinhDK>();
+        }
+
+        
+
+
+
         public bool ThemThiSinhVaoPhongThi(DSThiSinhTrongPhongThi objDSTSPhongThi)
         {
             {

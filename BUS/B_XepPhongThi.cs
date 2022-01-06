@@ -17,10 +17,12 @@ namespace BUS
             return d_XepPhongThi.GetDSThiSinhDaCoPhongThi();
         }
 
-        public List<ThiSinhDK> GetDSThiSinhChuaDangKy(int monthKhoa, int yearKhoa, String trinhDoValue)
+        public List<ThiSinhDK> GetDSThiSinhChuaDangKy( int monthKhoa, int yearKhoa, String trinhDoValue)
         {
-            return d_XepPhongThi.GetDSThiSinhChuaDangKy(monthKhoa, yearKhoa, trinhDoValue);
+            return d_XepPhongThi.GetDSThiSinhChuaDangKy( monthKhoa, yearKhoa, trinhDoValue);
         }
+
+        
 
         public bool ThemThiSinhVaoPhongThi(DSThiSinhTrongPhongThi objDSTSPhongThi)
         {

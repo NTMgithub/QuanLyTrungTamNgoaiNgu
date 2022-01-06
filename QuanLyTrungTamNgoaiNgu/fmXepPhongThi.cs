@@ -16,6 +16,7 @@ namespace QuanLyTrungTamNgoaiNgu
     {
         B_XepPhongThi b_XepPhongThi = new B_XepPhongThi();
         B_KhoaThi b_KhoaThi = new B_KhoaThi();
+        D_XepPhongThi d_XepPhongThi = new D_XepPhongThi();
         //int maKhoaThi = 1;
         public fmXepPhongThi()
         {
@@ -58,12 +59,15 @@ namespace QuanLyTrungTamNgoaiNgu
 
                 foreach (var item in listKhoaThi)
                 {
+                    var dayNgayThi = item.NGAYTHI.Value.Day;
                     var monthNgayThi = item.NGAYTHI.Value.Month;
                     var yearNgayThi = item.NGAYTHI.Value.Year;
+                    
 
-                    List<ThiSinhDK> listThiSinh = b_XepPhongThi.GetDSThiSinhChuaDangKy(monthNgayThi, yearNgayThi, trinhDoValue);
+                    List<ThiSinhDK> listThiSinh = d_XepPhongThi.GetDSThiSinhChuaDangKy_TruocNgayThi(dayNgayThi, monthNgayThi, yearNgayThi, trinhDoValue);
 
                     dataGridView_ChuaCoPhongThi.DataSource = listThiSinh;
+
 
                 }
 
