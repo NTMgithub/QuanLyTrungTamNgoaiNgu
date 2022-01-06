@@ -22,26 +22,28 @@ namespace QuanLyTrungTamNgoaiNgu
 
         public void HienThiDanhSachThiSinh_TheoTenHoacSDT()
         {
-            if(KiemTraRangBuoc() == true)
-            {
+            
                 if (textBoxSDT.Text.Length != 0 && textBoxHoTen.Text.Length != 0)
                 {
                     HienThiDanhSachThiSinh();
                 }
                 else
                 {
-                    string TenHoacSdt = "";
-                    if (textBoxSDT.Text.Length == 0)
-                        TenHoacSdt = textBoxHoTen.Text;
-                    if (textBoxHoTen.Text.Length == 0)
-                        TenHoacSdt = textBoxSDT.Text;
+                    if(KiemTraRangBuoc()==true)
+                    {
+                        string TenHoacSdt = "";
+                        if (textBoxSDT.Text.Length == 0)
+                            TenHoacSdt = textBoxHoTen.Text;
+                        if (textBoxHoTen.Text.Length == 0)
+                            TenHoacSdt = textBoxSDT.Text;
 
-                    dataGridViewbangDanhSachThiSinh.AutoGenerateColumns = false;
-                    dataGridViewbangDanhSachThiSinh.DataSource = B_DSThiSinhTrongPhongThi.GetDSThiSinh_TheoTenVaSDTs(TenHoacSdt);
-                    dataGridViewbangDanhSachThiSinh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                    dataGridViewbangDanhSachThiSinh.AllowUserToAddRows = false;
+                        dataGridViewbangDanhSachThiSinh.AutoGenerateColumns = false;
+                        dataGridViewbangDanhSachThiSinh.DataSource = B_DSThiSinhTrongPhongThi.GetDSThiSinh_TheoTenVaSDTs(TenHoacSdt);
+                        dataGridViewbangDanhSachThiSinh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        dataGridViewbangDanhSachThiSinh.AllowUserToAddRows = false;
+                    }    
                 }
-            }    
+               
         }
 
         public void HienThiDanhSachThiSinh()
@@ -61,14 +63,14 @@ namespace QuanLyTrungTamNgoaiNgu
             if (regex.IsMatch(textBoxHoTen.Text))
             {
                 //MessageBox.Show("Họ tên không được có số và kí tự đặc biệt!", "Thông báo");
-                textBoxHoTen.Focus();
+                //textBoxHoTen.Focus();
                 return false;
             }
-            Regex regexNumber = new Regex("[0-9]");
-            if (!regexNumber.IsMatch(textBoxSDT.Text))
+            Regex regexNumber = new Regex("[a-z]");
+            if (regexNumber.IsMatch(textBoxSDT.Text))
             {
                 //MessageBox.Show("Số điện thoại ở dạng số", "Thông báo");
-                textBoxSDT.Focus();
+                //textBoxSDT.Focus();
                 return false;
             }
 
