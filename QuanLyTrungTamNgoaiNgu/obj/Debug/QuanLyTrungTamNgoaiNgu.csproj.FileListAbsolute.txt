@@ -79,3 +79,4 @@ C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTa
 =======
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmDanhSachThiSinh.resources
 >>>>>>> main
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.csproj.CopyComplete
