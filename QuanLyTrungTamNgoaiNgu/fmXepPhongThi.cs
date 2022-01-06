@@ -16,7 +16,6 @@ namespace QuanLyTrungTamNgoaiNgu
     {
         B_XepPhongThi b_XepPhongThi = new B_XepPhongThi();
         B_KhoaThi b_KhoaThi = new B_KhoaThi();
-        D_XepPhongThi d_XepPhongThi = new D_XepPhongThi();
         //int maKhoaThi = 1;
         public fmXepPhongThi()
         {
@@ -59,15 +58,13 @@ namespace QuanLyTrungTamNgoaiNgu
 
                 foreach (var item in listKhoaThi)
                 {
-                    var dayNgayThi = item.NGAYTHI.Value.Day;
+
                     var monthNgayThi = item.NGAYTHI.Value.Month;
                     var yearNgayThi = item.NGAYTHI.Value.Year;
-                    
 
-                    List<ThiSinhDK> listThiSinh = d_XepPhongThi.GetDSThiSinhChuaDangKy_TruocNgayThi(dayNgayThi, monthNgayThi, yearNgayThi, trinhDoValue);
+                    List<ThiSinhDK> listThiSinh = b_XepPhongThi.GetDSThiSinhChuaDangKy(monthNgayThi, yearNgayThi, trinhDoValue);
 
                     dataGridView_ChuaCoPhongThi.DataSource = listThiSinh;
-
 
                 }
 
@@ -139,10 +136,10 @@ namespace QuanLyTrungTamNgoaiNgu
                     string[] delim = { Environment.NewLine, "\n" };
                     string[] lines = sb.ToString().Split(delim, StringSplitOptions.None);
 
-                    
+
                     foreach (string line in lines)
                     {
-                        
+
                         string maDangKyRow = line.Split('-')[0]; //lấy mã đăng ký từ stringbuilder line
                         if (int.TryParse(maDangKyRow, out maDangKyRowInt))
                         {
@@ -162,7 +159,7 @@ namespace QuanLyTrungTamNgoaiNgu
 
                             countLine++;
                         }
-                        
+
 
                     }
 
