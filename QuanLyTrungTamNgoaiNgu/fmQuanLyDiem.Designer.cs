@@ -67,9 +67,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel11 = new System.Windows.Forms.Panel();
             this.comboBoxPhong = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.comboBoxTrinhDo = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.dataGridViewbangDiemThiSinh = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -93,7 +90,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel15.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
-            this.panel12.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewbangDiemThiSinh)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -281,6 +277,7 @@ namespace QuanLyTrungTamNgoaiNgu
             this.btnLuu.TabIndex = 6;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // panel14
             // 
@@ -289,7 +286,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel14.Controls.Add(this.btnHuy);
             this.panel14.Controls.Add(this.panel10);
             this.panel14.Controls.Add(this.panel11);
-            this.panel14.Controls.Add(this.panel12);
             this.panel14.Controls.Add(this.panel4);
             this.panel14.Controls.Add(this.label5);
             this.panel14.Controls.Add(this.btnLuu);
@@ -513,40 +509,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.label13.TabIndex = 0;
             this.label13.Text = "Chọn phòng thi";
             // 
-            // panel12
-            // 
-            this.panel12.Controls.Add(this.comboBoxTrinhDo);
-            this.panel12.Controls.Add(this.label14);
-            this.panel12.Location = new System.Drawing.Point(346, 326);
-            this.panel12.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(285, 94);
-            this.panel12.TabIndex = 10;
-            // 
-            // comboBoxTrinhDo
-            // 
-            this.comboBoxTrinhDo.FormattingEnabled = true;
-            this.comboBoxTrinhDo.Items.AddRange(new object[] {
-            "A2",
-            "B1"});
-            this.comboBoxTrinhDo.Location = new System.Drawing.Point(19, 46);
-            this.comboBoxTrinhDo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxTrinhDo.MaximumSize = new System.Drawing.Size(247, 0);
-            this.comboBoxTrinhDo.MinimumSize = new System.Drawing.Size(247, 0);
-            this.comboBoxTrinhDo.Name = "comboBoxTrinhDo";
-            this.comboBoxTrinhDo.Size = new System.Drawing.Size(247, 28);
-            this.comboBoxTrinhDo.TabIndex = 1;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label14.Location = new System.Drawing.Point(15, 10);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(142, 22);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Chọn trình độ thi";
-            // 
             // dataGridViewbangDiemThiSinh
             // 
             this.dataGridViewbangDiemThiSinh.AllowUserToAddRows = false;
@@ -594,6 +556,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // MaDangKy
             // 
+            this.MaDangKy.DataPropertyName = "MADK";
             this.MaDangKy.HeaderText = "Mã Đăng Ký";
             this.MaDangKy.MinimumWidth = 6;
             this.MaDangKy.Name = "MaDangKy";
@@ -602,6 +565,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // SoBaoDanh
             // 
+            this.SoBaoDanh.DataPropertyName = "SBD";
             this.SoBaoDanh.HeaderText = "Số Báo Danh";
             this.SoBaoDanh.MinimumWidth = 6;
             this.SoBaoDanh.Name = "SoBaoDanh";
@@ -610,6 +574,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // HoTen
             // 
+            this.HoTen.DataPropertyName = "HOTEN";
             this.HoTen.HeaderText = "Họ Tên";
             this.HoTen.MinimumWidth = 6;
             this.HoTen.Name = "HoTen";
@@ -618,6 +583,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // DiemNghe
             // 
+            this.DiemNghe.DataPropertyName = "DIEMNGHE";
             this.DiemNghe.HeaderText = "Điểm nghe";
             this.DiemNghe.MinimumWidth = 6;
             this.DiemNghe.Name = "DiemNghe";
@@ -626,6 +592,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // DiemNoi
             // 
+            this.DiemNoi.DataPropertyName = "DIEMNOI";
             this.DiemNoi.HeaderText = "Điểm nói";
             this.DiemNoi.MinimumWidth = 6;
             this.DiemNoi.Name = "DiemNoi";
@@ -634,6 +601,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // DiemDoc
             // 
+            this.DiemDoc.DataPropertyName = "DIEMDOC";
             this.DiemDoc.HeaderText = "Điểm đọc";
             this.DiemDoc.MinimumWidth = 6;
             this.DiemDoc.Name = "DiemDoc";
@@ -642,6 +610,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // DiemViet
             // 
+            this.DiemViet.DataPropertyName = "DIEMVIET";
             this.DiemViet.HeaderText = "Điểm viết";
             this.DiemViet.MinimumWidth = 6;
             this.DiemViet.Name = "DiemViet";
@@ -656,9 +625,12 @@ namespace QuanLyTrungTamNgoaiNgu
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MaximumSize = new System.Drawing.Size(1622, 1021);
+            this.MinimumSize = new System.Drawing.Size(1622, 1021);
             this.Name = "fmQuanLyDiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmQuanLyDiem";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -685,8 +657,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel10.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
-            this.panel12.ResumeLayout(false);
-            this.panel12.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewbangDiemThiSinh)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -719,9 +689,6 @@ namespace QuanLyTrungTamNgoaiNgu
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.ComboBox comboBoxPhong;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.ComboBox comboBoxTrinhDo;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBoxDiemDoc;
         private System.Windows.Forms.TextBox textBoxDiemNoi;
         private System.Windows.Forms.TextBox textBoxDiemNghe;

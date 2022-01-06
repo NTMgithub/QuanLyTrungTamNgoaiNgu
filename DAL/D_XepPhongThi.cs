@@ -38,11 +38,11 @@ namespace DAL
         public List<ThiSinhDK> GetDSThiSinhChuaDangKy(int monthKhoa, int yearKhoa, String trinhDoValue)
         {
             var dsThiSinhDk = from tableThiSinh in TTAN.ThiSinhDKs
-                              where !(from tableDSThiSinhPhongThi in TTAN.DSThiSinhTrongPhongThis select tableDSThiSinhPhongThi.MADK).Contains(tableThiSinh.MADK) 
-                              && tableThiSinh.NGAYDK.Month == monthKhoa && tableThiSinh.NGAYDK.Year == yearKhoa 
+                              where !(from tableDSThiSinhPhongThi in TTAN.DSThiSinhTrongPhongThis select tableDSThiSinhPhongThi.MADK).Contains(tableThiSinh.MADK)
+                              && tableThiSinh.NGAYDK.Month == monthKhoa && tableThiSinh.NGAYDK.Year == yearKhoa
                               && tableThiSinh.TRINHDO == trinhDoValue
                               select tableThiSinh;
-                              
+
 
             return dsThiSinhDk.ToList<ThiSinhDK>();
         }
@@ -65,7 +65,19 @@ namespace DAL
         }
 
 
+
+
         //Phong thi
+
+        public List<dynamic> GetPhongThis(String khoathi)
+        {
+            int makhoathi = Int32.Parse(khoathi);
+            var dsPhongThi = from phongthis in TTAN.PhongThis
+                             where phongthis.MAKHOATHI == makhoathi
+                             select phongthis;
+
+            return dsPhongThi.ToList<dynamic>();
+        }
         public bool ThemPhongThi(PhongThi objPhongThi)
         {
             {

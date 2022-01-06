@@ -41,6 +41,7 @@ namespace QuanLyTrungTamNgoaiNgu
             this.btnXepPhongThi = new System.Windows.Forms.Button();
             this.btnTraCuu = new System.Windows.Forms.Button();
             this.btnDangKyDuThi = new System.Windows.Forms.Button();
+            this.buttonDanhSachThiSinh = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -91,6 +92,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.panel2.Controls.Add(this.buttonDanhSachThiSinh);
             this.panel2.Controls.Add(this.buttonLapKhoaThi);
             this.panel2.Controls.Add(this.panel5);
             this.panel2.Controls.Add(this.btnXepGiaoVien);
@@ -100,8 +102,9 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel2.Controls.Add(this.btnDangKyDuThi);
             this.panel2.Location = new System.Drawing.Point(3, 79);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(855, 567);
+            this.panel2.Size = new System.Drawing.Size(855, 566);
             this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // buttonLapKhoaThi
             // 
@@ -119,7 +122,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(-2, 439);
+            this.panel5.Location = new System.Drawing.Point(3, 529);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(864, 2);
             this.panel5.TabIndex = 6;
@@ -191,11 +194,24 @@ namespace QuanLyTrungTamNgoaiNgu
             this.btnDangKyDuThi.UseVisualStyleBackColor = false;
             this.btnDangKyDuThi.Click += new System.EventHandler(this.button1_Click);
             // 
+            // buttonDanhSachThiSinh
+            // 
+            this.buttonDanhSachThiSinh.BackColor = System.Drawing.Color.White;
+            this.buttonDanhSachThiSinh.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDanhSachThiSinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F);
+            this.buttonDanhSachThiSinh.Location = new System.Drawing.Point(59, 408);
+            this.buttonDanhSachThiSinh.Name = "buttonDanhSachThiSinh";
+            this.buttonDanhSachThiSinh.Size = new System.Drawing.Size(319, 81);
+            this.buttonDanhSachThiSinh.TabIndex = 8;
+            this.buttonDanhSachThiSinh.Text = "Danh sách thí sinh";
+            this.buttonDanhSachThiSinh.UseVisualStyleBackColor = false;
+            this.buttonDanhSachThiSinh.Click += new System.EventHandler(this.buttonDanhSachThiSinh_Click);
+            // 
             // fmTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(861, 541);
+            this.ClientSize = new System.Drawing.Size(861, 626);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "fmTrangChu";
@@ -222,5 +238,6 @@ namespace QuanLyTrungTamNgoaiNgu
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button buttonLapKhoaThi;
         private System.Windows.Forms.Button btnXepPhongThi;
+        private System.Windows.Forms.Button buttonDanhSachThiSinh;
     }
 }

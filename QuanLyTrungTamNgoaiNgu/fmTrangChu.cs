@@ -92,5 +92,16 @@ namespace QuanLyTrungTamNgoaiNgu
         {
 
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void buttonDanhSachThiSinh_Click(object sender, EventArgs e)
+        {
+            fmDanhSachThiSinh fmDSTS = new fmDanhSachThiSinh();
+            HienThiFormCon(fmDSTS);
+        }
     }
 }

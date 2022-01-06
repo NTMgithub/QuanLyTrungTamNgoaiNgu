@@ -29,6 +29,11 @@ namespace BUS
 
 
         //Phong thi
+        public List<dynamic> GetPhongThis(String khoathi)
+        {
+            return d_XepPhongThi.GetPhongThis(khoathi);
+        }
+
         public bool ThemPhongThi(PhongThi objPhongThi)
         {
             return d_XepPhongThi.ThemPhongThi(objPhongThi);
