@@ -58,6 +58,7 @@ namespace QuanLyTrungTamNgoaiNgu
 
                 foreach (var item in listKhoaThi)
                 {
+
                     var monthNgayThi = item.NGAYTHI.Value.Month;
                     var yearNgayThi = item.NGAYTHI.Value.Year;
 
@@ -135,10 +136,10 @@ namespace QuanLyTrungTamNgoaiNgu
                     string[] delim = { Environment.NewLine, "\n" };
                     string[] lines = sb.ToString().Split(delim, StringSplitOptions.None);
 
-                    
+
                     foreach (string line in lines)
                     {
-                        
+
                         string maDangKyRow = line.Split('-')[0]; //lấy mã đăng ký từ stringbuilder line
                         if (int.TryParse(maDangKyRow, out maDangKyRowInt))
                         {
@@ -158,7 +159,7 @@ namespace QuanLyTrungTamNgoaiNgu
 
                             countLine++;
                         }
-                        
+
 
                     }
 
