@@ -20,6 +20,7 @@ namespace DAL
                                                 MADK = ds.MADK,
                                                 SBD = ds.SBD,
                                                 HOTEN = thisinh.HOTEN,
+                                                PHONGTHI = ds.MAPHONGTHI,
                                                 DIEMNGHE = ds.DIEMNGHE,
                                                 DIEMNOI = ds.DIEMNOI,
                                                 DIEMVIET = ds.DIEMVIET,
@@ -66,6 +67,27 @@ namespace DAL
                     return false;
                 }
             }
+        }
+
+        // Câu 18
+        public List<dynamic> GetDSThiSinhCoDiemes(String TenHoacSdt)
+        {
+            var DSThiSinhCoDiem = from thisinh in TTAN.ThiSinhDKs
+                                  join danhsach in TTAN.DSThiSinhTrongPhongThis on thisinh.MADK equals danhsach.MADK
+                                  where thisinh.SDT == TenHoacSdt || thisinh.HOTEN == TenHoacSdt
+                                  select new
+                                  {
+                                      MADK = danhsach.MADK,
+                                      SBD = danhsach.SBD,
+                                      HOTEN = thisinh.HOTEN,
+                                      PHONGTHI = danhsach.MAPHONGTHI,
+                                      DIEMNGHE = danhsach.DIEMNGHE,
+                                      DIEMNOI = danhsach.DIEMNOI,
+                                      DIEMVIET = danhsach.DIEMVIET,
+                                      DIEMDOC = danhsach.DIEMDOC
+                                  };
+
+            return DSThiSinhCoDiem.ToList<dynamic>();
         }
     }
 }
