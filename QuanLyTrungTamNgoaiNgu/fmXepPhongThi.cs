@@ -96,6 +96,7 @@ namespace QuanLyTrungTamNgoaiNgu
                 //chia đều ra cho các phòng nếu số lượng thí sinh >35. Ví dụ: 40 thì mỗi phòng 20 thí sinh
                 int soLuongThiSinhTrenMotPhong = (int)((int)soLuongThiSinh / soLuongPhongCanTao);
 
+                int countLine = 1;
                 int item1 = 0;
                 //vòng for loop datagridview thí sinh chưa có phòng thi
                 foreach (var rows in SplitDataGridView(dataGridView_ChuaCoPhongThi, soLuongThiSinhTrenMotPhong))
@@ -134,10 +135,10 @@ namespace QuanLyTrungTamNgoaiNgu
                     string[] delim = { Environment.NewLine, "\n" };
                     string[] lines = sb.ToString().Split(delim, StringSplitOptions.None);
 
-                    int countLine = 0;
+                    
                     foreach (string line in lines)
                     {
-                        countLine++;
+                        
                         string maDangKyRow = line.Split('-')[0]; //lấy mã đăng ký từ stringbuilder line
                         if (int.TryParse(maDangKyRow, out maDangKyRowInt))
                         {
@@ -155,8 +156,9 @@ namespace QuanLyTrungTamNgoaiNgu
                                 System.Diagnostics.Debug.WriteLine("Thêm thí sinh " + SBDRow + " thành công");
                             }
 
-
+                            countLine++;
                         }
+                        
 
                     }
 
