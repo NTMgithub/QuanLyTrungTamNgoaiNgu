@@ -76,12 +76,6 @@
     <Compile Include="fmQuanLyDiem.Designer.cs">
       <DependentUpon>fmQuanLyDiem.cs</DependentUpon>
     </Compile>
-    <Compile Include="fmTimKiemThiSinhCoDiem.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="fmTimKiemThiSinhCoDiem.Designer.cs">
-      <DependentUpon>fmTimKiemThiSinhCoDiem.cs</DependentUpon>
-    </Compile>
     <Compile Include="fmTraCuu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,9 +122,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fmQuanLyDiem.resx">
       <DependentUpon>fmQuanLyDiem.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="fmTimKiemThiSinhCoDiem.resx">
-      <DependentUpon>fmTimKiemThiSinhCoDiem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fmTraCuu.resx">
       <DependentUpon>fmTraCuu.cs</DependentUpon>
