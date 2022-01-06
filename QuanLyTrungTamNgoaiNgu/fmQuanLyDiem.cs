@@ -123,6 +123,16 @@ namespace QuanLyTrungTamNgoaiNgu
             LoadDanhSachThiSinh();
         }
 
+        // Cau18:
+        public void HienThiDanhSachThiSinhCoDiem()
+        {
+                string TenHoacSdt = textBoxTimKiem.Text;
+                dataGridViewbangDiemThiSinh.AutoGenerateColumns = false;
+                dataGridViewbangDiemThiSinh.DataSource = B_DSThiSinhTrongPhongThi.GetDSThiSinhCoDiemes(TenHoacSdt);
+                dataGridViewbangDiemThiSinh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridViewbangDiemThiSinh.AllowUserToAddRows = false;
+        }
+
         private void dataGridViewbangDiemThiSinh_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -132,6 +142,16 @@ namespace QuanLyTrungTamNgoaiNgu
         {
             LoadDanhSachThiSinh();
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonTimKiem_Click(object sender, EventArgs e)
+        {
+            HienThiDanhSachThiSinhCoDiem();
         }
     }
 }

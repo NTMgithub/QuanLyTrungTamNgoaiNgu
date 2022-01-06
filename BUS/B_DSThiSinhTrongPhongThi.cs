@@ -18,6 +18,10 @@ namespace BUS
         {
             return D_DSThiSinhTrongPhongThi.UpdateDiem(thiSinhNew, madk);
         }
+        public List<dynamic> GetDSThiSinhCoDiemes(String TenHoacSdt)
+        {
+            return D_DSThiSinhTrongPhongThi.GetDSThiSinhCoDiemes(TenHoacSdt);
+        }
     }
 
 }

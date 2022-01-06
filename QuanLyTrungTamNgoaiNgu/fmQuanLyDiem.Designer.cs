@@ -57,10 +57,16 @@ namespace QuanLyTrungTamNgoaiNgu
             this.dataGridViewbangDiemThiSinh = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.textBoxTimKiem = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.buttonTimKiem = new System.Windows.Forms.Button();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MaDangKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoBaoDanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MAPHONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemNghe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemNoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -75,15 +81,17 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel11.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewbangDiemThiSinh)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label5.Location = new System.Drawing.Point(25, 449);
+            this.label5.Location = new System.Drawing.Point(22, 359);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(1721, 22);
+            this.label5.Size = new System.Drawing.Size(1380, 18);
             this.label5.TabIndex = 9;
             this.label5.Text = "_________________ Bảng điểm của thí sinh ________________________________________" +
     "________________________________________________________________________________" +
@@ -93,30 +101,28 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.panel7.Controls.Add(this.textBoxDiemDoc);
             this.panel7.Controls.Add(this.label9);
-            this.panel7.Location = new System.Drawing.Point(22, 241);
-            this.panel7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel7.Location = new System.Drawing.Point(20, 193);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(317, 59);
+            this.panel7.Size = new System.Drawing.Size(282, 47);
             this.panel7.TabIndex = 10;
             // 
             // textBoxDiemDoc
             // 
             this.textBoxDiemDoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxDiemDoc.Location = new System.Drawing.Point(125, 14);
-            this.textBoxDiemDoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxDiemDoc.MaximumSize = new System.Drawing.Size(337, 35);
-            this.textBoxDiemDoc.MinimumSize = new System.Drawing.Size(134, 28);
+            this.textBoxDiemDoc.Location = new System.Drawing.Point(111, 11);
+            this.textBoxDiemDoc.MaximumSize = new System.Drawing.Size(300, 35);
+            this.textBoxDiemDoc.MinimumSize = new System.Drawing.Size(120, 28);
             this.textBoxDiemDoc.Name = "textBoxDiemDoc";
-            this.textBoxDiemDoc.Size = new System.Drawing.Size(180, 26);
+            this.textBoxDiemDoc.Size = new System.Drawing.Size(160, 22);
             this.textBoxDiemDoc.TabIndex = 5;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label9.Location = new System.Drawing.Point(15, 19);
+            this.label9.Location = new System.Drawing.Point(13, 15);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 22);
+            this.label9.Size = new System.Drawing.Size(72, 18);
             this.label9.TabIndex = 0;
             this.label9.Text = "Điểm đọc";
             // 
@@ -127,40 +133,37 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(1014, 10);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel4.Location = new System.Drawing.Point(901, 8);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(359, 410);
+            this.panel4.Size = new System.Drawing.Size(319, 328);
             this.panel4.TabIndex = 9;
             // 
             // panel8
             // 
             this.panel8.Controls.Add(this.textBoxDiemViet);
             this.panel8.Controls.Add(this.label10);
-            this.panel8.Location = new System.Drawing.Point(22, 332);
-            this.panel8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel8.Location = new System.Drawing.Point(20, 266);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(317, 59);
+            this.panel8.Size = new System.Drawing.Size(282, 47);
             this.panel8.TabIndex = 11;
             // 
             // textBoxDiemViet
             // 
             this.textBoxDiemViet.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxDiemViet.Location = new System.Drawing.Point(125, 14);
-            this.textBoxDiemViet.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxDiemViet.MaximumSize = new System.Drawing.Size(337, 35);
-            this.textBoxDiemViet.MinimumSize = new System.Drawing.Size(134, 28);
+            this.textBoxDiemViet.Location = new System.Drawing.Point(111, 11);
+            this.textBoxDiemViet.MaximumSize = new System.Drawing.Size(300, 35);
+            this.textBoxDiemViet.MinimumSize = new System.Drawing.Size(120, 28);
             this.textBoxDiemViet.Name = "textBoxDiemViet";
-            this.textBoxDiemViet.Size = new System.Drawing.Size(180, 26);
+            this.textBoxDiemViet.Size = new System.Drawing.Size(160, 22);
             this.textBoxDiemViet.TabIndex = 3;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label10.Location = new System.Drawing.Point(15, 19);
+            this.label10.Location = new System.Drawing.Point(13, 15);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(84, 22);
+            this.label10.Size = new System.Drawing.Size(69, 18);
             this.label10.TabIndex = 0;
             this.label10.Text = "Điểm viết";
             // 
@@ -168,30 +171,28 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.panel6.Controls.Add(this.textBoxDiemNoi);
             this.panel6.Controls.Add(this.label8);
-            this.panel6.Location = new System.Drawing.Point(22, 144);
-            this.panel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel6.Location = new System.Drawing.Point(20, 115);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(317, 59);
+            this.panel6.Size = new System.Drawing.Size(282, 47);
             this.panel6.TabIndex = 9;
             // 
             // textBoxDiemNoi
             // 
             this.textBoxDiemNoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxDiemNoi.Location = new System.Drawing.Point(125, 14);
-            this.textBoxDiemNoi.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxDiemNoi.MaximumSize = new System.Drawing.Size(337, 35);
-            this.textBoxDiemNoi.MinimumSize = new System.Drawing.Size(134, 28);
+            this.textBoxDiemNoi.Location = new System.Drawing.Point(111, 11);
+            this.textBoxDiemNoi.MaximumSize = new System.Drawing.Size(300, 35);
+            this.textBoxDiemNoi.MinimumSize = new System.Drawing.Size(120, 28);
             this.textBoxDiemNoi.Name = "textBoxDiemNoi";
-            this.textBoxDiemNoi.Size = new System.Drawing.Size(180, 26);
+            this.textBoxDiemNoi.Size = new System.Drawing.Size(160, 22);
             this.textBoxDiemNoi.TabIndex = 4;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label8.Location = new System.Drawing.Point(15, 19);
+            this.label8.Location = new System.Drawing.Point(13, 15);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(80, 22);
+            this.label8.Size = new System.Drawing.Size(67, 18);
             this.label8.TabIndex = 0;
             this.label8.Text = "Điểm nói";
             // 
@@ -199,30 +200,28 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.panel5.Controls.Add(this.textBoxDiemNghe);
             this.panel5.Controls.Add(this.label7);
-            this.panel5.Location = new System.Drawing.Point(22, 49);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel5.Location = new System.Drawing.Point(20, 39);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(317, 59);
+            this.panel5.Size = new System.Drawing.Size(282, 47);
             this.panel5.TabIndex = 8;
             // 
             // textBoxDiemNghe
             // 
             this.textBoxDiemNghe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.textBoxDiemNghe.Location = new System.Drawing.Point(125, 14);
-            this.textBoxDiemNghe.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.textBoxDiemNghe.MaximumSize = new System.Drawing.Size(337, 35);
-            this.textBoxDiemNghe.MinimumSize = new System.Drawing.Size(134, 28);
+            this.textBoxDiemNghe.Location = new System.Drawing.Point(111, 11);
+            this.textBoxDiemNghe.MaximumSize = new System.Drawing.Size(300, 35);
+            this.textBoxDiemNghe.MinimumSize = new System.Drawing.Size(120, 28);
             this.textBoxDiemNghe.Name = "textBoxDiemNghe";
-            this.textBoxDiemNghe.Size = new System.Drawing.Size(180, 26);
+            this.textBoxDiemNghe.Size = new System.Drawing.Size(160, 22);
             this.textBoxDiemNghe.TabIndex = 4;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label7.Location = new System.Drawing.Point(15, 19);
+            this.label7.Location = new System.Drawing.Point(13, 15);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(96, 22);
+            this.label7.Size = new System.Drawing.Size(79, 18);
             this.label7.TabIndex = 0;
             this.label7.Text = "Điểm nghe";
             // 
@@ -232,19 +231,18 @@ namespace QuanLyTrungTamNgoaiNgu
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label6.Location = new System.Drawing.Point(155, 11);
+            this.label6.Location = new System.Drawing.Point(138, 9);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 29);
+            this.label6.Size = new System.Drawing.Size(57, 25);
             this.label6.TabIndex = 3;
             this.label6.Text = "Điểm";
             // 
             // btnClear
             // 
             this.btnClear.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnClear.Location = new System.Drawing.Point(1431, 156);
-            this.btnClear.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnClear.Location = new System.Drawing.Point(1272, 125);
             this.btnClear.Name = "btnClear";
-            this.btnClear.Size = new System.Drawing.Size(146, 48);
+            this.btnClear.Size = new System.Drawing.Size(130, 38);
             this.btnClear.TabIndex = 13;
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = false;
@@ -253,10 +251,9 @@ namespace QuanLyTrungTamNgoaiNgu
             // btnLuu
             // 
             this.btnLuu.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnLuu.Location = new System.Drawing.Point(1431, 51);
-            this.btnLuu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLuu.Location = new System.Drawing.Point(1272, 41);
             this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(146, 48);
+            this.btnLuu.Size = new System.Drawing.Size(130, 38);
             this.btnLuu.TabIndex = 6;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
@@ -265,6 +262,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.panel14.Controls.Add(this.panel2);
             this.panel14.Controls.Add(this.btnOK);
             this.panel14.Controls.Add(this.btnClear);
             this.panel14.Controls.Add(this.panel10);
@@ -273,19 +271,17 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel14.Controls.Add(this.label5);
             this.panel14.Controls.Add(this.btnLuu);
             this.panel14.Controls.Add(this.dataGridViewbangDiemThiSinh);
-            this.panel14.Location = new System.Drawing.Point(0, 90);
-            this.panel14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel14.Location = new System.Drawing.Point(0, 72);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1600, 868);
+            this.panel14.Size = new System.Drawing.Size(1422, 694);
             this.panel14.TabIndex = 7;
             // 
             // btnOK
             // 
             this.btnOK.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnOK.Location = new System.Drawing.Point(638, 52);
-            this.btnOK.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnOK.Location = new System.Drawing.Point(567, 42);
             this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(146, 48);
+            this.btnOK.Size = new System.Drawing.Size(130, 38);
             this.btnOK.TabIndex = 14;
             this.btnOK.Text = "OK";
             this.btnOK.UseVisualStyleBackColor = false;
@@ -295,21 +291,19 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.panel10.Controls.Add(this.comboBoxKhoa);
             this.panel10.Controls.Add(this.label12);
-            this.panel10.Location = new System.Drawing.Point(12, 10);
-            this.panel10.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel10.Location = new System.Drawing.Point(11, 8);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(285, 94);
+            this.panel10.Size = new System.Drawing.Size(253, 75);
             this.panel10.TabIndex = 12;
             // 
             // comboBoxKhoa
             // 
             this.comboBoxKhoa.FormattingEnabled = true;
-            this.comboBoxKhoa.Location = new System.Drawing.Point(19, 46);
-            this.comboBoxKhoa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxKhoa.MaximumSize = new System.Drawing.Size(247, 0);
-            this.comboBoxKhoa.MinimumSize = new System.Drawing.Size(247, 0);
+            this.comboBoxKhoa.Location = new System.Drawing.Point(17, 37);
+            this.comboBoxKhoa.MaximumSize = new System.Drawing.Size(220, 0);
+            this.comboBoxKhoa.MinimumSize = new System.Drawing.Size(220, 0);
             this.comboBoxKhoa.Name = "comboBoxKhoa";
-            this.comboBoxKhoa.Size = new System.Drawing.Size(247, 28);
+            this.comboBoxKhoa.Size = new System.Drawing.Size(220, 24);
             this.comboBoxKhoa.TabIndex = 1;
             this.comboBoxKhoa.SelectedIndexChanged += new System.EventHandler(this.comboBoxKhoa_SelectedIndexChanged);
             // 
@@ -317,9 +311,9 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label12.Location = new System.Drawing.Point(15, 10);
+            this.label12.Location = new System.Drawing.Point(13, 8);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(121, 22);
+            this.label12.Size = new System.Drawing.Size(100, 18);
             this.label12.TabIndex = 0;
             this.label12.Text = "Chọn khóa thi";
             // 
@@ -327,21 +321,19 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.panel11.Controls.Add(this.comboBoxPhong);
             this.panel11.Controls.Add(this.label13);
-            this.panel11.Location = new System.Drawing.Point(324, 10);
-            this.panel11.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.panel11.Location = new System.Drawing.Point(288, 8);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(285, 94);
+            this.panel11.Size = new System.Drawing.Size(253, 75);
             this.panel11.TabIndex = 11;
             // 
             // comboBoxPhong
             // 
             this.comboBoxPhong.FormattingEnabled = true;
-            this.comboBoxPhong.Location = new System.Drawing.Point(19, 46);
-            this.comboBoxPhong.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.comboBoxPhong.MaximumSize = new System.Drawing.Size(247, 0);
-            this.comboBoxPhong.MinimumSize = new System.Drawing.Size(247, 0);
+            this.comboBoxPhong.Location = new System.Drawing.Point(17, 37);
+            this.comboBoxPhong.MaximumSize = new System.Drawing.Size(220, 0);
+            this.comboBoxPhong.MinimumSize = new System.Drawing.Size(220, 0);
             this.comboBoxPhong.Name = "comboBoxPhong";
-            this.comboBoxPhong.Size = new System.Drawing.Size(247, 28);
+            this.comboBoxPhong.Size = new System.Drawing.Size(220, 24);
             this.comboBoxPhong.TabIndex = 1;
             this.comboBoxPhong.SelectedIndexChanged += new System.EventHandler(this.comboBoxPhong_SelectedIndexChanged);
             // 
@@ -349,9 +341,9 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label13.Location = new System.Drawing.Point(15, 10);
+            this.label13.Location = new System.Drawing.Point(13, 8);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(132, 22);
+            this.label13.Size = new System.Drawing.Size(108, 18);
             this.label13.TabIndex = 0;
             this.label13.Text = "Chọn phòng thi";
             // 
@@ -364,16 +356,16 @@ namespace QuanLyTrungTamNgoaiNgu
             this.MaDangKy,
             this.SoBaoDanh,
             this.HoTen,
+            this.MAPHONG,
             this.DiemNghe,
             this.DiemNoi,
             this.DiemDoc,
             this.DiemViet});
-            this.dataGridViewbangDiemThiSinh.Location = new System.Drawing.Point(28, 486);
-            this.dataGridViewbangDiemThiSinh.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dataGridViewbangDiemThiSinh.Location = new System.Drawing.Point(25, 389);
             this.dataGridViewbangDiemThiSinh.Name = "dataGridViewbangDiemThiSinh";
             this.dataGridViewbangDiemThiSinh.RowHeadersWidth = 51;
             this.dataGridViewbangDiemThiSinh.RowTemplate.Height = 24;
-            this.dataGridViewbangDiemThiSinh.Size = new System.Drawing.Size(1550, 369);
+            this.dataGridViewbangDiemThiSinh.Size = new System.Drawing.Size(1378, 295);
             this.dataGridViewbangDiemThiSinh.TabIndex = 0;
             this.dataGridViewbangDiemThiSinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewbangDiemThiSinh_CellContentClick);
             // 
@@ -382,9 +374,8 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1600, 82);
+            this.panel1.Size = new System.Drawing.Size(1422, 66);
             this.panel1.TabIndex = 6;
             // 
             // label1
@@ -394,11 +385,60 @@ namespace QuanLyTrungTamNgoaiNgu
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(664, 10);
+            this.label1.Location = new System.Drawing.Point(590, 8);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(347, 52);
+            this.label1.Size = new System.Drawing.Size(296, 44);
             this.label1.TabIndex = 2;
             this.label1.Text = "Quản lý điểm thi";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.buttonTimKiem);
+            this.panel2.Controls.Add(this.panel9);
+            this.panel2.Location = new System.Drawing.Point(27, 233);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(449, 103);
+            this.panel2.TabIndex = 13;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.textBoxTimKiem);
+            this.panel9.Controls.Add(this.label4);
+            this.panel9.Location = new System.Drawing.Point(18, 13);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(247, 75);
+            this.panel9.TabIndex = 14;
+            // 
+            // textBoxTimKiem
+            // 
+            this.textBoxTimKiem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.textBoxTimKiem.Location = new System.Drawing.Point(13, 40);
+            this.textBoxTimKiem.MaximumSize = new System.Drawing.Size(300, 35);
+            this.textBoxTimKiem.MinimumSize = new System.Drawing.Size(120, 28);
+            this.textBoxTimKiem.Name = "textBoxTimKiem";
+            this.textBoxTimKiem.Size = new System.Drawing.Size(216, 28);
+            this.textBoxTimKiem.TabIndex = 5;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label4.Location = new System.Drawing.Point(13, 8);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(192, 18);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Nhập tên hoặc số điện thoại";
+            // 
+            // buttonTimKiem
+            // 
+            this.buttonTimKiem.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.buttonTimKiem.Location = new System.Drawing.Point(304, 50);
+            this.buttonTimKiem.Name = "buttonTimKiem";
+            this.buttonTimKiem.Size = new System.Drawing.Size(130, 38);
+            this.buttonTimKiem.TabIndex = 15;
+            this.buttonTimKiem.Text = "Tìm kiếm";
+            this.buttonTimKiem.UseVisualStyleBackColor = false;
+            this.buttonTimKiem.Click += new System.EventHandler(this.buttonTimKiem_Click);
             // 
             // Column1
             // 
@@ -430,6 +470,14 @@ namespace QuanLyTrungTamNgoaiNgu
             this.HoTen.HeaderText = "Họ Tên";
             this.HoTen.MinimumWidth = 6;
             this.HoTen.Name = "HoTen";
+            // 
+            // MAPHONG
+            // 
+            this.MAPHONG.DataPropertyName = "PHONGTHI";
+            this.MAPHONG.HeaderText = "Mã Phòng";
+            this.MAPHONG.MinimumWidth = 6;
+            this.MAPHONG.Name = "MAPHONG";
+            this.MAPHONG.Width = 125;
             // 
             // DiemNghe
             // 
@@ -465,14 +513,13 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // fmQuanLyDiem
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1600, 965);
+            this.ClientSize = new System.Drawing.Size(1426, 779);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MaximumSize = new System.Drawing.Size(1622, 1021);
-            this.MinimumSize = new System.Drawing.Size(1622, 1021);
+            this.MaximumSize = new System.Drawing.Size(1444, 826);
+            this.MinimumSize = new System.Drawing.Size(1444, 826);
             this.Name = "fmQuanLyDiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fmQuanLyDiem";
@@ -496,6 +543,9 @@ namespace QuanLyTrungTamNgoaiNgu
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewbangDiemThiSinh)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel9.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -529,10 +579,16 @@ namespace QuanLyTrungTamNgoaiNgu
         private System.Windows.Forms.TextBox textBoxDiemNoi;
         private System.Windows.Forms.TextBox textBoxDiemNghe;
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button buttonTimKiem;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.TextBox textBoxTimKiem;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDangKy;
         private System.Windows.Forms.DataGridViewTextBoxColumn SoBaoDanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAPHONG;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemNghe;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemNoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn DiemDoc;
