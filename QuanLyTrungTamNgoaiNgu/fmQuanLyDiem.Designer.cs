@@ -55,8 +55,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.comboBoxPhong = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.dataGridViewbangDiemThiSinh = new System.Windows.Forms.DataGridView();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.MaDangKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoBaoDanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -65,6 +63,8 @@ namespace QuanLyTrungTamNgoaiNgu
             this.DiemNoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemViet = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel7.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -125,7 +125,7 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.panel5);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(901, 8);
+            this.panel4.Location = new System.Drawing.Point(498, 17);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(319, 328);
             this.panel4.TabIndex = 9;
@@ -231,8 +231,10 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // btnClear
             // 
-            this.btnClear.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnClear.Location = new System.Drawing.Point(1272, 125);
+            this.btnClear.BackColor = System.Drawing.Color.SlateGray;
+            this.btnClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClear.ForeColor = System.Drawing.Color.White;
+            this.btnClear.Location = new System.Drawing.Point(846, 156);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(130, 38);
             this.btnClear.TabIndex = 13;
@@ -242,8 +244,10 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // btnLuu
             // 
-            this.btnLuu.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnLuu.Location = new System.Drawing.Point(1272, 41);
+            this.btnLuu.BackColor = System.Drawing.Color.LimeGreen;
+            this.btnLuu.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLuu.ForeColor = System.Drawing.Color.White;
+            this.btnLuu.Location = new System.Drawing.Point(846, 63);
             this.btnLuu.Name = "btnLuu";
             this.btnLuu.Size = new System.Drawing.Size(130, 38);
             this.btnLuu.TabIndex = 6;
@@ -270,7 +274,9 @@ namespace QuanLyTrungTamNgoaiNgu
             // btnOK
             // 
             this.btnOK.BackColor = System.Drawing.Color.CornflowerBlue;
-            this.btnOK.Location = new System.Drawing.Point(567, 42);
+            this.btnOK.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOK.ForeColor = System.Drawing.Color.White;
+            this.btnOK.Location = new System.Drawing.Point(202, 261);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(130, 38);
             this.btnOK.TabIndex = 14;
@@ -282,7 +288,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.panel10.Controls.Add(this.comboBoxKhoa);
             this.panel10.Controls.Add(this.label12);
-            this.panel10.Location = new System.Drawing.Point(11, 8);
+            this.panel10.Location = new System.Drawing.Point(139, 52);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(253, 75);
             this.panel10.TabIndex = 12;
@@ -312,7 +318,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.panel11.Controls.Add(this.comboBoxPhong);
             this.panel11.Controls.Add(this.label13);
-            this.panel11.Location = new System.Drawing.Point(288, 8);
+            this.panel11.Location = new System.Drawing.Point(139, 147);
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(253, 75);
             this.panel11.TabIndex = 11;
@@ -355,31 +361,9 @@ namespace QuanLyTrungTamNgoaiNgu
             this.dataGridViewbangDiemThiSinh.Name = "dataGridViewbangDiemThiSinh";
             this.dataGridViewbangDiemThiSinh.RowHeadersWidth = 51;
             this.dataGridViewbangDiemThiSinh.RowTemplate.Height = 24;
-            this.dataGridViewbangDiemThiSinh.Size = new System.Drawing.Size(1378, 295);
+            this.dataGridViewbangDiemThiSinh.Size = new System.Drawing.Size(995, 295);
             this.dataGridViewbangDiemThiSinh.TabIndex = 0;
             this.dataGridViewbangDiemThiSinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewbangDiemThiSinh_CellContentClick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1422, 66);
-            this.panel1.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(590, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(296, 44);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Quản lý điểm thi";
             // 
             // Column1
             // 
@@ -444,18 +428,40 @@ namespace QuanLyTrungTamNgoaiNgu
             this.DiemViet.Name = "DiemViet";
             this.DiemViet.Width = 95;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1422, 66);
+            this.panel1.TabIndex = 6;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 22.2F);
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(397, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(296, 44);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Quản lý điểm thi";
+            // 
             // fmQuanLyDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1426, 779);
+            this.ClientSize = new System.Drawing.Size(1046, 779);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel1);
-            this.MaximumSize = new System.Drawing.Size(1444, 826);
-            this.MinimumSize = new System.Drawing.Size(1444, 826);
+            this.MaximumSize = new System.Drawing.Size(1064, 826);
+            this.MinimumSize = new System.Drawing.Size(1064, 826);
             this.Name = "fmQuanLyDiem";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fmQuanLyDiem";
+            this.Text = "Quản lý điểm | Trung tâm ngoại ngữ";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();

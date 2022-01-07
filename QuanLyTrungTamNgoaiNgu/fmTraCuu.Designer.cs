@@ -30,6 +30,12 @@ namespace QuanLyTrungTamNgoaiNgu
         private void InitializeComponent()
         {
             this.panel14 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.comboBoxPhong = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.comboBoxKhoa = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBoxSDT = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,19 +55,13 @@ namespace QuanLyTrungTamNgoaiNgu
             this.DiemViet = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.comboBoxKhoa = new System.Windows.Forms.ComboBox();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.comboBoxPhong = new System.Windows.Forms.ComboBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel14.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewbangDanhSachThiSinh)).BeginInit();
             this.panel1.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel14
@@ -77,6 +77,66 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(1411, 560);
             this.panel14.TabIndex = 5;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.comboBoxPhong);
+            this.panel6.Controls.Add(this.label7);
+            this.panel6.Location = new System.Drawing.Point(1113, 28);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(253, 75);
+            this.panel6.TabIndex = 9;
+            // 
+            // comboBoxPhong
+            // 
+            this.comboBoxPhong.FormattingEnabled = true;
+            this.comboBoxPhong.Location = new System.Drawing.Point(16, 37);
+            this.comboBoxPhong.MaximumSize = new System.Drawing.Size(220, 0);
+            this.comboBoxPhong.MinimumSize = new System.Drawing.Size(220, 0);
+            this.comboBoxPhong.Name = "comboBoxPhong";
+            this.comboBoxPhong.Size = new System.Drawing.Size(220, 24);
+            this.comboBoxPhong.TabIndex = 2;
+            this.comboBoxPhong.SelectedIndexChanged += new System.EventHandler(this.comboBoxPhong_SelectedIndexChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label7.Location = new System.Drawing.Point(13, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(70, 18);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "Phòng thi";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.comboBoxKhoa);
+            this.panel5.Controls.Add(this.label3);
+            this.panel5.Location = new System.Drawing.Point(756, 28);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(253, 75);
+            this.panel5.TabIndex = 8;
+            // 
+            // comboBoxKhoa
+            // 
+            this.comboBoxKhoa.FormattingEnabled = true;
+            this.comboBoxKhoa.Location = new System.Drawing.Point(16, 37);
+            this.comboBoxKhoa.MaximumSize = new System.Drawing.Size(220, 0);
+            this.comboBoxKhoa.MinimumSize = new System.Drawing.Size(220, 0);
+            this.comboBoxKhoa.Name = "comboBoxKhoa";
+            this.comboBoxKhoa.Size = new System.Drawing.Size(220, 24);
+            this.comboBoxKhoa.TabIndex = 2;
+            this.comboBoxKhoa.SelectedIndexChanged += new System.EventHandler(this.comboBoxKhoa_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label3.Location = new System.Drawing.Point(13, 8);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 18);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Khóa thi";
             // 
             // panel3
             // 
@@ -266,66 +326,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.label1.Text = "Tra cứu";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.comboBoxKhoa);
-            this.panel5.Controls.Add(this.label3);
-            this.panel5.Location = new System.Drawing.Point(756, 28);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(253, 75);
-            this.panel5.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label3.Location = new System.Drawing.Point(13, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 18);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Khóa thi";
-            // 
-            // comboBoxKhoa
-            // 
-            this.comboBoxKhoa.FormattingEnabled = true;
-            this.comboBoxKhoa.Location = new System.Drawing.Point(16, 37);
-            this.comboBoxKhoa.MaximumSize = new System.Drawing.Size(220, 0);
-            this.comboBoxKhoa.MinimumSize = new System.Drawing.Size(220, 0);
-            this.comboBoxKhoa.Name = "comboBoxKhoa";
-            this.comboBoxKhoa.Size = new System.Drawing.Size(220, 24);
-            this.comboBoxKhoa.TabIndex = 2;
-            this.comboBoxKhoa.SelectedIndexChanged += new System.EventHandler(this.comboBoxKhoa_SelectedIndexChanged);
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.comboBoxPhong);
-            this.panel6.Controls.Add(this.label7);
-            this.panel6.Location = new System.Drawing.Point(1113, 28);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(253, 75);
-            this.panel6.TabIndex = 9;
-            // 
-            // comboBoxPhong
-            // 
-            this.comboBoxPhong.FormattingEnabled = true;
-            this.comboBoxPhong.Location = new System.Drawing.Point(16, 37);
-            this.comboBoxPhong.MaximumSize = new System.Drawing.Size(220, 0);
-            this.comboBoxPhong.MinimumSize = new System.Drawing.Size(220, 0);
-            this.comboBoxPhong.Name = "comboBoxPhong";
-            this.comboBoxPhong.Size = new System.Drawing.Size(220, 24);
-            this.comboBoxPhong.TabIndex = 2;
-            this.comboBoxPhong.SelectedIndexChanged += new System.EventHandler(this.comboBoxPhong_SelectedIndexChanged);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label7.Location = new System.Drawing.Point(13, 8);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(70, 18);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "Phòng thi";
-            // 
             // fmTraCuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -335,9 +335,13 @@ namespace QuanLyTrungTamNgoaiNgu
             this.Controls.Add(this.panel1);
             this.Name = "fmTraCuu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "fmTraCuu";
+            this.Text = "Tra cứu | Trung tâm ngoại ngữ";
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel9.ResumeLayout(false);
@@ -345,10 +349,6 @@ namespace QuanLyTrungTamNgoaiNgu
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewbangDanhSachThiSinh)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
             this.ResumeLayout(false);
 
         }
