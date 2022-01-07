@@ -131,5 +131,28 @@ namespace DAL
             return DSThiSinh.ToList<dynamic>();
         }
 
+        public List<dynamic> GetThongTinGiayChungNhan(int maKhoaThi, String soBaoDanh)
+        {
+            var DSThiSinh = from thisinh in TTAN.ThiSinhDKs
+                            join danhsach in TTAN.DSThiSinhTrongPhongThis on thisinh.MADK equals danhsach.MADK
+                            join khoathi in TTAN.KhoaThis on danhsach.MAKHOATHI equals khoathi.MAKHOATHI
+                            where danhsach.MAKHOATHI == maKhoaThi && danhsach.SBD == soBaoDanh
+                            select new
+                            {
+                                TRINHDO = thisinh.TRINHDO,
+                                HOTEN = thisinh.HOTEN,
+                                NGAYSINH = thisinh.NGAYSINH,
+                                CMND = thisinh.CMND,
+                                NGAYTHI = khoathi.NGAYTHI,
+                                DIEMNGHE = danhsach.DIEMNGHE,
+                                DIEMNOI = danhsach.DIEMNOI,
+                                DIEMVIET = danhsach.DIEMVIET,
+                                DIEMDOC = danhsach.DIEMDOC
+                            };
+
+            return DSThiSinh.ToList<dynamic>();
+        }
+
+
     }
 }
