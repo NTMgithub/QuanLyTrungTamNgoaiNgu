@@ -44,17 +44,22 @@ namespace QuanLyTrungTamNgoaiNgu
             this.label12 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dataGridViewbangDanhSachThiSinh = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaDangKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SoBaoDanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTen = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MAPHONG = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemNghe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemNoi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemDoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DiemViet = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel14.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -62,11 +67,15 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewbangDanhSachThiSinh)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.PaleGoldenrod;
+            this.panel14.Controls.Add(this.panel2);
+            this.panel14.Controls.Add(this.label4);
+            this.panel14.Controls.Add(this.dataGridView1);
             this.panel14.Controls.Add(this.panel6);
             this.panel14.Controls.Add(this.panel5);
             this.panel14.Controls.Add(this.panel3);
@@ -75,20 +84,22 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel14.Controls.Add(this.dataGridViewbangDanhSachThiSinh);
             this.panel14.Location = new System.Drawing.Point(0, 70);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(1411, 560);
+            this.panel14.Size = new System.Drawing.Size(1411, 720);
             this.panel14.TabIndex = 5;
+            this.panel14.Paint += new System.Windows.Forms.PaintEventHandler(this.panel14_Paint);
             // 
             // panel6
             // 
             this.panel6.Controls.Add(this.comboBoxPhong);
             this.panel6.Controls.Add(this.label7);
-            this.panel6.Location = new System.Drawing.Point(1113, 28);
+            this.panel6.Location = new System.Drawing.Point(369, 14);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(253, 75);
             this.panel6.TabIndex = 9;
             // 
             // comboBoxPhong
             // 
+            this.comboBoxPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPhong.FormattingEnabled = true;
             this.comboBoxPhong.Location = new System.Drawing.Point(16, 37);
             this.comboBoxPhong.MaximumSize = new System.Drawing.Size(220, 0);
@@ -112,13 +123,14 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.panel5.Controls.Add(this.comboBoxKhoa);
             this.panel5.Controls.Add(this.label3);
-            this.panel5.Location = new System.Drawing.Point(756, 28);
+            this.panel5.Location = new System.Drawing.Point(25, 14);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(253, 75);
             this.panel5.TabIndex = 8;
             // 
             // comboBoxKhoa
             // 
+            this.comboBoxKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxKhoa.FormattingEnabled = true;
             this.comboBoxKhoa.Location = new System.Drawing.Point(16, 37);
             this.comboBoxKhoa.MaximumSize = new System.Drawing.Size(220, 0);
@@ -142,7 +154,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.panel3.Controls.Add(this.textBoxSDT);
             this.panel3.Controls.Add(this.label2);
-            this.panel3.Location = new System.Drawing.Point(394, 28);
+            this.panel3.Location = new System.Drawing.Point(369, 398);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(253, 75);
             this.panel3.TabIndex = 8;
@@ -172,7 +184,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.panel9.Controls.Add(this.textBoxHoTen);
             this.panel9.Controls.Add(this.label12);
-            this.panel9.Location = new System.Drawing.Point(37, 28);
+            this.panel9.Location = new System.Drawing.Point(25, 398);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(253, 75);
             this.panel9.TabIndex = 7;
@@ -202,7 +214,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
-            this.label5.Location = new System.Drawing.Point(18, 132);
+            this.label5.Location = new System.Drawing.Point(22, 490);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(1377, 18);
             this.label5.TabIndex = 12;
@@ -213,95 +225,25 @@ namespace QuanLyTrungTamNgoaiNgu
             // dataGridViewbangDanhSachThiSinh
             // 
             this.dataGridViewbangDanhSachThiSinh.AllowUserToAddRows = false;
+            this.dataGridViewbangDanhSachThiSinh.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewbangDanhSachThiSinh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewbangDanhSachThiSinh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
             this.MaDangKy,
             this.SoBaoDanh,
             this.HoTen,
+            this.SDT,
             this.MAPHONG,
             this.DiemNghe,
             this.DiemNoi,
             this.DiemDoc,
             this.DiemViet});
-            this.dataGridViewbangDanhSachThiSinh.Location = new System.Drawing.Point(11, 165);
+            this.dataGridViewbangDanhSachThiSinh.Location = new System.Drawing.Point(25, 522);
             this.dataGridViewbangDanhSachThiSinh.Name = "dataGridViewbangDanhSachThiSinh";
             this.dataGridViewbangDanhSachThiSinh.RowHeadersWidth = 51;
             this.dataGridViewbangDanhSachThiSinh.RowTemplate.Height = 24;
-            this.dataGridViewbangDanhSachThiSinh.Size = new System.Drawing.Size(1378, 380);
+            this.dataGridViewbangDanhSachThiSinh.Size = new System.Drawing.Size(1365, 180);
             this.dataGridViewbangDanhSachThiSinh.TabIndex = 11;
             this.dataGridViewbangDanhSachThiSinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewbangDiemThiSinh_CellContentClick);
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "select";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
-            // 
-            // MaDangKy
-            // 
-            this.MaDangKy.DataPropertyName = "MADK";
-            this.MaDangKy.HeaderText = "Mã Đăng Ký";
-            this.MaDangKy.MinimumWidth = 6;
-            this.MaDangKy.Name = "MaDangKy";
-            this.MaDangKy.Width = 125;
-            // 
-            // SoBaoDanh
-            // 
-            this.SoBaoDanh.DataPropertyName = "SBD";
-            this.SoBaoDanh.HeaderText = "Số Báo Danh";
-            this.SoBaoDanh.MinimumWidth = 6;
-            this.SoBaoDanh.Name = "SoBaoDanh";
-            this.SoBaoDanh.Width = 135;
-            // 
-            // HoTen
-            // 
-            this.HoTen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.HoTen.DataPropertyName = "HOTEN";
-            this.HoTen.HeaderText = "Họ Tên";
-            this.HoTen.MinimumWidth = 6;
-            this.HoTen.Name = "HoTen";
-            // 
-            // MAPHONG
-            // 
-            this.MAPHONG.DataPropertyName = "PHONGTHI";
-            this.MAPHONG.HeaderText = "Mã Phòng";
-            this.MAPHONG.MinimumWidth = 6;
-            this.MAPHONG.Name = "MAPHONG";
-            this.MAPHONG.Width = 125;
-            // 
-            // DiemNghe
-            // 
-            this.DiemNghe.DataPropertyName = "DIEMNGHE";
-            this.DiemNghe.HeaderText = "Điểm nghe";
-            this.DiemNghe.MinimumWidth = 6;
-            this.DiemNghe.Name = "DiemNghe";
-            this.DiemNghe.Width = 105;
-            // 
-            // DiemNoi
-            // 
-            this.DiemNoi.DataPropertyName = "DIEMNOI";
-            this.DiemNoi.HeaderText = "Điểm nói";
-            this.DiemNoi.MinimumWidth = 6;
-            this.DiemNoi.Name = "DiemNoi";
-            this.DiemNoi.Width = 95;
-            // 
-            // DiemDoc
-            // 
-            this.DiemDoc.DataPropertyName = "DIEMDOC";
-            this.DiemDoc.HeaderText = "Điểm đọc";
-            this.DiemDoc.MinimumWidth = 6;
-            this.DiemDoc.Name = "DiemDoc";
-            this.DiemDoc.Width = 95;
-            // 
-            // DiemViet
-            // 
-            this.DiemViet.DataPropertyName = "DIEMVIET";
-            this.DiemViet.HeaderText = "Điểm viết";
-            this.DiemViet.MinimumWidth = 6;
-            this.DiemViet.Name = "DiemViet";
-            this.DiemViet.Width = 95;
             // 
             // panel1
             // 
@@ -326,11 +268,126 @@ namespace QuanLyTrungTamNgoaiNgu
             this.label1.Text = "Tra cứu";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn2});
+            this.dataGridView1.Location = new System.Drawing.Point(25, 137);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1365, 180);
+            this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            this.label4.Location = new System.Drawing.Point(22, 105);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(1377, 18);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "_________________ Danh sách thí sinh ____________________________________________" +
+    "________________________________________________________________________________" +
+    "______________\r\n";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "HOTEN";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Họ Tên";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "SBD";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Số Báo Danh";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            // 
+            // MaDangKy
+            // 
+            this.MaDangKy.DataPropertyName = "MADK";
+            this.MaDangKy.HeaderText = "Mã Đăng Ký";
+            this.MaDangKy.MinimumWidth = 6;
+            this.MaDangKy.Name = "MaDangKy";
+            // 
+            // SoBaoDanh
+            // 
+            this.SoBaoDanh.DataPropertyName = "SBD";
+            this.SoBaoDanh.HeaderText = "Số Báo Danh";
+            this.SoBaoDanh.MinimumWidth = 6;
+            this.SoBaoDanh.Name = "SoBaoDanh";
+            // 
+            // HoTen
+            // 
+            this.HoTen.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.HoTen.DataPropertyName = "HOTEN";
+            this.HoTen.HeaderText = "Họ Tên";
+            this.HoTen.MinimumWidth = 6;
+            this.HoTen.Name = "HoTen";
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "Số Điện Thoại";
+            this.SDT.MinimumWidth = 6;
+            this.SDT.Name = "SDT";
+            // 
+            // MAPHONG
+            // 
+            this.MAPHONG.DataPropertyName = "PHONGTHI";
+            this.MAPHONG.HeaderText = "Mã Phòng";
+            this.MAPHONG.MinimumWidth = 6;
+            this.MAPHONG.Name = "MAPHONG";
+            // 
+            // DiemNghe
+            // 
+            this.DiemNghe.DataPropertyName = "DIEMNGHE";
+            this.DiemNghe.HeaderText = "Điểm nghe";
+            this.DiemNghe.MinimumWidth = 6;
+            this.DiemNghe.Name = "DiemNghe";
+            // 
+            // DiemNoi
+            // 
+            this.DiemNoi.DataPropertyName = "DIEMNOI";
+            this.DiemNoi.HeaderText = "Điểm nói";
+            this.DiemNoi.MinimumWidth = 6;
+            this.DiemNoi.Name = "DiemNoi";
+            // 
+            // DiemDoc
+            // 
+            this.DiemDoc.DataPropertyName = "DIEMDOC";
+            this.DiemDoc.HeaderText = "Điểm đọc";
+            this.DiemDoc.MinimumWidth = 6;
+            this.DiemDoc.Name = "DiemDoc";
+            // 
+            // DiemViet
+            // 
+            this.DiemViet.DataPropertyName = "DIEMVIET";
+            this.DiemViet.HeaderText = "Điểm viết";
+            this.DiemViet.MinimumWidth = 6;
+            this.DiemViet.Name = "DiemViet";
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(25, 347);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1367, 1);
+            this.panel2.TabIndex = 15;
+            // 
             // fmTraCuu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1411, 631);
+            this.ClientSize = new System.Drawing.Size(1411, 802);
             this.Controls.Add(this.panel14);
             this.Controls.Add(this.panel1);
             this.Name = "fmTraCuu";
@@ -349,6 +406,7 @@ namespace QuanLyTrungTamNgoaiNgu
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewbangDanhSachThiSinh)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -361,15 +419,6 @@ namespace QuanLyTrungTamNgoaiNgu
         private System.Windows.Forms.TextBox textBoxHoTen;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DataGridView dataGridViewbangDanhSachThiSinh;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaDangKy;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoBaoDanh;
-        private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MAPHONG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiemNghe;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiemNoi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiemDoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiemViet;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBoxSDT;
@@ -380,5 +429,19 @@ namespace QuanLyTrungTamNgoaiNgu
         private System.Windows.Forms.ComboBox comboBoxPhong;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBoxKhoa;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaDangKy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoBaoDanh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn HoTen;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MAPHONG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiemNghe;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiemNoi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiemDoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiemViet;
+        private System.Windows.Forms.Panel panel2;
     }
 }

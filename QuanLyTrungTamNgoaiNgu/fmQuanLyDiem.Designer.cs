@@ -295,6 +295,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // comboBoxKhoa
             // 
+            this.comboBoxKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxKhoa.FormattingEnabled = true;
             this.comboBoxKhoa.Location = new System.Drawing.Point(17, 37);
             this.comboBoxKhoa.MaximumSize = new System.Drawing.Size(220, 0);
@@ -325,6 +326,7 @@ namespace QuanLyTrungTamNgoaiNgu
             // 
             // comboBoxPhong
             // 
+            this.comboBoxPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxPhong.FormattingEnabled = true;
             this.comboBoxPhong.Location = new System.Drawing.Point(17, 37);
             this.comboBoxPhong.MaximumSize = new System.Drawing.Size(220, 0);

@@ -33,3 +33,37 @@ D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\Qu
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\EntityFramework.xml
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\BUS.dll
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\BUS.pdb
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\WebTrungTamNgoaiNgu.dll.config
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\WebTrungTamNgoaiNgu.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\WebTrungTamNgoaiNgu.pdb
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\Antlr3.Runtime.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\BUS.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\DAL.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\Newtonsoft.Json.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\System.Web.Helpers.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\System.Web.Mvc.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\System.Web.Optimization.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\System.Web.Razor.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\System.Web.WebPages.Deployment.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\System.Web.WebPages.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\System.Web.WebPages.Razor.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\WebGrease.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\EntityFramework.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\BUS.pdb
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\DAL.pdb
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\DAL.dll.config
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\System.Web.Helpers.xml
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\System.Web.Mvc.xml
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\System.Web.Optimization.xml
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\System.Web.Razor.xml
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\System.Web.WebPages.xml
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\System.Web.WebPages.Deployment.xml
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\System.Web.WebPages.Razor.xml
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\Newtonsoft.Json.xml
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\Antlr3.Runtime.pdb
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\bin\EntityFramework.xml
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\obj\Debug\WebTrungTamNgoaiNgu.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\obj\Debug\WebTrungTamNgoaiNgu.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\obj\Debug\WebTrungTamNgoaiNgu.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\WebTrungTamNgoaiNgu\obj\Debug\WebTrungTamNgoaiNgu.pdb
