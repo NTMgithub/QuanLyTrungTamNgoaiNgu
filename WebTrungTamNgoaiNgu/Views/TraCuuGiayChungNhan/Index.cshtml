@@ -1,0 +1,158 @@
+﻿@{
+    ViewBag.Title = "Tra cứu giấy chứng nhận";
+}
+
+<main id="main">
+    <div style="padding: 25px;padding-bottom: 20px;border-radius: 10px;">
+        <h2 class="text-center" style="text-transform: uppercase;">Tra cứu giấy chứng nhận</h2>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div class="containerForm">
+            <form>
+
+                <div class="containerThongTinCaNhan">
+                    <div class="mb-3">
+                        <label class="form-label">Khóa thi</label>
+                        <select class="form-select" id="selectKhoaThi">
+                            
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputSBD" class="form-label">Số báo danh</label>
+                        <input type="text" class="form-control" id="inputSBD" placeholder="Nhập số báo danh..." required>
+                    </div>
+
+                    <input type="button" class="btn btn-primary" value="Tìm kiếm" onclick="TimKiem()" />
+
+                </div>
+
+            </form>
+
+            <div style="margin-top: 25px;">
+                <span style="text-transform: uppercase;font-weight: 800;margin-bottom: 10px;">Kết quả tìm kiếm</span>
+                <div id="ketQuaTimKiem">
+                    <div>
+
+                    </div>
+                </div>
+                
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <script>
+
+        $(document).ready(function () {
+            LoadKhoaThi();
+        });
+
+        function LoadKhoaThi() {
+            document.getElementById('selectKhoaThi').options.length = 0; //clear dropdown
+
+            $.ajax({
+                url: "/TraCuuGiayChungNhan/GetAllKhoaThi",
+                type: "GET",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                async: false,
+                success: function (result) {
+                    $.each(result, function (index) {
+                        $('#selectKhoaThi').append($('<option>', {
+                            value: result[index].MAKHOATHI,
+                            text: result[index].TENKHOATHI
+                        }));
+                    })
+                },
+                error: function (errorMessage) {
+                    alert(errorMessage.responseText);
+                }
+            });
+
+
+        }
+
+
+        function TimKiem() {
+            var _soBaoDanh = $('#inputSBD').val();
+            var _maKhoaThi = $('#selectKhoaThi option:selected').val();
+          
+            if (_soBaoDanh == '') {
+                swal({
+                    title: "Không được để trống!",
+                    text: "Vui lòng nhập đầy đủ thông tin!",
+                    icon: "warning",
+                    button: "Đóng",
+                });
+            } else {
+                $('#ketQuaTimKiem div div').remove(); //clear ket qua truoc khi tim kiem
+                $('#ketQuaTimKiem div p').remove(); //clear ket qua truoc khi tim kiem
+                $('#ketQuaTimKiem div button').remove();
+
+                $.ajax({
+                    url: "/TraCuuGiayChungNhan/GetThongTinGiayChungNhan?maKhoaThi=" + _maKhoaThi + "&soBaoDanh=" + _soBaoDanh,
+                    type: "GET",
+                    contentType: "application/json;charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.length < 1) {
+                            $('#ketQuaTimKiem div').append($('<p class="h5" style="color: red;margin: 10px;">Không tìm thấy thông tin thí sinh!</p>'));
+                        } else {
+                            $.each(result, function (index) {
+                                if (result[index].DIEMNGHE == null || result[index].DIEMDOC == null || result[index].DIEMNOI == null || result[index].DIEMVIET == null) {
+                                    $('#ketQuaTimKiem div').append($('<p class="h5" style="color: red;margin: 10px;">Thí sinh này chưa có điểm!</p>'));
+                                } else {
+                                    $('#ketQuaTimKiem div').append($('<div id="elementGiayChungNhan" style="width:100%; height:auto; padding:20px; text-align:center; border: 10px solid #787878"><div style="width:100%; height:100%; padding:20px; text-align:center; border: 5px solid #787878" ><span style="font-size:50px; font-weight:bold">Chứng nhận kết quả</span><p style="font-size:25px"><i>Trình độ ' + result[index].TRINHDO + '</i></p><br><table style="margin: auto;"><tbody><tr style="font-size: 20px;"><td>Họ tên: </td><td>' + result[index].HOTEN + '</td></tr><tr style="font-size: 20px;"><td>Ngày sinh: </td><td>' + FormatDate(result[index].NGAYSINH) + '</td></tr><tr style="font-size: 20px;"><td>CMND: </td><td>' + result[index].CMND + '</td></tr></tbody></table><br><span style="font-size:25px"><i>Đã tham gia kỳ thi vào ngày: ' + FormatDate(result[index].NGAYTHI) + '</i></span><br><span style="font-size:25px"><i>Với kết quả:</i></span><br><p style="font-size: 20px;">Nghe: ' + result[index].DIEMNGHE + '</p><p style="font-size: 20px;">Nói: ' + result[index].DIEMNOI + '</p><p style="font-size: 20px;">Đọc: ' + result[index].DIEMDOC + '</p><p style="font-size: 20px;">Viết: ' + result[index].DIEMVIET + '</p></div></div><button type="button" name="btnLuuGiayChungNhan" class="btn btn-warning" style="margin-top: 20px;" onclick="SaveGiayChungNhanPDF()" >Lưu PDF</button></div>'));
+
+                                }
+                               
+                            })
+                        }
+
+                    },
+                    error: function (errorMessage) {
+                        alert(errorMessage.responseText);
+                    }
+                });
+
+            }
+
+
+        }
+
+        function SaveGiayChungNhanPDF() {
+            var element = document.getElementById('ketQuaTimKiem');
+            html2pdf(element);
+        }
+
+
+        function FormatDate(inputDate) {
+            var str, year, month, day, d, finalDate;
+            str = inputDate.replace(/\D/g, "");
+            d = new Date(parseInt(str));
+            year = d.getFullYear();
+            month = d.getMonth() + 1;
+            day = d.getDate();
+            if (day < 10) {
+                day = "0" + day;
+            }
+            if (month < 10) {
+                month = "0" + month;
+            }
+            finalDate = day + "-" + month + "-" + year;
+            return finalDate;
+        }
+
+        
+
+
+    </script>
+
+
+</main><!-- End #main -->
