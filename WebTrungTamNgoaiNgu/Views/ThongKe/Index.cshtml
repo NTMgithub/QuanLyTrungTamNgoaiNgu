@@ -1,5 +1,11 @@
 ﻿@{
     ViewBag.Title = "Thống kê";
+
+    var soLuongKhoaThi = ViewBag.soLuongKhoaThi;
+    var soLuongPhongThi = ViewBag.soLuongPhongThi;
+    var soLuongThiSinhA2 = ViewBag.soLuongThiSinhA2;
+    var soLuongThiSinhB1 = ViewBag.soLuongThiSinhB1;
+
 }
 
 <main id="main">
@@ -10,19 +16,23 @@
     <div class="d-flex justify-content-center">
         <div style="margin: 10px;">
             <div class="containerForm containerThongKe">
-                <span>sl khóa</span>
+                <span style="font-size: 25px;">@soLuongKhoaThi</span>
+                <p>Khóa thi</p>
             </div>
             <div class="containerForm containerThongKe">
-                <span>số lượng phòng</span>
+                <span style="font-size: 25px;">@soLuongPhongThi</span>
+                <p>Phòng thi</p>
             </div>
         </div>
 
         <div style="margin: 10px;">
             <div class="containerForm containerThongKe">
-                <span>số lượng thí sinh A2</span>
+                <span style="font-size: 25px;">@soLuongThiSinhA2</span>
+                <p>Tổng thí sinh thi A2</p>
             </div>
             <div class="containerForm containerThongKe">
-                <span>số lượng thí sinh B1</span>
+                <span style="font-size: 25px;">@soLuongThiSinhB1</span>
+                <p>Tổng thí sinh thi B1</p>
             </div>
         </div>
 

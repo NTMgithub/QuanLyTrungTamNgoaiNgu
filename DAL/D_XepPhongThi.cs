@@ -83,6 +83,12 @@ namespace DAL
 
 
         //Phong thi
+        public List<PhongThi> GetAllPhongThi()
+        {
+            var dsPhongThi = TTAN.PhongThis;
+
+            return dsPhongThi.ToList<PhongThi>();
+        }
 
         public List<dynamic> GetPhongThis(String khoathi)
         {

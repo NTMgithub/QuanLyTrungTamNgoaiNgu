@@ -13,6 +13,11 @@ namespace DAL
             var dsThiSinhDk = TTAN.ThiSinhDKs;
             return dsThiSinhDk.ToList<ThiSinhDK>();
         }
+        public List<ThiSinhDK> GetThiSinhTheoTrinhDo(String trinhDo)
+        {
+            var dsThiSinhDk = TTAN.ThiSinhDKs.Where(t=>t.TRINHDO == trinhDo);
+            return dsThiSinhDk.ToList<ThiSinhDK>();
+        }
 
         public List<ThiSinhDK> GetThongTinThiSinh(int maDangKy)
         {
