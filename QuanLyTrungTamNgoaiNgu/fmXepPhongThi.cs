@@ -65,8 +65,8 @@ namespace QuanLyTrungTamNgoaiNgu
 
                     foreach (var itemTS in listThiSinh.ToList())
                     {
-                        var truoc3Ngay = (datetimeNgayThi - itemTS.NGAYDK).Days;
-                        if (truoc3Ngay < 3)
+                        var truoc5Ngay = (datetimeNgayThi - itemTS.NGAYDK).Days;
+                        if (truoc5Ngay < 5)
                         {
                             listThiSinh.Remove(itemTS);
                         }
