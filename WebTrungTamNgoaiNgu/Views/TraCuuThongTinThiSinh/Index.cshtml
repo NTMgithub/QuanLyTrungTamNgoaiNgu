@@ -1,0 +1,97 @@
+﻿@{
+    ViewBag.Title = "Tra cứu thông tin thí sinh";
+}
+
+<main id="main">
+    <div style="padding: 25px;padding-bottom: 20px;border-radius: 10px;">
+        <h2 class="text-center" style="text-transform: uppercase;">Tra cứu thông tin thí sinh</h2>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div class="containerForm">
+            <div>
+
+                <div class="containerThongTinCaNhan">
+                    <div class="mb-3">
+                        <label for="inputHoten" class="form-label">Họ tên</label>
+                        <input type="text" class="form-control" id="inputHoten" placeholder="Nhập họ tên..." required>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="inputSDT" class="form-label">Số điện thoại</label>
+                        <input type="text" class="form-control" id="inputSDT" placeholder="Nhập số điện thoại..." required>
+                    </div>
+
+                    <input type="button" class="btn btn-primary" onclick='TimKiem()' value='Tìm kiếm' />
+
+                </div>
+
+            </div>
+
+            <div style="margin-top: 25px;">
+                <span style="text-transform: uppercase;font-weight: 800;margin-bottom: 5px;">Kết quả tìm kiếm</span>
+                <div id="ketQuaTimKiem">
+                    <div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+    <script>
+
+        function TimKiem() {
+            var _hoTen = $('#inputHoten').val();
+            var _soDienThoai = $('#inputSDT').val();
+
+            if (_hoTen == '' || _soDienThoai == '') {
+                swal({
+                    title: "Không được để trống!",
+                    text: "Vui lòng nhập đầy đủ thông tin!",
+                    icon: "warning",
+                    button: "Đóng",
+                });
+            } else {
+
+                $('#ketQuaTimKiem div table').remove(); //clear ket qua truoc khi tim kiem
+                $('#ketQuaTimKiem div p').remove(); //clear ket qua truoc khi tim kiem
+
+                $.ajax({
+                    url: "/TraCuuThongTinThiSinh/GetThiSinhTheoHoTenSDT?hoten=" + _hoTen + "&sdt=" + _soDienThoai,
+                    type: "GET",
+                    contentType: "application/json;charset=utf-8",
+                    dataType: "json",
+                    success: function (result) {
+                        if (result.length < 1) {
+                            $('#ketQuaTimKiem div').append($('<p class="h5" style="color: red;margin: 10px;">Không tìm thấy thông tin thí sinh hoặc thí sinh chưa được xếp phòng thi!</p>'));
+                        } else {
+                            $.each(result, function (index) {
+                                $('#ketQuaTimKiem div').append($('<table class="table table-hover"><thead><tr><th scope="col">Họ tên</th><th scope="col">Số báo danh</th><th scope="col">Khóa thi</th><th scope="col">Phòng thi</th><th scope="col">Kết quả thi</th></tr></thead><tbody><tr><td>' + result[index].HOTEN + '</td><td>' + result[index].SBD + '</td><td>' + result[index].KHOATHI + '</td><td>' + result[index].PHONGTHI + '</td><td><p>Điểm nghe: ' + result[index].DIEMNGHE + '</p><p>Điểm nói: ' + result[index].DIEMNOI + '</p><p>Điểm viết: ' + result[index].DIEMVIET + '</p><p>Điểm đọc: ' + result[index].DIEMDOC + '</p></td></tr></tbody></table>'));
+
+                            })
+                        }
+                        
+                    },
+                    error: function (errorMessage) {
+                        alert(errorMessage.responseText);
+                    }
+                });
+
+
+            }
+
+
+        }
+
+
+    </script>
+
+
+
+</main><!-- End #main -->

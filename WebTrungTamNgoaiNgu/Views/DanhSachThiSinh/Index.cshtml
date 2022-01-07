@@ -1,0 +1,80 @@
+﻿@{
+    ViewBag.Title = "Danh sách thí sinh";
+}
+
+<main id="main">
+    <div style="padding: 25px;padding-bottom: 20px;border-radius: 10px;">
+        <h2 class="text-center" style="text-transform: uppercase;">Danh sách thí sinh</h2>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div class="containerForm" style="width: 80%;">
+            <form>
+
+                <div class="containerThongTinCaNhan">
+                    <div class="mb-3">
+                        <label class="form-label">Khóa thi</label>
+                        <select class="form-select" id="selectKhoaThi">
+                            <option value="1" selected>One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Phòng thi</label>
+                        <select class="form-select" id="selectPhongThi">
+                            <option value="1" selected>One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+
+                </div>
+
+            </form>
+
+            <div style="margin-top: 25px;">
+                <span style="text-transform: uppercase;font-weight: 800;margin-bottom: 5px;">Kết quả tìm kiếm</span>
+                <div id="ketQuaTimKiem">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">Mã đăng ký</th>
+                                <th scope="col">Họ tên</th>
+                                <th scope="col">Khóa thi</th>
+                                <th scope="col">Phòng thi</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>mdo</td>
+                                <td>mdo</td>
+                                <td>
+                                    <button type="button" class="btn btn-info">Thông tin thí sinh</button>
+                                    <button type="button" class="btn btn-secondary" style="background: sienna;">Kết quả thi</button>
+                                    <button type="button" class="btn btn-secondary" style="background: darkslategrey;">Giấy chứng nhận</button>
+                                </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+</main><!-- End #main -->

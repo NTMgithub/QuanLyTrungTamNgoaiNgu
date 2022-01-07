@@ -36,13 +36,13 @@ namespace QuanLyTrungTamNgoaiNgu
             this.comboBoxKhoa = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridViewDanhSachThiSinh = new System.Windows.Forms.DataGridView();
+            this.TenThiSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoBaoDanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.comboBoxPhong = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.comboBoxPhong = new System.Windows.Forms.ComboBox();
-            this.TenThiSinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoBaoDanh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel14.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhSachThiSinh)).BeginInit();
@@ -129,6 +129,22 @@ namespace QuanLyTrungTamNgoaiNgu
             this.dataGridViewDanhSachThiSinh.TabIndex = 0;
             this.dataGridViewDanhSachThiSinh.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewDanhSachThiSinh_CellContentClick);
             // 
+            // TenThiSinh
+            // 
+            this.TenThiSinh.DataPropertyName = "HOTEN";
+            this.TenThiSinh.HeaderText = "Tên Thí Sinh";
+            this.TenThiSinh.MinimumWidth = 6;
+            this.TenThiSinh.Name = "TenThiSinh";
+            this.TenThiSinh.Width = 200;
+            // 
+            // SoBaoDanh
+            // 
+            this.SoBaoDanh.DataPropertyName = "SBD";
+            this.SoBaoDanh.HeaderText = "Số Báo Danh";
+            this.SoBaoDanh.MinimumWidth = 6;
+            this.SoBaoDanh.Name = "SoBaoDanh";
+            this.SoBaoDanh.Width = 200;
+            // 
             // panel7
             // 
             this.panel7.Controls.Add(this.comboBoxPhong);
@@ -137,6 +153,17 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(356, 51);
             this.panel7.TabIndex = 1;
+            // 
+            // comboBoxPhong
+            // 
+            this.comboBoxPhong.FormattingEnabled = true;
+            this.comboBoxPhong.Location = new System.Drawing.Point(115, 13);
+            this.comboBoxPhong.MaximumSize = new System.Drawing.Size(220, 0);
+            this.comboBoxPhong.MinimumSize = new System.Drawing.Size(220, 0);
+            this.comboBoxPhong.Name = "comboBoxPhong";
+            this.comboBoxPhong.Size = new System.Drawing.Size(220, 24);
+            this.comboBoxPhong.TabIndex = 2;
+            this.comboBoxPhong.SelectedIndexChanged += new System.EventHandler(this.comboBoxPhong_SelectedIndexChanged_1);
             // 
             // label4
             // 
@@ -171,32 +198,6 @@ namespace QuanLyTrungTamNgoaiNgu
             this.panel1.Size = new System.Drawing.Size(933, 61);
             this.panel1.TabIndex = 6;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
-            // 
-            // comboBoxPhong
-            // 
-            this.comboBoxPhong.FormattingEnabled = true;
-            this.comboBoxPhong.Location = new System.Drawing.Point(115, 13);
-            this.comboBoxPhong.MaximumSize = new System.Drawing.Size(220, 0);
-            this.comboBoxPhong.MinimumSize = new System.Drawing.Size(220, 0);
-            this.comboBoxPhong.Name = "comboBoxPhong";
-            this.comboBoxPhong.Size = new System.Drawing.Size(220, 24);
-            this.comboBoxPhong.TabIndex = 2;
-            // 
-            // TenThiSinh
-            // 
-            this.TenThiSinh.DataPropertyName = "HOTEN";
-            this.TenThiSinh.HeaderText = "Tên Thí Sinh";
-            this.TenThiSinh.MinimumWidth = 6;
-            this.TenThiSinh.Name = "TenThiSinh";
-            this.TenThiSinh.Width = 200;
-            // 
-            // SoBaoDanh
-            // 
-            this.SoBaoDanh.DataPropertyName = "SBD";
-            this.SoBaoDanh.HeaderText = "Số Báo Danh";
-            this.SoBaoDanh.MinimumWidth = 6;
-            this.SoBaoDanh.Name = "SoBaoDanh";
-            this.SoBaoDanh.Width = 200;
             // 
             // fmDanhSachThiSinh
             // 

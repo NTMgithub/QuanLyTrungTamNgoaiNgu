@@ -112,23 +112,100 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TraCuuThongTinThiSinhController.cs" />
+    <Compile Include="Controllers\TraCuuGiayChungNhanController.cs" />
+    <Compile Include="Controllers\ThongKeController.cs" />
+    <Compile Include="Controllers\DanhSachThiSinhController.cs" />
+    <Compile Include="Controllers\DangKyThiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\img\about-img.svg" />
+    <Content Include="Content\img\apple-touch-icon.png" />
+    <Content Include="Content\img\favicon.png" />
+    <Content Include="Content\img\hero-img.svg" />
+    <Content Include="Content\img\logo.png" />
+    <Content Include="Content\js\jquery.min.js" />
+    <Content Include="Content\js\main.js" />
+    <Content Include="Content\js\sweetalert.min.js" />
+    <Content Include="Content\vendor\aos\aos.css" />
+    <Content Include="Content\vendor\aos\aos.js" />
+    <Content Include="Content\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="Content\vendor\bootstrap-icons\index.html" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Content\vendor\boxicons\css\animations.css" />
+    <Content Include="Content\vendor\boxicons\css\boxicons.css" />
+    <Content Include="Content\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="Content\vendor\boxicons\css\transformations.css" />
+    <Content Include="Content\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="Content\vendor\glightbox\css\glightbox.css" />
+    <Content Include="Content\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="Content\vendor\glightbox\js\glightbox.js" />
+    <Content Include="Content\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="Content\vendor\isotope-layout\isotope.pkgd.js" />
+    <Content Include="Content\vendor\isotope-layout\isotope.pkgd.min.js" />
+    <Content Include="Content\vendor\php-email-form\validate.js" />
+    <Content Include="Content\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="Content\vendor\swiper\swiper-bundle.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Content\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="Content\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="Content\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="Content\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Content\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Content\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="Content\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="Content\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="Content\vendor\boxicons\fonts\boxicons.woff2" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -151,9 +228,11 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\DangKyThi\Index.cshtml" />
+    <Content Include="Views\DanhSachThiSinh\Index.cshtml" />
+    <Content Include="Views\ThongKe\Index.cshtml" />
+    <Content Include="Views\TraCuuGiayChungNhan\Index.cshtml" />
+    <Content Include="Views\TraCuuThongTinThiSinh\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -164,13 +243,19 @@
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-theme.min.css.map" />
-    <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{6feab5fc-d778-48ce-b2b5-122a2f628cff}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{b7a1679f-ed42-4649-acad-662b1b6310fa}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -190,7 +275,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>52963</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52963/</IISUrl>
+          <IISUrl>http://localhost:52964/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -20,6 +20,7 @@ namespace DAL
                                                 MADK = ds.MADK,
                                                 SBD = ds.SBD,
                                                 HOTEN = thisinh.HOTEN,
+                                                PHONGTHI = ds.MAPHONGTHI,
                                                 DIEMNGHE = ds.DIEMNGHE,
                                                 DIEMNOI = ds.DIEMNOI,
                                                 DIEMVIET = ds.DIEMVIET,
@@ -67,5 +68,91 @@ namespace DAL
                 }
             }
         }
+
+        // Câu 18
+        public List<dynamic> GetDSThiSinh_TheoTenVaSDTs(String TenHoacSdt)
+        {
+            var DSThiSinh = from thisinh in TTAN.ThiSinhDKs
+                                  join danhsach in TTAN.DSThiSinhTrongPhongThis on thisinh.MADK equals danhsach.MADK
+                                  where thisinh.SDT == TenHoacSdt || thisinh.HOTEN == TenHoacSdt
+                                  select new
+                                  {
+                                      MADK = danhsach.MADK,
+                                      SBD = danhsach.SBD,
+                                      HOTEN = thisinh.HOTEN,
+                                      PHONGTHI = danhsach.MAPHONGTHI,
+                                      DIEMNGHE = danhsach.DIEMNGHE,
+                                      DIEMNOI = danhsach.DIEMNOI,
+                                      DIEMVIET = danhsach.DIEMVIET,
+                                      DIEMDOC = danhsach.DIEMDOC
+                                  };
+
+            return DSThiSinh.ToList<dynamic>();
+        }
+        public List<dynamic> GetDSThiSinhs(String hoten, String sdt)
+        {
+            var DSThiSinh = from thisinh in TTAN.ThiSinhDKs
+                                  join danhsach in TTAN.DSThiSinhTrongPhongThis on thisinh.MADK equals danhsach.MADK
+                                  where thisinh.HOTEN == hoten && thisinh.SDT == sdt
+                                  select new
+                                  {
+                                      MADK = danhsach.MADK,
+                                      SBD = danhsach.SBD,
+                                      HOTEN = thisinh.HOTEN,
+                                      PHONGTHI = danhsach.MAPHONGTHI,
+                                      DIEMNGHE = danhsach.DIEMNGHE,
+                                      DIEMNOI = danhsach.DIEMNOI,
+                                      DIEMVIET = danhsach.DIEMVIET,
+                                      DIEMDOC = danhsach.DIEMDOC
+                                  };
+
+            return DSThiSinh.ToList<dynamic>();
+        }
+
+        public List<dynamic> GetDSThiSinhTheoHoTenSDT(String hoten, String sdt)
+        {
+            var DSThiSinh = from thisinh in TTAN.ThiSinhDKs
+                            join danhsach in TTAN.DSThiSinhTrongPhongThis on thisinh.MADK equals danhsach.MADK
+                            join khoathi in TTAN.KhoaThis on danhsach.MAKHOATHI equals khoathi.MAKHOATHI
+                            where thisinh.HOTEN == hoten && thisinh.SDT == sdt
+                            select new
+                            {
+                                MADK = danhsach.MADK,
+                                SBD = danhsach.SBD,
+                                HOTEN = thisinh.HOTEN,
+                                KHOATHI = khoathi.TENKHOATHI,
+                                PHONGTHI = danhsach.MAPHONGTHI,
+                                DIEMNGHE = danhsach.DIEMNGHE,
+                                DIEMNOI = danhsach.DIEMNOI,
+                                DIEMVIET = danhsach.DIEMVIET,
+                                DIEMDOC = danhsach.DIEMDOC
+                            };
+
+            return DSThiSinh.ToList<dynamic>();
+        }
+
+        public List<dynamic> GetThongTinGiayChungNhan(int maKhoaThi, String soBaoDanh)
+        {
+            var DSThiSinh = from thisinh in TTAN.ThiSinhDKs
+                            join danhsach in TTAN.DSThiSinhTrongPhongThis on thisinh.MADK equals danhsach.MADK
+                            join khoathi in TTAN.KhoaThis on danhsach.MAKHOATHI equals khoathi.MAKHOATHI
+                            where danhsach.MAKHOATHI == maKhoaThi && danhsach.SBD == soBaoDanh
+                            select new
+                            {
+                                TRINHDO = thisinh.TRINHDO,
+                                HOTEN = thisinh.HOTEN,
+                                NGAYSINH = thisinh.NGAYSINH,
+                                CMND = thisinh.CMND,
+                                NGAYTHI = khoathi.NGAYTHI,
+                                DIEMNGHE = danhsach.DIEMNGHE,
+                                DIEMNOI = danhsach.DIEMNOI,
+                                DIEMVIET = danhsach.DIEMVIET,
+                                DIEMDOC = danhsach.DIEMDOC
+                            };
+
+            return DSThiSinh.ToList<dynamic>();
+        }
+
+
     }
 }

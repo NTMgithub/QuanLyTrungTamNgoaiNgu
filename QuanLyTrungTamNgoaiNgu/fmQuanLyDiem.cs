@@ -22,7 +22,7 @@ namespace QuanLyTrungTamNgoaiNgu
             InitializeComponent();
             LoadComboboxKhoaThi();
             LoadComboboxPhongThi();
-            void chkItems_CheckedChanged(object sender, EventArgs e)
+            void chekItems_CheckedChanged(object sender, EventArgs e)
             {
                 foreach (DataGridViewRow row in dataGridViewbangDiemThiSinh.Rows)
                 {
@@ -123,6 +123,7 @@ namespace QuanLyTrungTamNgoaiNgu
             LoadDanhSachThiSinh();
         }
 
+
         private void dataGridViewbangDiemThiSinh_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -133,5 +134,14 @@ namespace QuanLyTrungTamNgoaiNgu
             LoadDanhSachThiSinh();
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
+
+        
     }
 }
