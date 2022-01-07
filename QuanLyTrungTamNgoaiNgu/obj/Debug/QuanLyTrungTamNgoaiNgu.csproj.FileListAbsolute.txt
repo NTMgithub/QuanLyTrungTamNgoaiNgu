@@ -64,3 +64,4 @@ D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\Qu
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.pdb
 D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmDanhSachThiSinh.resources
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmDanhSachThiSinh.resources
+D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.csproj.CopyComplete
