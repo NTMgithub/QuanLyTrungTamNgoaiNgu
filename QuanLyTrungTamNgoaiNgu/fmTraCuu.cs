@@ -15,11 +15,16 @@ namespace QuanLyTrungTamNgoaiNgu
     public partial class fmTraCuu : Form
     {
         B_DSThiSinhTrongPhongThi B_DSThiSinhTrongPhongThi = new B_DSThiSinhTrongPhongThi();
+        B_KhoaThi b_KhoaThi = new B_KhoaThi();
+        B_XepPhongThi b_XepPhongThi = new B_XepPhongThi();
         public fmTraCuu()
         {
             InitializeComponent();
+            LoadComboBoxKhoaThi();
+            LoadComboBoxPhong();
         }
 
+        //Cau 18
         public void HienThiDanhSachThiSinh_TheoTenHoacSDT()
         {
             
@@ -57,26 +62,66 @@ namespace QuanLyTrungTamNgoaiNgu
         }
         bool KiemTraRangBuoc()
         {
-            //Kiểm tra kí tự đặc biệt và số
             Regex regex = new Regex(@"[""!#$%&'()*+,-./:;<=>?@[\\\]^_`{|}~0-9]");
 
             if (regex.IsMatch(textBoxHoTen.Text))
             {
-                //MessageBox.Show("Họ tên không được có số và kí tự đặc biệt!", "Thông báo");
-                //textBoxHoTen.Focus();
                 return false;
             }
             Regex regexNumber = new Regex("[a-z]");
             if (regexNumber.IsMatch(textBoxSDT.Text))
             {
-                //MessageBox.Show("Số điện thoại ở dạng số", "Thông báo");
-                //textBoxSDT.Focus();
                 return false;
             }
 
             return true;
         }
 
+        // Cau 17
+        public void LoadComboBoxKhoaThi()
+        {
+            comboBoxKhoa.DataSource = b_KhoaThi.GetKhoaThis();
+            comboBoxKhoa.DisplayMember = "TENKHOATHI";
+            comboBoxKhoa.ValueMember = "MAKHOATHI";
+
+        }
+
+        public void LoadComboBoxPhong()
+        {
+            string makhoathi = comboBoxKhoa.SelectedValue.ToString();
+            comboBoxPhong.DisplayMember = "MAPHONGTHI";
+            comboBoxPhong.ValueMember = "MAPHONGTHI";
+        }
+        public void HienThiComboPhong()
+        {
+            string makhoathi = comboBoxKhoa.SelectedValue.ToString();
+            if (!makhoathi.Equals("System.Data.Entity.DynamicProxies.KhoaThi_87305566F1A93C290A8622FD22538AF5E789C925966D751F28BBB24AC85315ED"))
+            {
+
+                comboBoxPhong.DataSource = b_XepPhongThi.GetPhongThis(makhoathi);
+                comboBoxPhong.DisplayMember = "MAPHONGTHI";
+                comboBoxPhong.ValueMember = "MAPHONGTHI";
+            }
+        }
+        public void HienThiDanhSach()
+        {
+            dataGridViewbangDanhSachThiSinh.DataSource = null;
+            if (comboBoxPhong.SelectedValue != null)
+            {
+                int makhoathi = int.Parse(comboBoxKhoa.SelectedValue.ToString());
+                string maphongthi = comboBoxPhong.SelectedValue.ToString();
+                dataGridViewbangDanhSachThiSinh.AutoGenerateColumns = false;
+                dataGridViewbangDanhSachThiSinh.DataSource = B_DSThiSinhTrongPhongThi.GetDSThiSinhTrongPhongThies(makhoathi, maphongthi);
+                dataGridViewbangDanhSachThiSinh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridViewbangDanhSachThiSinh.AllowUserToAddRows = false;
+                //Để có thể check checkbox
+                for (int i = 0; i <= dataGridViewbangDanhSachThiSinh.Rows.Count - 1; i++)
+                {
+                    dataGridViewbangDanhSachThiSinh.Rows[i].Cells[0].Value = false;
+
+                }
+            }
+        }
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -120,6 +165,16 @@ namespace QuanLyTrungTamNgoaiNgu
         private void buttonTimKiem_TheoTenVaSDT_Click(object sender, EventArgs e)
         {
             
+        }
+
+        private void comboBoxKhoa_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            HienThiComboPhong();
+        }
+
+        private void comboBoxPhong_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            HienThiDanhSach();
         }
     }
 }

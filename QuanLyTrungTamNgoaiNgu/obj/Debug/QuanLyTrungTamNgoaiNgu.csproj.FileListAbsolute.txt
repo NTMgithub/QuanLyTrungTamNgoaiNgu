@@ -65,3 +65,13 @@ D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\Qu
 D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmDanhSachThiSinh.resources
 D:\Study\HK1_Nam4\XayDungPhanMemMoHinhPhanLop\ThiHocKy\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmDanhSachThiSinh.resources
 D:\Projects\Visual Studio\source\repos\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.csproj.CopyComplete
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\BUS.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\DAL.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\EntityFramework.dll
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\BUS.pdb
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\DAL.pdb
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\DAL.dll.config
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\bin\Debug\EntityFramework.xml
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmDanhSachThiSinh.resources
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmLapKhoaThi.resources
+C:\Users\ACER\Desktop\Mô hình phân lớp\QuanLyTrungTamNgoaiNgu\QuanLyTrungTamNgoaiNgu\obj\Debug\QuanLyTrungTamNgoaiNgu.fmXepGiaoVien.resources
