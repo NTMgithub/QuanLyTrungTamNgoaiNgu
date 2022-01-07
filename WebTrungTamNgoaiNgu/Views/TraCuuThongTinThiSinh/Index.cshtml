@@ -31,7 +31,9 @@
             <div style="margin-top: 25px;">
                 <span style="text-transform: uppercase;font-weight: 800;margin-bottom: 5px;">Kết quả tìm kiếm</span>
                 <div id="ketQuaTimKiem">
-
+                    <div>
+                        
+                    </div>
                 </div>
             </div>
 
@@ -56,24 +58,25 @@
                     button: "Đóng",
                 });
             } else {
-                var objData = {
-                    hoTen: _hoTen,
-                    sdt: _soDienThoai
-                }
 
-                document.getElementById("#ketQuaTimKiem").innerHTML = ""; //clear ket qua
+                $('#ketQuaTimKiem div table').remove(); //clear ket qua truoc khi tim kiem
+                $('#ketQuaTimKiem div p').remove(); //clear ket qua truoc khi tim kiem
 
                 $.ajax({
-                    url: "/TraCuuThongTinThiSinh/GetThiSinhTheoHoTenSDT",
-                    data: JSON.stringify(objData),
+                    url: "/TraCuuThongTinThiSinh/GetThiSinhTheoHoTenSDT?hoten=" + _hoTen + "&sdt=" + _soDienThoai,
                     type: "GET",
                     contentType: "application/json;charset=utf-8",
                     dataType: "json",
                     success: function (result) {
-                        $.each(result, function (index) {
-                            $('#ketQuaTimKiem').append($(''));
-                            
-                        })
+                        if (result.length < 1) {
+                            $('#ketQuaTimKiem div').append($('<p class="h5" style="color: red;margin: 10px;">Không tìm thấy thông tin thí sinh hoặc thí sinh chưa được xếp phòng thi!</p>'));
+                        } else {
+                            $.each(result, function (index) {
+                                $('#ketQuaTimKiem div').append($('<table class="table table-hover"><thead><tr><th scope="col">Họ tên</th><th scope="col">Số báo danh</th><th scope="col">Khóa thi</th><th scope="col">Phòng thi</th><th scope="col">Kết quả thi</th></tr></thead><tbody><tr><td>' + result[index].HOTEN + '</td><td>' + result[index].SBD + '</td><td>' + result[index].KHOATHI + '</td><td>' + result[index].PHONGTHI + '</td><td><p>Điểm nghe: ' + result[index].DIEMNGHE + '</p><p>Điểm nói: ' + result[index].DIEMNOI + '</p><p>Điểm viết: ' + result[index].DIEMVIET + '</p><p>Điểm đọc: ' + result[index].DIEMDOC + '</p></td></tr></tbody></table>'));
+
+                            })
+                        }
+                        
                     },
                     error: function (errorMessage) {
                         alert(errorMessage.responseText);
