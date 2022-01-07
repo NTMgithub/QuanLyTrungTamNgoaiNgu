@@ -105,19 +105,19 @@ namespace QuanLyTrungTamNgoaiNgu
         }
         public void HienThiDanhSach()
         {
-            dataGridViewbangDanhSachThiSinh.DataSource = null;
+            dataGridView1.DataSource = null;
             if (comboBoxPhong.SelectedValue != null)
             {
                 int makhoathi = int.Parse(comboBoxKhoa.SelectedValue.ToString());
                 string maphongthi = comboBoxPhong.SelectedValue.ToString();
-                dataGridViewbangDanhSachThiSinh.AutoGenerateColumns = false;
-                dataGridViewbangDanhSachThiSinh.DataSource = B_DSThiSinhTrongPhongThi.GetDSThiSinhTrongPhongThies(makhoathi, maphongthi);
-                dataGridViewbangDanhSachThiSinh.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dataGridViewbangDanhSachThiSinh.AllowUserToAddRows = false;
+                dataGridView1.AutoGenerateColumns = false;
+                dataGridView1.DataSource = B_DSThiSinhTrongPhongThi.GetDSThiSinhTrongPhongThies(makhoathi, maphongthi);
+                dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dataGridView1.AllowUserToAddRows = false;
                 //Để có thể check checkbox
-                for (int i = 0; i <= dataGridViewbangDanhSachThiSinh.Rows.Count - 1; i++)
+                for (int i = 0; i <= dataGridView1.Rows.Count - 1; i++)
                 {
-                    dataGridViewbangDanhSachThiSinh.Rows[i].Cells[0].Value = false;
+                    dataGridView1.Rows[i].Cells[0].Value = false;
 
                 }
             }
@@ -175,6 +175,16 @@ namespace QuanLyTrungTamNgoaiNgu
         private void comboBoxPhong_SelectedIndexChanged(object sender, EventArgs e)
         {
             HienThiDanhSach();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel14_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

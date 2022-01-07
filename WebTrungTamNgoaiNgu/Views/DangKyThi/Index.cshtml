@@ -55,10 +55,10 @@
                     <span style="text-transform: uppercase;font-weight: 800;margin-bottom: 5px;">Thông tin đăng ký thi</span>
                 </div>
                 <div class="containerThongTinCaNhan">
-                    <div class="mb-3">
+                    @*<div class="mb-3">
                         <label for="inputNgayDangKy" class="form-label">Ngày đăng ký</label>
                         <input type="date" class="form-control" id="inputNgayDangKy" required>
-                    </div>
+                    </div>*@
 
                     <div class="mb-3">
                         <label class="form-label">Trình độ thi</label>
@@ -77,7 +77,7 @@
 
 
     <script>
-
+        
         function Add() {
 
             var _hoTen = $('#inputHoTen').val();
@@ -86,8 +86,10 @@
             var _email = $('#inputEmail').val();
             var _ngaySinh = $('#inputNgaySinh').val();
             var _gioiTinh = $('input[name="radioGioiTinh"]:checked').parent().find('label').text();
-            var _ngayDangKy = $('#inputNgayDangKy').val();
+            var _ngayDangKy = new Date();
             var _trinhDoThi = $('#selectTrinhDoThi :selected').text();
+
+            console.log(_ngayDangKy);
 
             if (_hoTen == '' || _soCMND == '' || _soDienThoai == '' || _email == '' || _ngaySinh == '' || _ngayDangKy == '') {
                 swal({
