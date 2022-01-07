@@ -153,6 +153,26 @@ namespace DAL
             return DSThiSinh.ToList<dynamic>();
         }
 
+        public List<dynamic> GetKetQuaThiSinhQuaMaDangKy(int maDangKy)
+        {
+            var DSThiSinh = from thisinh in TTAN.ThiSinhDKs
+                            join danhsach in TTAN.DSThiSinhTrongPhongThis on thisinh.MADK equals danhsach.MADK
+                            where danhsach.MADK == maDangKy 
+                            select new
+                            {
+                                TRINHDO = thisinh.TRINHDO,
+                                HOTEN = thisinh.HOTEN,
+                                NGAYSINH = thisinh.NGAYSINH,
+                                CMND = thisinh.CMND,
+                                DIEMNGHE = danhsach.DIEMNGHE,
+                                DIEMNOI = danhsach.DIEMNOI,
+                                DIEMVIET = danhsach.DIEMVIET,
+                                DIEMDOC = danhsach.DIEMDOC
+                            };
+
+            return DSThiSinh.ToList<dynamic>();
+        }
+
 
     }
 }

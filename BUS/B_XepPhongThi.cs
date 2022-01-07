@@ -36,6 +36,8 @@ namespace BUS
             return d_XepPhongThi.GetPhongThis(khoathi);
         }
 
+       
+
         public bool ThemPhongThi(PhongThi objPhongThi)
         {
             return d_XepPhongThi.ThemPhongThi(objPhongThi);

@@ -15,22 +15,16 @@
                     <div class="mb-3">
                         <label class="form-label">Khóa thi</label>
                         <select class="form-select" id="selectKhoaThi">
-                            <option value="1" selected>One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
                         </select>
                     </div>
 
                     <div class="mb-3">
                         <label class="form-label">Phòng thi</label>
                         <select class="form-select" id="selectPhongThi">
-                            <option value="1" selected>One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
                         </select>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+                    <!-- <button type="button" class="btn btn-primary" onclick="TimKiem()" >Tìm kiếm</button> -->
 
                 </div>
 
@@ -39,31 +33,22 @@
             <div style="margin-top: 25px;">
                 <span style="text-transform: uppercase;font-weight: 800;margin-bottom: 5px;">Kết quả tìm kiếm</span>
                 <div id="ketQuaTimKiem">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">Mã đăng ký</th>
-                                <th scope="col">Họ tên</th>
-                                <th scope="col">Khóa thi</th>
-                                <th scope="col">Phòng thi</th>
-                                <th scope="col"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>mdo</td>
-                                <td>mdo</td>
-                                <td>
-                                    <button type="button" class="btn btn-info">Thông tin thí sinh</button>
-                                    <button type="button" class="btn btn-secondary" style="background: sienna;">Kết quả thi</button>
-                                    <button type="button" class="btn btn-secondary" style="background: darkslategrey;">Giấy chứng nhận</button>
-                                </td>
-                            </tr>
-
-                        </tbody>
-                    </table>
+                    <div>
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Mã đăng ký</th>
+                                    <th scope="col">Họ tên</th>
+                                    <th scope="col">Khóa thi</th>
+                                    <th scope="col">Phòng thi</th>
+                                    <th scope="col">Số báo danh</th>
+                                    <th scope="col"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -74,7 +59,284 @@
 
     </div>
 
+    <div class="modal fade" id="modalThongTinThiSinh" tabindex="-1" aria-labelledby="modalThongTinThiSinhLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalThongTinThiSinhLabel">Thông tin thí sinh</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Mã đăng ký: <span id="TTTS_maDangKy"></span></p>
+                    <p>Họ tên: <span id="TTTS_hoTen"></span></p>
+                    <p>CMND: <span id="TTTS_CMND"></span></p>
+                    <p>Ngày sinh: <span id="TTTS_ngaySinh"></span></p>
+                    <p>Giới tính: <span id="TTTS_gioiTinh"></span></p>
+                    <p>Số điện thoại: <span id="TTTS_soDienThoai"></span></p>
+                    <p>Email: <span id="TTTS_email"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="modal fade" id="modalKetQuaThi" tabindex="-1" aria-labelledby="modalKetQuaThiLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalKetQuaThiLabel">Kết quả thi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Mã đăng ký: <span id="KQT_maDangKy"></span></p>
+                    <p>Họ tên: <span id="KQT_hoTen"></span></p>
+                    <p>----Kết quả thi----</p>
+                    <p>Điểm nghe: <span id="KQT_diemNghe"></span></p>
+                    <p>Điểm nói: <span id="KQT_diemNoi"></span></p>
+                    <p>Điểm đọc: <span id="KQT_diemDoc"></span></p>
+                    <p>Điểm viết: <span id="KQT_diemViet"></span></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalGiayChungNhan" tabindex="-1" aria-labelledby="modalGiayChungNhanLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalGiayChungNhanLabel">Giấy chứng nhận kết quả</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="ketQuaChungNhan">
+                        <div></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+            LoadKhoaThi();
+            LoadPhongThiTheoKhoa();
+            TimKiem();
+            $("#selectKhoaThi").on('change', function () {
+                LoadPhongThiTheoKhoa();
+                TimKiem();
+            });
+            $("#selectPhongThi").on('change', function () {
+                TimKiem();
+            });
+        });
+
+        function LoadKhoaThi() {
+            document.getElementById('selectKhoaThi').options.length = 0; //clear dropdown
+
+            $.ajax({
+                url: "/TraCuuGiayChungNhan/GetAllKhoaThi",
+                type: "GET",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                async: false,
+                success: function (result) {
+                    $.each(result, function (index) {
+                        $('#selectKhoaThi').append($('<option>', {
+                            value: result[index].MAKHOATHI,
+                            text: result[index].TENKHOATHI
+                        }));
+                    })
+
+                },
+                error: function (errorMessage) {
+                    alert(errorMessage.responseText);
+                }
+            });
+
+
+        }
+
+        function LoadPhongThiTheoKhoa() {
+            var _maKhoaThi = $('#selectKhoaThi option:selected').val();
+            console.log(_maKhoaThi);
+
+            document.getElementById('selectPhongThi').options.length = 0; //clear dropdown
+
+            $.ajax({
+                url: "/DanhSachThiSinh/GetPhongThiTheoKhoa?maKhoaThi=" + _maKhoaThi,
+                type: "GET",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                async: false,
+                success: function (result) {
+                    $.each(result, function (index) {
+                        $('#selectPhongThi').append($('<option>', {
+                            value: result[index].MAPHONGTHI,
+                            text: result[index].MAPHONGTHI
+                        }));
+                    })
+
+                },
+                error: function (errorMessage) {
+                    alert(errorMessage.responseText);
+                }
+            });
+
+
+        }
+
+        function TimKiem() {
+            var _maKhoaThi = $('#selectKhoaThi option:selected').val();
+            var _maPhongThi = $('#selectPhongThi option:selected').val();
+
+            if (_maKhoaThi == '' || _maPhongThi == '') {
+                swal({
+                    title: "Không được để trống!",
+                    text: "Vui lòng nhập đầy đủ thông tin!",
+                    icon: "warning",
+                    button: "Đóng",
+                });
+            } else {
+                $('#ketQuaTimKiem div table tbody tr').remove(); //clear truoc khi them
+
+                $.ajax({
+                    url: "/DanhSachThiSinh/TraCuuDanhSachThiSinh?maKhoaThi=" + _maKhoaThi + "&maPhongThi=" + _maPhongThi,
+                    type: "GET",
+                    contentType: "application/json;charset=utf-8",
+                    dataType: "json",
+                    async: false,
+                    success: function (result) {
+                        $.each(result, function (index) {
+                            $('#ketQuaTimKiem div table tbody').append($('<tr><td>' + result[index].MADK + '</td><td>' + result[index].HOTEN + '</td><td>' + _maKhoaThi + '</td><td>' + result[index].PHONGTHI + '</td><td>' + result[index].SBD + '</td><td><button type="button" class="btn btn-info" style="margin-right: 10px;" data-bs-toggle="modal" data-bs-target="#modalThongTinThiSinh" onclick="GetMaDKThongTinThiSinh(' + result[index].MADK + ')"  >Thông tin thí sinh</button><button type="button" class="btn btn-secondary" style="background: sienna;margin-right: 10px;" data-bs-toggle="modal" data-bs-target="#modalKetQuaThi" onclick="GetMaDKKetQuaThi(' + result[index].MADK + ')" >Kết quả thi</button><button type="button" class="btn btn-secondary" style="background: darkslategrey;margin-right: 10px;" data-bs-toggle="modal" data-bs-target="#modalGiayChungNhan" onclick="GetGiayChungNhan(' + _maKhoaThi + ',' + result[index].SBD +')">Giấy chứng nhận</button></td></tr >'));
+                        })
+
+                    },
+                    error: function (errorMessage) {
+                        alert(errorMessage.responseText);
+                    }
+                });
+            }
+
+
+        }
+
+
+        function GetMaDKThongTinThiSinh(maDangKy) {
+            $('#TTTS_maDangKy').text(maDangKy);
+
+            $.ajax({
+                url: "/DanhSachThiSinh/GetThongTinThiSinh?maDangKy=" + maDangKy,
+                type: "GET",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                async: false,
+                success: function (result) {
+                    console.log(result[0].HOTEN);
+                    $('#TTTS_hoTen').text(result[0].HOTEN);
+                    $('#TTTS_CMND').text(result[0].CMND);
+                    $('#TTTS_ngaySinh').text(FormatDate(result[0].NGAYSINH));
+                    $('#TTTS_gioiTinh').text(result[0].GIOITINH);
+                    $('#TTTS_soDienThoai').text(result[0].SDT);
+                    $('#TTTS_email').text(result[0].EMAIL);
+
+                },
+                error: function (errorMessage) {
+                    alert(errorMessage.responseText);
+                }
+            });
+
+        }
+
+        function GetMaDKKetQuaThi(maDangKy) {
+            $('#KQT_maDangKy').text(maDangKy);
+
+            $.ajax({
+                url: "/DanhSachThiSinh/GetKetQuaThiSinhQuaMaDangKy?maDangKy=" + maDangKy,
+                type: "GET",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                async: false,
+                success: function (result) {
+                    $('#KQT_hoTen').text(result[0].HOTEN);
+                    $('#KQT_diemNghe').text(result[0].DIEMNGHE);
+                    $('#KQT_diemNoi').text(result[0].DIEMNOI);
+                    $('#KQT_diemDoc').text(result[0].DIEMDOC);
+                    $('#KQT_diemViet').text(result[0].DIEMVIET);
+                   
+                },
+                error: function (errorMessage) {
+                    alert(errorMessage.responseText);
+                }
+            });
+
+        }
+
+        function GetGiayChungNhan(maKhoaThi, SBD) {
+            $('#ketQuaChungNhan div div').remove(); //clear ket qua truoc khi tim kiem
+            $('#ketQuaChungNhan div p').remove(); //clear ket qua truoc khi tim kiem
+            $('#ketQuaChungNhan div button').remove();
+
+            $.ajax({
+                url: "/TraCuuGiayChungNhan/GetThongTinGiayChungNhan?maKhoaThi=" + maKhoaThi + "&soBaoDanh="+ SBD,
+                type: "GET",
+                contentType: "application/json;charset=utf-8",
+                dataType: "json",
+                async: false,
+                success: function (result) {
+                    if (result.length < 1) {
+                        $('#ketQuaChungNhan div').append($('<p class="h5" style="color: red;margin: 10px;">Không tìm thấy thông tin thí sinh!</p>'));
+                    } else {
+                        $.each(result, function (index) {
+                            if (result[index].DIEMNGHE == null || result[index].DIEMDOC == null || result[index].DIEMNOI == null || result[index].DIEMVIET == null) {
+                                $('#ketQuaChungNhan div').append($('<p class="h5" style="color: red;margin: 10px;">Thí sinh này chưa có điểm!</p>'));
+                            } else {
+                                $('#ketQuaChungNhan div').append($('<div id="elementGiayChungNhan" style="width:100%; height:auto; padding:20px; text-align:center; border: 10px solid #787878"><div style="width:100%; height:100%; padding:20px; text-align:center; border: 5px solid #787878" ><span style="font-size:50px; font-weight:bold">Chứng nhận kết quả</span><p style="font-size:25px"><i>Trình độ ' + result[index].TRINHDO + '</i></p><br><table style="margin: auto;"><tbody><tr style="font-size: 20px;"><td>Họ tên: </td><td>' + result[index].HOTEN + '</td></tr><tr style="font-size: 20px;"><td>Ngày sinh: </td><td>' + FormatDate(result[index].NGAYSINH) + '</td></tr><tr style="font-size: 20px;"><td>CMND: </td><td>' + result[index].CMND + '</td></tr></tbody></table><br><span style="font-size:25px"><i>Đã tham gia kỳ thi vào ngày: ' + FormatDate(result[index].NGAYTHI) + '</i></span><br><span style="font-size:25px"><i>Với kết quả:</i></span><br><p style="font-size: 20px;">Nghe: ' + result[index].DIEMNGHE + '</p><p style="font-size: 20px;">Nói: ' + result[index].DIEMNOI + '</p><p style="font-size: 20px;">Đọc: ' + result[index].DIEMDOC + '</p><p style="font-size: 20px;">Viết: ' + result[index].DIEMVIET + '</p></div></div><button type="button" name="btnLuuGiayChungNhan" class="btn btn-warning" style="margin-top: 20px;" onclick="SaveGiayChungNhanPDF()" >Lưu PDF</button></div>'));
+
+                            }
+
+                        })
+                    }
+
+                },
+                error: function (errorMessage) {
+                    alert(errorMessage.responseText);
+                }
+            });
+
+        }
+
+
+        function FormatDate(inputDate) {
+            var str, year, month, day, d, finalDate;
+            str = inputDate.replace(/\D/g, "");
+            d = new Date(parseInt(str));
+            year = d.getFullYear();
+            month = d.getMonth() + 1;
+            day = d.getDate();
+            if (day < 10) {
+                day = "0" + day;
+            }
+            if (month < 10) {
+                month = "0" + month;
+            }
+            finalDate = day + "-" + month + "-" + year;
+            return finalDate;
+        }
+
+
+
+    </script>
 
 
 </main><!-- End #main -->

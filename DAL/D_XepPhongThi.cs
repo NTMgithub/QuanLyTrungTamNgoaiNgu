@@ -93,6 +93,17 @@ namespace DAL
 
             return dsPhongThi.ToList<dynamic>();
         }
+
+        public List<PhongThi> GetPhongThiTheoKhoa(int maKhoathi)
+        {
+            TTAN.Configuration.ProxyCreationEnabled = false;
+            var dsPhongThi = from phongthis in TTAN.PhongThis
+                             where phongthis.MAKHOATHI == maKhoathi
+                             select phongthis;
+
+            return dsPhongThi.ToList<PhongThi>();
+        }
+
         public bool ThemPhongThi(PhongThi objPhongThi)
         {
             {
