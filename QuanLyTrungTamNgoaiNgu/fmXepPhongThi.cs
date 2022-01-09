@@ -95,20 +95,29 @@ namespace QuanLyTrungTamNgoaiNgu
 
                 double soLuongThiSinh = (double)dataGridView_ChuaCoPhongThi.Rows.Count;
                 double soLuongToiDa = 35.0; //max 35 thí sinh 1 phòng
-                double soLuongPhongCanTao;
+                int soLuongPhongCanTao = 0;
 
+                
                 if (soLuongThiSinh <= soLuongToiDa)
                 {
                     soLuongPhongCanTao = 1;
+                    
                 }
                 else
                 {
-                    soLuongPhongCanTao = Math.Round(soLuongThiSinh / soLuongToiDa);
+                    double soLuongPhongCanTao_LayDu = soLuongThiSinh%soLuongToiDa;
+                    if (soLuongPhongCanTao_LayDu != 0)
+                    {
+                        soLuongPhongCanTao = (int)(soLuongThiSinh/soLuongToiDa) + 1;
+                    }
+                    
                 }
 
                 //chia đều ra cho các phòng nếu số lượng thí sinh >35. Ví dụ: 40 thì mỗi phòng 20 thí sinh
                 int soLuongThiSinhTrenMotPhong = (int)((int)soLuongThiSinh / soLuongPhongCanTao);
 
+                System.Diagnostics.Debug.WriteLine("Số lượng phòng cần tạo: " + soLuongPhongCanTao);
+                System.Diagnostics.Debug.WriteLine("Số lượng thí sinh/phòng: " + soLuongThiSinhTrenMotPhong);
                 int countLine = 1;
                 int item1 = 0;
                 //vòng for loop datagridview thí sinh chưa có phòng thi
