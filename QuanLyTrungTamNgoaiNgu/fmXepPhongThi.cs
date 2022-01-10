@@ -112,9 +112,19 @@ namespace QuanLyTrungTamNgoaiNgu
                     }
                     
                 }
-
+            
                 //chia đều ra cho các phòng nếu số lượng thí sinh >35. Ví dụ: 40 thì mỗi phòng 20 thí sinh
-                int soLuongThiSinhTrenMotPhong = (int)((int)soLuongThiSinh / soLuongPhongCanTao);
+                int soLuongThiSinhTrenMotPhong = 0;
+                double soLuongThiSinhTrenMotPhong_LayDu = soLuongThiSinh%soLuongPhongCanTao;
+                if (soLuongThiSinhTrenMotPhong_LayDu != 0)
+                {
+                    soLuongThiSinhTrenMotPhong = (int)((int)soLuongThiSinh / soLuongPhongCanTao) + 1;
+                }
+                else
+                {
+                    soLuongThiSinhTrenMotPhong = (int)((int)soLuongThiSinh / soLuongPhongCanTao);
+                }
+                 
 
                 System.Diagnostics.Debug.WriteLine("Số lượng phòng cần tạo: " + soLuongPhongCanTao);
                 System.Diagnostics.Debug.WriteLine("Số lượng thí sinh/phòng: " + soLuongThiSinhTrenMotPhong);
